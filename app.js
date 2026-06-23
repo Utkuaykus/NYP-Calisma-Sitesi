@@ -159,10 +159,16 @@ function filterQuizByTopic(topic) {
 }
 
 function getFilteredQuestions() {
-    return QUESTIONS.filter(q => {
+    const filtered = QUESTIONS.filter(q => {
         const typeMatch = currentFilter === 'all' || q.type === currentFilter;
         const topicMatch = currentTopicFilter === 'all' || q.topic === currentTopicFilter;
         return typeMatch && topicMatch;
+    });
+
+    // Soru tipine göre sırala: Boşluk Doldurma → Çıktı Bulma → Hata Bulma → Test (Kavram)
+    const typeOrder = { fillblank: 0, output: 1, error: 2, concept: 3 };
+    return filtered.sort((a, b) => {
+        return (typeOrder[a.type] ?? 99) - (typeOrder[b.type] ?? 99);
     });
 }
 
