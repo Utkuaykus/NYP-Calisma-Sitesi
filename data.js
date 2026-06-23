@@ -1,435 +1,326 @@
 // ============================================
-// NYP Final Çalışma Sitesi - VERİ DOSYASI
-// Tüm konular detaylı, sınavda çıkacak her şey var
+// NYP Final Çalışma Sitesi - Veri Dosyası
 // ============================================
 
 const TOPICS = [
     // ===== TOPIC 0: UML & Giriş =====
     {
-        id: 0, title: "UML & Giriş", subtitle: "Unified Modeling Language ve Temel Kavramlar",
+        id: 0,
+        title: "UML & Giriş",
+        subtitle: "Unified Modeling Language ve Temel Kavramlar",
         content: [
-            { title: "📐 UML Nedir?", body: `<p><strong>UML (Unified Modeling Language)</strong>, yazılım sistemlerinin tasarımını görselleştirmek için kullanılan genel amaçlı modelleme dilidir. 1995'te geliştirilmiştir.</p>
-<ul><li>Yazılı bir dil <strong>değildir</strong>, grafiksel gösterimler kullanır</li><li>14 çeşit UML türü vardır: <strong>Yapısal (Structural)</strong> ve <strong>Davranışsal (Behavioral)</strong> olmak üzere 2 gruba ayrılır</li><li>Class Diagram, <strong>Structural Diagram</strong> altında bulunur</li><li>Farklı programlama dilleri kullanan geliştiriciler arasında <strong>ortak bir dil</strong> oluşturur</li></ul>`},
-            { title: "🏗️ UML Class Diagram Yapısı", body: `<p>Class diyagramları <strong>3 bölümden</strong> oluşur:</p>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:10px;border:1px solid var(--border);text-align:left">Bölüm</th><th style="padding:10px;border:1px solid var(--border)">İçerik</th></tr>
-<tr><td style="padding:10px;border:1px solid var(--border)">Üst</td><td style="padding:10px;border:1px solid var(--border)">Sınıf Adı</td></tr>
-<tr><td style="padding:10px;border:1px solid var(--border)">Orta</td><td style="padding:10px;border:1px solid var(--border)">Attributes (Alanlar/Özellikler)</td></tr>
-<tr><td style="padding:10px;border:1px solid var(--border)">Alt</td><td style="padding:10px;border:1px solid var(--border)">Methods (Metotlar)</td></tr></table>
-<p><strong>Erişim Belirleyiciler (Access Modifiers):</strong></p>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Sembol</th><th style="padding:8px;border:1px solid var(--border)">C# Karşılığı</th><th style="padding:8px;border:1px solid var(--border)">Açıklama</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border);text-align:center;font-weight:700">-</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">private</span></td><td style="padding:8px;border:1px solid var(--border)">Sadece sınıf içinden</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border);text-align:center;font-weight:700">+</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">public</span></td><td style="padding:8px;border:1px solid var(--border)">Herkese açık</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border);text-align:center;font-weight:700">#</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">protected</span></td><td style="padding:8px;border:1px solid var(--border)">Sınıf + türeyen sınıflar</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border);text-align:center;font-weight:700">~</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">internal</span></td><td style="padding:8px;border:1px solid var(--border)">Aynı proje içinden</td></tr></table>
-<p><strong>Özel gösterimler:</strong> <span class="keyword">{readOnly}</span> → readonly, <strong>altı çizili</strong> → static</p>`},
-            { title: "🔗 UML İlişki Türleri", body: `<ul>
-<li><strong>Inheritance (Kalıtım):</strong> Üçgen başlı ok → alt sınıftan üst sınıfa doğru</li>
-<li><strong>Composition (Bileşim):</strong> Dolu elmas → bir sınıf başka sınıfı alan olarak kullanır</li>
-<li><strong>Interface:</strong> Noktalı çizgi ile sınıfa bağlanır</li>
-<li><strong>Nested Class:</strong> İçinde artı işareti olan daire ile gösterilir</li>
-<li><strong>Enumeration:</strong> &laquo;enumeration&raquo; flag'i ile gösterilir</li></ul>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Namespace: Sınıfları gruplamak için</span>
-<span class="code-keyword">using</span> System;
-
-<span class="code-keyword">namespace</span> <span class="code-type">MyApp</span>
+            {
+                title: "📐 UML Nedir?",
+                body: `<p>UML (Unified Modeling Language), yazılım sistemlerinin tasarımını <strong>görselleştirmek</strong> için kullanılan genel amaçlı modelleme dilidir.</p>
+                <ul>
+                    <li>1995 yılında yazılımlarda standart yaklaşım oluşturmak için geliştirilmiştir</li>
+                    <li>Yazılı bir dil değildir, <strong>grafiksel gösterimler</strong> kullanır</li>
+                    <li>Nesne yönelimli yazılım geliştirmenin çok önemli bir parçasıdır</li>
+                    <li>14 çeşit UML türü vardır: <strong>Yapısal</strong> ve <strong>Davranışsal</strong> olmak üzere 2 gruba ayrılır</li>
+                </ul>`
+            },
+            {
+                title: "🏗️ UML Class Diagram",
+                body: `<p>Class diyagramları 3 bölümden oluşur:</p>
+                <ul>
+                    <li><strong>En üst:</strong> Sınıf adı</li>
+                    <li><strong>Orta:</strong> Attributes (özellikler/alanlar)</li>
+                    <li><strong>Alt:</strong> Methods (metotlar)</li>
+                </ul>
+                <p><strong>Erişim Belirleyiciler:</strong></p>
+                <ul>
+                    <li><span class="keyword">-</span> → private</li>
+                    <li><span class="keyword">+</span> → public</li>
+                    <li><span class="keyword">#</span> → protected</li>
+                    <li><span class="keyword">~</span> → internal</li>
+                    <li><span class="keyword">{readOnly}</span> → readonly</li>
+                    <li><strong>Altı çizili</strong> → static</li>
+                </ul>
+                <div class="tip-box">UML'de kalıtım (inheritance) üçgen başlı ok ile gösterilir. Alt sınıftan üst sınıfa doğru ok işaret eder.</div>`
+            },
+            {
+                title: "📦 Namespace ve Enum",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Namespace: Ortak sınıfları bir arada tutmak için kullanılır</span>
+<span class="code-keyword">namespace</span> <span class="code-type">MyLibrary</span>
 {
-    <span class="code-keyword">public enum</span> <span class="code-type">Cinsiyet</span> { Erkek, Kadin }
+    <span class="code-comment">// Enum: Adlandırılmış değerler kümesi</span>
+    <span class="code-keyword">public enum</span> <span class="code-type">Cinsiyet</span>
+    {
+        Erkek,
+        Kadin
+    }
 
     <span class="code-keyword">public abstract class</span> <span class="code-type">Person</span>
     {
         <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
         <span class="code-keyword">public</span> <span class="code-type">Cinsiyet</span> Gender { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-        <span class="code-keyword">public abstract void</span> <span class="code-method">DoWork</span>();
+        <span class="code-keyword">public abstract void</span> <span class="code-method">doWork</span>();
     }
-}</pre></div>`}
+}</pre></div>`
+            }
         ]
     },
 
     // ===== TOPIC 1: Kontrol İfadeleri 1 =====
     {
-        id: 1, title: "Kontrol İfadeleri 1", subtitle: "if/else, while, Operatörler, Tip Dönüşümleri",
+        id: 1,
+        title: "Kontrol İfadeleri 1",
+        subtitle: "if, if-else, while, Sayaç ve Nöbetçi Kontrollü Döngüler",
         content: [
-            { title: "🔀 if / if-else / Nested if-else", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Basit if</span>
-<span class="code-keyword">if</span> (grade >= <span class="code-number">60</span>)
-    Console.WriteLine(<span class="code-string">"Passed"</span>);
-
-<span class="code-comment">// if-else</span>
-<span class="code-keyword">if</span> (grade >= <span class="code-number">60</span>)
-    Console.WriteLine(<span class="code-string">"Passed"</span>);
-<span class="code-keyword">else</span>
-    Console.WriteLine(<span class="code-string">"Failed"</span>);
-
-<span class="code-comment">// Nested if-else (iç içe)</span>
-<span class="code-keyword">if</span> (grade >= <span class="code-number">90</span>)
+            {
+                title: "🔀 Seçim İfadeleri",
+                body: `<p>C# 3 tür seçim yapısı sunar:</p>
+                <ul>
+                    <li><span class="keyword">if</span> → Koşul true ise çalışır</li>
+                    <li><span class="keyword">if...else</span> → Koşula göre iki yoldan biri çalışır</li>
+                    <li><span class="keyword">switch</span> → Birden fazla duruma göre farklı işlem yapar</li>
+                </ul>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">if</span> (grade >= <span class="code-number">90</span>)
     Console.WriteLine(<span class="code-string">"A"</span>);
 <span class="code-keyword">else if</span> (grade >= <span class="code-number">80</span>)
     Console.WriteLine(<span class="code-string">"B"</span>);
 <span class="code-keyword">else if</span> (grade >= <span class="code-number">70</span>)
     Console.WriteLine(<span class="code-string">"C"</span>);
-<span class="code-keyword">else if</span> (grade >= <span class="code-number">60</span>)
-    Console.WriteLine(<span class="code-string">"D"</span>);
 <span class="code-keyword">else</span>
     Console.WriteLine(<span class="code-string">"F"</span>);
 
-<span class="code-comment">// Koşullu (ternary) operatör (?:)</span>
-Console.WriteLine(grade >= <span class="code-number">60</span> ? <span class="code-string">"Passed"</span> : <span class="code-string">"Failed"</span>);</pre></div>
-<div class="important-box">Birden fazla satır çalıştırmak için süslü parantez <span class="keyword">{}</span> (block) kullanılmalı. Aksi halde sadece ilk satır if'e bağlıdır!</div>`},
-            { title: "🔄 while Döngüleri", body: `<p><strong>Sayaç kontrollü (Counter-controlled / Definite):</strong> Tekrar sayısı bilinir.</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">int</span> counter = <span class="code-number">1</span>;
-<span class="code-keyword">int</span> total = <span class="code-number">0</span>;
-
-<span class="code-keyword">while</span> (counter <= <span class="code-number">10</span>)
-{
-    Console.Write(<span class="code-string">"Not girin: "</span>);
-    <span class="code-keyword">int</span> grade = <span class="code-keyword">int</span>.Parse(Console.ReadLine());
-    total += grade;
-    counter++;
-}
-
-<span class="code-keyword">double</span> average = (<span class="code-keyword">double</span>)total / <span class="code-number">10</span>; <span class="code-comment">// Cast ile double bölme</span></pre></div>
-<p><strong>Nöbetçi kontrollü (Sentinel-controlled / Indefinite):</strong> Tekrar sayısı bilinmez, özel değerle biter.</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">int</span> total = <span class="code-number">0</span>, count = <span class="code-number">0</span>;
-Console.Write(<span class="code-string">"Not girin (-1 çıkış): "</span>);
-<span class="code-keyword">int</span> grade = <span class="code-keyword">int</span>.Parse(Console.ReadLine());
-
-<span class="code-keyword">while</span> (grade != -<span class="code-number">1</span>)
+<span class="code-comment">// Koşullu operatör (?:)</span>
+Console.WriteLine(grade >= <span class="code-number">60</span> ? <span class="code-string">"Passed"</span> : <span class="code-string">"Failed"</span>);</pre></div>`
+            },
+            {
+                title: "🔄 while Döngüsü",
+                body: `<p>Sayaç kontrollü ve nöbetçi kontrollü döngüler:</p>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Sayaç kontrollü (definite iteration)</span>
+<span class="code-keyword">int</span> count = <span class="code-number">1</span>;
+<span class="code-keyword">while</span> (count <= <span class="code-number">10</span>)
 {
     total += grade;
     count++;
-    Console.Write(<span class="code-string">"Not girin (-1 çıkış): "</span>);
+}
+
+<span class="code-comment">// Nöbetçi kontrollü (indefinite iteration)</span>
+<span class="code-keyword">while</span> (grade != -<span class="code-number">1</span>)  <span class="code-comment">// -1 sentinel değer</span>
+{
+    total += grade;
     grade = <span class="code-keyword">int</span>.Parse(Console.ReadLine());
 }</pre></div>
-<div class="important-box"><strong>Integer bölme:</strong> <code>7 / 2 = 3</code> (kesirli kısım kaybolur!). Kesirli sonuç için explicit cast kullanın: <code>(double)7 / 2 = 3.5</code></div>`},
-            { title: "📊 Bileşik Atama ve Varsayılan Değerler", body: `<p><strong>Bileşik atama operatörleri:</strong></p>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Operatör</th><th style="padding:8px;border:1px solid var(--border)">Eşdeğeri</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">c += 3</span></td><td style="padding:8px;border:1px solid var(--border)">c = c + 3</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">c -= 3</span></td><td style="padding:8px;border:1px solid var(--border)">c = c - 3</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">c *= 3</span></td><td style="padding:8px;border:1px solid var(--border)">c = c * 3</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">c /= 3</span></td><td style="padding:8px;border:1px solid var(--border)">c = c / 3</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">c %= 3</span></td><td style="padding:8px;border:1px solid var(--border)">c = c % 3</td></tr></table>
-<p><strong>Instance variable varsayılan değerleri:</strong></p>
-<ul><li><span class="keyword">int, double, decimal</span> vb. sayısal → <strong>0</strong></li>
-<li><span class="keyword">bool</span> → <strong>false</strong></li>
-<li>Referans tipleri (string, object, array) → <strong>null</strong></li></ul>
-<div class="tip-box">Yerel değişkenlere (local variables) varsayılan değer atanmaz, kullanmadan önce mutlaka değer verilmelidir!</div>`}
+                <div class="important-box">Integer bölme kesirli kısmı kaybeder! <span class="keyword">(double)</span> cast kullanarak explicit conversion yapılabilir.</div>`
+            },
+            {
+                title: "📊 Varsayılan Değerler",
+                body: `<ul>
+                    <li><span class="keyword">char, int, long, float, double, decimal</span> → 0</li>
+                    <li><span class="keyword">bool</span> → false</li>
+                    <li><strong>Referans tipleri</strong> → null</li>
+                </ul>`
+            }
         ]
     },
 
     // ===== TOPIC 2: Kontrol İfadeleri 2 =====
     {
-        id: 2, title: "Kontrol İfadeleri 2", subtitle: "for, do-while, switch, break, continue, Mantıksal Operatörler",
+        id: 2,
+        title: "Kontrol İfadeleri 2",
+        subtitle: "for, do-while, switch, break, continue, Mantıksal Operatörler",
         content: [
-            { title: "🔁 for Döngüsü", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Temel for döngüsü</span>
-<span class="code-keyword">for</span> (<span class="code-keyword">int</span> i = <span class="code-number">1</span>; i <= <span class="code-number">10</span>; i++)
+            {
+                title: "🔁 for Döngüsü",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">for</span> (<span class="code-keyword">int</span> i = <span class="code-number">2</span>; i <= <span class="code-number">20</span>; i += <span class="code-number">2</span>)
 {
-    Console.Write($<span class="code-string">"{i} "</span>);
+    total += i;  <span class="code-comment">// 2'den 20'ye çift sayıları topla</span>
 }
-<span class="code-comment">// Çıktı: 1 2 3 4 5 6 7 8 9 10</span>
 
-<span class="code-comment">// Çift sayıları toplama</span>
-<span class="code-keyword">int</span> total = <span class="code-number">0</span>;
-<span class="code-keyword">for</span> (<span class="code-keyword">int</span> i = <span class="code-number">2</span>; i <= <span class="code-number">20</span>; i += <span class="code-number">2</span>)
-    total += i;  <span class="code-comment">// 2+4+6+...+20 = 110</span>
-
-<span class="code-comment">// Math.Pow ile bileşik faiz</span>
+<span class="code-comment">// Bileşik faiz hesabı</span>
+<span class="code-keyword">decimal</span> amount = <span class="code-number">1000</span>;
 <span class="code-keyword">for</span> (<span class="code-keyword">int</span> year = <span class="code-number">1</span>; year <= <span class="code-number">10</span>; year++)
 {
-    <span class="code-keyword">decimal</span> amount = <span class="code-number">1000</span> * (<span class="code-keyword">decimal</span>)Math.Pow(<span class="code-number">1.05</span>, year);
-    Console.WriteLine($<span class="code-string">"{year,4}{amount,20:C}"</span>);
-    <span class="code-comment">// {year,4} → 4 karakter genişlik, sağa hizalı</span>
-    <span class="code-comment">// {amount,20:C} → 20 karakter, para formatı</span>
-}</pre></div>
-<div class="tip-box"><span class="keyword">Math.Pow(x, y)</span> → x üzeri y hesaplar. Static metottur, <code>Math.Pow(2, 10) = 1024</code></div>`},
-            { title: "🔃 do-while ve switch", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// do-while: Koşul SONDA kontrol edilir, en az 1 kez çalışır</span>
-<span class="code-keyword">int</span> counter = <span class="code-number">1</span>;
+    amount = <span class="code-number">1000</span> * (<span class="code-keyword">decimal</span>)Math.Pow(<span class="code-number">1.05</span>, year);
+}</pre></div>`
+            },
+            {
+                title: "🔃 do...while ve switch",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// do...while: En az 1 kez çalışır</span>
 <span class="code-keyword">do</span>
 {
-    Console.WriteLine(counter);
-    counter++;
-} <span class="code-keyword">while</span> (counter <= <span class="code-number">10</span>);
+    Console.Write(<span class="code-string">"Sayı girin: "</span>);
+    num = <span class="code-keyword">int</span>.Parse(Console.ReadLine());
+} <span class="code-keyword">while</span> (num != <span class="code-number">0</span>);
 
-<span class="code-comment">// switch - birden fazla case aynı bloğu paylaşabilir</span>
-<span class="code-keyword">switch</span> (grade / <span class="code-number">10</span>)
+<span class="code-comment">// switch ifadesi</span>
+<span class="code-keyword">switch</span> (grade)
 {
-    <span class="code-keyword">case</span> <span class="code-number">10</span>:
-    <span class="code-keyword">case</span> <span class="code-number">9</span>:
-        Console.WriteLine(<span class="code-string">"A"</span>);
-        <span class="code-keyword">break</span>;
-    <span class="code-keyword">case</span> <span class="code-number">8</span>:
-        Console.WriteLine(<span class="code-string">"B"</span>);
-        <span class="code-keyword">break</span>;
-    <span class="code-keyword">default</span>:
-        Console.WriteLine(<span class="code-string">"F"</span>);
-        <span class="code-keyword">break</span>;  <span class="code-comment">// C#'da break ZORUNLU!</span>
+    <span class="code-keyword">case</span> <span class="code-string">"A"</span>: Console.WriteLine(<span class="code-string">"Mükemmel"</span>); <span class="code-keyword">break</span>;
+    <span class="code-keyword">case</span> <span class="code-string">"B"</span>: Console.WriteLine(<span class="code-string">"İyi"</span>); <span class="code-keyword">break</span>;
+    <span class="code-keyword">default</span>: Console.WriteLine(<span class="code-string">"Geçersiz"</span>); <span class="code-keyword">break</span>;
 }</pre></div>
-<div class="important-box">C#'da her case bloğunda <span class="keyword">break</span> zorunludur (C/C++'dan farklı olarak fall-through yoktur).</div>`},
-            { title: "⏭️ break ve continue", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// break: Döngüden tamamen çıkar</span>
-<span class="code-keyword">for</span> (<span class="code-keyword">int</span> i = <span class="code-number">1</span>; i <= <span class="code-number">10</span>; i++)
-{
-    <span class="code-keyword">if</span> (i == <span class="code-number">5</span>) <span class="code-keyword">break</span>;
-    Console.Write($<span class="code-string">"{i} "</span>);
-}
-<span class="code-comment">// Çıktı: 1 2 3 4</span>
-
-<span class="code-comment">// continue: Kalan kodu atla, sonraki iterasyona geç</span>
-<span class="code-keyword">for</span> (<span class="code-keyword">int</span> i = <span class="code-number">1</span>; i <= <span class="code-number">10</span>; i++)
-{
-    <span class="code-keyword">if</span> (i % <span class="code-number">2</span> == <span class="code-number">0</span>) <span class="code-keyword">continue</span>;
-    Console.Write($<span class="code-string">"{i} "</span>);
-}
-<span class="code-comment">// Çıktı: 1 3 5 7 9 (çift sayılar atlanır)</span></pre></div>`},
-            { title: "🧮 Mantıksal Operatörler (ÖNEMLİ!)", body: `<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Operatör</th><th style="padding:8px;border:1px solid var(--border)">Ad</th><th style="padding:8px;border:1px solid var(--border)">Short-circuit?</th><th style="padding:8px;border:1px solid var(--border)">Açıklama</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">&&</span></td><td style="padding:8px;border:1px solid var(--border)">Conditional AND</td><td style="padding:8px;border:1px solid var(--border)">✅ Evet</td><td style="padding:8px;border:1px solid var(--border)">İlk false ise ikinciye bakmaz</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">||</span></td><td style="padding:8px;border:1px solid var(--border)">Conditional OR</td><td style="padding:8px;border:1px solid var(--border)">✅ Evet</td><td style="padding:8px;border:1px solid var(--border)">İlk true ise ikinciye bakmaz</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">&</span></td><td style="padding:8px;border:1px solid var(--border)">Boolean AND</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">Her iki tarafı da değerlendirir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">|</span></td><td style="padding:8px;border:1px solid var(--border)">Boolean OR</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">Her iki tarafı da değerlendirir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">^</span></td><td style="padding:8px;border:1px solid var(--border)">XOR</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">Sadece biri true ise true</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">!</span></td><td style="padding:8px;border:1px solid var(--border)">NOT</td><td style="padding:8px;border:1px solid var(--border)">-</td><td style="padding:8px;border:1px solid var(--border)">Değeri tersine çevirir</td></tr></table>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Short-circuit örneği:</span>
-<span class="code-keyword">int</span> x = <span class="code-number">0</span>;
-<span class="code-keyword">if</span> (x != <span class="code-number">0</span> && <span class="code-number">10</span> / x > <span class="code-number">2</span>)  <span class="code-comment">// x=0, && short-circuit yapar, 10/x çalışmaz → HATA OLMAZ</span>
-<span class="code-keyword">if</span> (x != <span class="code-number">0</span> &  <span class="code-number">10</span> / x > <span class="code-number">2</span>)  <span class="code-comment">// & short-circuit YAPMAZ, 10/x çalışır → DivideByZeroException!</span>
-
-<span class="code-comment">// Side effect örneği:</span>
-<span class="code-keyword">bool</span> result = (birthday == <span class="code-keyword">true</span>) | (++age >= <span class="code-number">65</span>);
-<span class="code-comment">// | kullanıldığı için ++age HER ZAMAN çalışır</span></pre></div>`}
+                <div class="important-box"><span class="keyword">break</span> döngüden çıkar, <span class="keyword">continue</span> sonraki iterasyona geçer.</div>`
+            },
+            {
+                title: "🧮 Mantıksal Operatörler",
+                body: `<ul>
+                    <li><span class="keyword">&&</span> → Koşullu AND (short-circuit)</li>
+                    <li><span class="keyword">||</span> → Koşullu OR (short-circuit)</li>
+                    <li><span class="keyword">&</span> → Boolean AND (short-circuit YOK)</li>
+                    <li><span class="keyword">|</span> → Boolean OR (short-circuit YOK)</li>
+                    <li><span class="keyword">^</span> → XOR (yalnızca biri true ise true)</li>
+                    <li><span class="keyword">!</span> → Mantıksal değil (negation)</li>
+                </ul>
+                <div class="tip-box"><span class="keyword">&&</span> ve <span class="keyword">||</span> short-circuit yapar: ilk operand sonucu belirlerse ikincisi değerlendirilmez. <span class="keyword">&</span> ve <span class="keyword">|</span> her iki tarafı da değerlendirir.</div>`
+            }
         ]
     },
 
     // ===== TOPIC 3: Diziler =====
     {
-        id: 3, title: "Diziler", subtitle: "Tek/Çok Boyutlu Diziler, foreach, params, ref/out",
+        id: 3,
+        title: "Diziler",
+        subtitle: "Tek ve Çok Boyutlu Diziler, foreach, params, ref",
         content: [
-            { title: "📊 Dizi Oluşturma ve Başlatma", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// 1) new ile oluşturma</span>
-<span class="code-keyword">int</span>[] c = <span class="code-keyword">new int</span>[<span class="code-number">12</span>];  <span class="code-comment">// 12 elemanlı, hepsi 0</span>
+            {
+                title: "📊 Dizi Temelleri",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Dizi oluşturma</span>
+<span class="code-keyword">int</span>[] c = <span class="code-keyword">new int</span>[<span class="code-number">12</span>];
 
-<span class="code-comment">// 2) Initializer ile oluşturma</span>
-<span class="code-keyword">int</span>[] values = { <span class="code-number">32</span>, <span class="code-number">27</span>, <span class="code-number">64</span>, <span class="code-number">18</span>, <span class="code-number">95</span> };  <span class="code-comment">// 5 elemanlı</span>
+<span class="code-comment">// Dizi başlatıcı</span>
+<span class="code-keyword">int</span>[] values = { <span class="code-number">32</span>, <span class="code-number">27</span>, <span class="code-number">64</span>, <span class="code-number">18</span>, <span class="code-number">95</span> };
 
-<span class="code-comment">// 3) İki adımda</span>
-<span class="code-keyword">int</span>[] arr;
-arr = <span class="code-keyword">new int</span>[<span class="code-number">5</span>];  <span class="code-comment">// Boyut değişken olabilir</span>
-
-<span class="code-comment">// Dizi boyutu: .Length property</span>
-Console.WriteLine(values.Length);  <span class="code-comment">// 5</span>
-
-<span class="code-comment">// Dizi yeniden boyutlandırma</span>
-Array.Resize(<span class="code-keyword">ref</span> values, <span class="code-number">10</span>);  <span class="code-comment">// Yeni dizi oluşturur, eski içeriği kopyalar</span></pre></div>
-<div class="important-box">Diziler <strong>referans tipidir</strong>. <span class="keyword">new</span> ile oluşturulur. Varsayılan değerler: sayısal→0, bool→false, referans→null. İndeksler <strong>0'dan</strong> başlar!</div>`},
-            { title: "🔄 foreach Döngüsü", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">int</span>[] numbers = { <span class="code-number">87</span>, <span class="code-number">68</span>, <span class="code-number">94</span>, <span class="code-number">100</span>, <span class="code-number">83</span> };
-
-<span class="code-comment">// foreach ile dizi elemanlarını okuma</span>
-<span class="code-keyword">foreach</span> (<span class="code-keyword">int</span> number <span class="code-keyword">in</span> numbers)
+<span class="code-comment">// foreach ile gezme</span>
+<span class="code-keyword">foreach</span> (<span class="code-keyword">int</span> val <span class="code-keyword">in</span> values)
 {
-    Console.Write($<span class="code-string">"{number} "</span>);
+    Console.WriteLine(val);
 }
-<span class="code-comment">// Çıktı: 87 68 94 100 83</span></pre></div>
-<div class="important-box"><span class="keyword">foreach</span> döngüsünde iteration variable <strong>read-only</strong>'dir! Dizi elemanlarını foreach ile değiştiremezsiniz. Değiştirmek için <span class="keyword">for</span> döngüsü kullanın.</div>`},
-            { title: "📐 Çok Boyutlu Diziler", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// ═══ RECTANGULAR (Dikdörtgensel) DİZİ ═══</span>
-<span class="code-comment">// Her satır aynı sayıda sütuna sahip</span>
-<span class="code-keyword">int</span>[,] rect = <span class="code-keyword">new int</span>[<span class="code-number">3</span>, <span class="code-number">4</span>];  <span class="code-comment">// 3 satır, 4 sütun</span>
-<span class="code-keyword">int</span>[,] b = { {<span class="code-number">1</span>, <span class="code-number">2</span>}, {<span class="code-number">3</span>, <span class="code-number">4</span>} };     <span class="code-comment">// 2x2 dizi</span>
-<span class="code-keyword">int</span> val = b[<span class="code-number">1</span>, <span class="code-number">0</span>];  <span class="code-comment">// satır 1, sütun 0 → 3</span>
 
-<span class="code-comment">// ═══ JAGGED (Düzensiz) DİZİ ═══</span>
-<span class="code-comment">// Her satır farklı sayıda elemana sahip olabilir</span>
+<span class="code-comment">// Dizi boyutunu değiştirme</span>
+Array.Resize(<span class="code-keyword">ref</span> values, <span class="code-number">10</span>);</pre></div>
+                <p><strong>Varsayılan değerler:</strong> Sayısal → 0, bool → false, Referans → null</p>`
+            },
+            {
+                title: "📐 Çok Boyutlu Diziler",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Rectangular (dikdörtgensel) dizi</span>
+<span class="code-keyword">int</span>[,] b = { {<span class="code-number">1</span>, <span class="code-number">2</span>}, {<span class="code-number">3</span>, <span class="code-number">4</span>} };
+<span class="code-keyword">int</span> val = b[<span class="code-number">0</span>, <span class="code-number">1</span>]; <span class="code-comment">// 2</span>
+
+<span class="code-comment">// Jagged (düzensiz) dizi</span>
 <span class="code-keyword">int</span>[][] jagged = {
-    <span class="code-keyword">new int</span>[] { <span class="code-number">1</span>, <span class="code-number">2</span> },
-    <span class="code-keyword">new int</span>[] { <span class="code-number">3</span> },
-    <span class="code-keyword">new int</span>[] { <span class="code-number">4</span>, <span class="code-number">5</span>, <span class="code-number">6</span> }
+    <span class="code-keyword">new int</span>[] {<span class="code-number">1</span>, <span class="code-number">2</span>},
+    <span class="code-keyword">new int</span>[] {<span class="code-number">3</span>},
+    <span class="code-keyword">new int</span>[] {<span class="code-number">4</span>, <span class="code-number">5</span>, <span class="code-number">6</span>}
 };
-<span class="code-keyword">int</span> val2 = jagged[<span class="code-number">2</span>][<span class="code-number">1</span>];  <span class="code-comment">// satır 2, sütun 1 → 5</span>
-
-<span class="code-comment">// Jagged dizi adım adım oluşturma</span>
-<span class="code-keyword">int</span>[][] c = <span class="code-keyword">new int</span>[<span class="code-number">2</span>][];
-c[<span class="code-number">0</span>] = <span class="code-keyword">new int</span>[<span class="code-number">5</span>];  <span class="code-comment">// satır 0: 5 eleman</span>
-c[<span class="code-number">1</span>] = <span class="code-keyword">new int</span>[<span class="code-number">3</span>];  <span class="code-comment">// satır 1: 3 eleman</span></pre></div>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)"></th><th style="padding:8px;border:1px solid var(--border)">Rectangular</th><th style="padding:8px;border:1px solid var(--border)">Jagged</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Tanım</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">int[,]</span></td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">int[][]</span></td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Erişim</td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">a[satır, sütun]</span></td><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">a[satır][sütun]</span></td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Satır uzunluğu</td><td style="padding:8px;border:1px solid var(--border)">Hepsi aynı</td><td style="padding:8px;border:1px solid var(--border)">Farklı olabilir</td></tr></table>`},
-            { title: "📤 params, ref, out ve Dizi Geçirme", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// params: Değişken sayıda argüman (sadece son parametre!)</span>
+<span class="code-keyword">int</span> val2 = jagged[<span class="code-number">2</span>][<span class="code-number">1</span>]; <span class="code-comment">// 5</span></pre></div>
+                <div class="important-box">Rectangular: <span class="keyword">a[satır, sütun]</span> | Jagged: <span class="keyword">a[satır][sütun]</span></div>`
+            },
+            {
+                title: "📤 Dizi Parametreleri ve params",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// params: Değişken uzunluklu parametre listesi</span>
 <span class="code-keyword">static double</span> <span class="code-method">Average</span>(<span class="code-keyword">params double</span>[] values)
 {
     <span class="code-keyword">double</span> total = <span class="code-number">0</span>;
-    <span class="code-keyword">foreach</span> (<span class="code-keyword">double</span> v <span class="code-keyword">in</span> values)
-        total += v;
+    <span class="code-keyword">foreach</span> (<span class="code-keyword">double</span> val <span class="code-keyword">in</span> values)
+        total += val;
     <span class="code-keyword">return</span> total / values.Length;
 }
 
-<span class="code-comment">// Kullanım: Average(1.0, 2.0, 3.0) veya Average(dizi)</span>
-
-<span class="code-comment">// ref: Değişkenin kendisini (referansını) gönderir</span>
-<span class="code-keyword">static void</span> <span class="code-method">Swap</span>(<span class="code-keyword">ref int</span> a, <span class="code-keyword">ref int</span> b)
-{
-    <span class="code-keyword">int</span> temp = a;
-    a = b;
-    b = temp;
-}
-
-<span class="code-comment">// out: Metot içinde değer atanması ZORUNLU</span>
-<span class="code-keyword">static void</span> <span class="code-method">Divide</span>(<span class="code-keyword">int</span> a, <span class="code-keyword">int</span> b, <span class="code-keyword">out int</span> result, <span class="code-keyword">out int</span> remainder)
-{
-    result = a / b;
-    remainder = a % b;
-}</pre></div>
-<div class="tip-box"><strong>Dizi bir referans tipidir.</strong> Metoda dizi gönderildiğinde referansın kopyası gönderilir (dizi kopyalanmaz). Yani metot içinde dizi elemanları değiştirilirse orijinal dizi de değişir!</div>`}
+<span class="code-comment">// Kullanım</span>
+<span class="code-keyword">double</span> avg = Average(<span class="code-number">1.0</span>, <span class="code-number">2.0</span>, <span class="code-number">3.0</span>);</pre></div>
+                <div class="tip-box">Dizi bir referans tipidir. Metoda dizi gönderildiğinde referansın kopyası gönderilir, dizi kopyalanmaz!</div>`
+            }
         ]
     },
 
     // ===== TOPIC 4: Sınıflar ve Nesneler =====
     {
-        id: 4, title: "Sınıflar ve Nesneler", subtitle: "Constructor, this, static, readonly, const, Composition, List<T>, Exception Handling",
+        id: 4,
+        title: "Sınıflar ve Nesneler",
+        subtitle: "Constructor, this, static, readonly, Composition, List<T>",
         content: [
-            { title: "🏛️ Sınıf Temelleri, Property ve Erişim Belirleyiciler", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Time1</span>
+            {
+                title: "🏛️ Sınıf Temelleri ve Erişim Belirleyiciler",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Time1</span>
 {
-    <span class="code-comment">// Auto-implemented property'ler</span>
     <span class="code-keyword">public int</span> Hour { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
     <span class="code-keyword">public int</span> Minute { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
     <span class="code-keyword">public int</span> Second { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 
-    <span class="code-comment">// Getter-only auto-property (readonly implicitly)</span>
-    <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; }
-
-    <span class="code-comment">// Manuel property with validation</span>
-    <span class="code-keyword">private int</span> hour;
-    <span class="code-keyword">public int</span> HourManual
-    {
-        <span class="code-keyword">get</span> { <span class="code-keyword">return</span> hour; }
-        <span class="code-keyword">set</span>
-        {
-            <span class="code-keyword">if</span> (value >= <span class="code-number">0</span> && value < <span class="code-number">24</span>)
-                hour = value;
-            <span class="code-keyword">else</span>
-                <span class="code-keyword">throw new</span> <span class="code-type">ArgumentOutOfRangeException</span>();
-        }
-    }
+    <span class="code-keyword">public string</span> <span class="code-method">ToUniversalString</span>() =>
+        $<span class="code-string">"{Hour:D2}:{Minute:D2}:{Second:D2}"</span>;
 }</pre></div>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Modifier</th><th style="padding:8px;border:1px solid var(--border)">Erişim</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">public</span></td><td style="padding:8px;border:1px solid var(--border)">Her yerden</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">private</span></td><td style="padding:8px;border:1px solid var(--border)">Sadece sınıf içinden</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">protected</span></td><td style="padding:8px;border:1px solid var(--border)">Sınıf + türeyen sınıflar</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">internal</span></td><td style="padding:8px;border:1px solid var(--border)">Aynı proje (assembly) içinden</td></tr></table>`},
-            { title: "🔧 Constructor, this ve Constructor Zincirleme", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Time2</span>
+                <ul>
+                    <li><span class="keyword">public</span> → Herkese açık</li>
+                    <li><span class="keyword">private</span> → Sadece sınıf içinden erişilebilir</li>
+                    <li><span class="keyword">protected</span> → Sınıf ve türeyen sınıflardan erişilebilir</li>
+                </ul>`
+            },
+            {
+                title: "🔧 Constructor ve this Anahtar Kelimesi",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Time2</span>
 {
-    <span class="code-keyword">private int</span> hour, minute, second;
+    <span class="code-keyword">private int</span> hour;
+    <span class="code-keyword">private int</span> minute;
+    <span class="code-keyword">private int</span> second;
 
-    <span class="code-comment">// Parametresiz constructor → diğer constructor'ı çağırır</span>
+    <span class="code-comment">// Parametresiz constructor</span>
     <span class="code-keyword">public</span> <span class="code-method">Time2</span>() : <span class="code-keyword">this</span>(<span class="code-number">0</span>, <span class="code-number">0</span>, <span class="code-number">0</span>) { }
 
-    <span class="code-comment">// Tek parametreli</span>
-    <span class="code-keyword">public</span> <span class="code-method">Time2</span>(<span class="code-keyword">int</span> hour) : <span class="code-keyword">this</span>(hour, <span class="code-number">0</span>, <span class="code-number">0</span>) { }
-
-    <span class="code-comment">// Tam parametreli constructor</span>
+    <span class="code-comment">// Parametreli constructor</span>
     <span class="code-keyword">public</span> <span class="code-method">Time2</span>(<span class="code-keyword">int</span> hour, <span class="code-keyword">int</span> minute, <span class="code-keyword">int</span> second)
     {
-        <span class="code-keyword">this</span>.hour = hour;       <span class="code-comment">// this. ile instance variable'a erişim</span>
-        <span class="code-keyword">this</span>.minute = minute;   <span class="code-comment">// parametre ile alanı ayırt eder</span>
+        <span class="code-keyword">this</span>.hour = hour;     <span class="code-comment">// this ile instance variable'a erişim</span>
+        <span class="code-keyword">this</span>.minute = minute;
         <span class="code-keyword">this</span>.second = second;
     }
-
-    <span class="code-comment">// Kopya constructor</span>
-    <span class="code-keyword">public</span> <span class="code-method">Time2</span>(<span class="code-type">Time2</span> time)
-        : <span class="code-keyword">this</span>(time.hour, time.minute, time.second) { }
 }</pre></div>
-<div class="important-box"><strong>Constructor Kuralları:</strong>
-<ul><li>Constructor'lar <strong>kalıtılmaz!</strong></li>
-<li>Hiç constructor yazmazsanız → compiler <strong>varsayılan parametresiz constructor</strong> oluşturur</li>
-<li>En az 1 constructor yazarsanız → compiler varsayılan constructor <strong>oluşturmaz!</strong></li>
-<li><span class="keyword">this(...)</span> ile aynı sınıftaki başka constructor çağrılır (constructor chaining)</li></ul></div>`},
-            { title: "⚡ static Üyeler", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Employee</span>
+                <div class="important-box">Constructor'lar kalıtılmaz! Sınıfta hiç constructor yoksa compiler varsayılan (parametsiz) constructor oluşturur. En az bir constructor tanımlanmışsa varsayılan constructor oluşturulmaz!</div>`
+            },
+            {
+                title: "⚡ static, readonly ve const",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Employee</span>
 {
-    <span class="code-comment">// static: Tüm nesneler tarafından PAYLAŞILIR</span>
     <span class="code-keyword">private static int</span> Count { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; } = <span class="code-number">0</span>;
-
-    <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; }
+    <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; }  <span class="code-comment">// getter-only → implicit readonly</span>
 
     <span class="code-keyword">public</span> <span class="code-method">Employee</span>(<span class="code-keyword">string</span> name)
     {
         Name = name;
         ++Count;  <span class="code-comment">// Her nesne oluşturulduğunda artır</span>
     }
-
-    <span class="code-comment">// static metot - nesne olmadan çağrılır</span>
-    <span class="code-keyword">public static int</span> <span class="code-method">GetCount</span>() => Count;
-}
-
-<span class="code-comment">// Kullanım:</span>
-<span class="code-keyword">var</span> e1 = <span class="code-keyword">new</span> <span class="code-type">Employee</span>(<span class="code-string">"Ali"</span>);
-<span class="code-keyword">var</span> e2 = <span class="code-keyword">new</span> <span class="code-type">Employee</span>(<span class="code-string">"Veli"</span>);
-Console.WriteLine(Employee.GetCount());  <span class="code-comment">// 2 (sınıf adıyla çağrılır)</span></pre></div>
-<div class="important-box"><strong>static metotlar:</strong>
-<ul><li><span class="keyword">this</span> anahtar kelimesini <strong>kullanamaz</strong></li>
-<li>Non-static üyelere <strong>doğrudan erişemez</strong></li>
-<li>Nesne olmadan çağrılabilir: <code>ClassName.Method()</code></li>
-<li>Örnek: <code>Math.Pow()</code>, <code>Console.WriteLine()</code></li></ul></div>`},
-            { title: "🔒 const, readonly ve Getter-only Property", body: `<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Özellik</th><th style="padding:8px;border:1px solid var(--border)"><span class="keyword">const</span></th><th style="padding:8px;border:1px solid var(--border)"><span class="keyword">readonly</span></th><th style="padding:8px;border:1px solid var(--border)">Getter-only Property</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Atanma zamanı</td><td style="padding:8px;border:1px solid var(--border)">Derleme zamanı</td><td style="padding:8px;border:1px solid var(--border)">Constructor'da</td><td style="padding:8px;border:1px solid var(--border)">Constructor'da</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Sonra değişir mi?</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">İmplicit static?</td><td style="padding:8px;border:1px solid var(--border)">✅ Evet</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td><td style="padding:8px;border:1px solid var(--border)">❌ Hayır</td></tr></table>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">const double</span> PI = <span class="code-number">3.14159</span>;  <span class="code-comment">// Derleme zamanında atanmalı</span>
-<span class="code-keyword">readonly int</span> maxSize;        <span class="code-comment">// Constructor'da atanabilir</span>
-<span class="code-keyword">public string</span> Id { <span class="code-keyword">get</span>; }   <span class="code-comment">// Getter-only → implicitly readonly</span></pre></div>`},
-            { title: "🧩 Composition (Has-A) ve List<T>", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Composition: Bir sınıf başka sınıf nesnelerini ALAN olarak içerir</span>
-<span class="code-keyword">public class</span> <span class="code-type">Date</span>
-{
-    <span class="code-keyword">public int</span> Month { <span class="code-keyword">get</span>; }
-    <span class="code-keyword">public int</span> Day { <span class="code-keyword">get</span>; }
-    <span class="code-keyword">public int</span> Year { <span class="code-keyword">get</span>; }
-}
-
+}</pre></div>
+                <ul>
+                    <li><span class="keyword">static</span>: Tüm nesneler tarafından paylaşılır. <code>this</code> kullanılamaz!</li>
+                    <li><span class="keyword">const</span>: Derleme zamanında atanmalı, sonra değiştirilemez</li>
+                    <li><span class="keyword">readonly</span>: Constructor'da atanabilir, sonra değiştirilemez</li>
+                    <li><strong>Getter-only auto-property:</strong> Implicit readonly</li>
+                </ul>`
+            },
+            {
+                title: "🧩 Composition (Has-A) ve List<T>",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Composition: Bir sınıf başka sınıf nesnelerini içerir</span>
 <span class="code-keyword">public class</span> <span class="code-type">Employee</span>
 {
-    <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; }
-    <span class="code-keyword">public</span> <span class="code-type">Date</span> BirthDate { <span class="code-keyword">get</span>; }  <span class="code-comment">// Employee HAS-A Date</span>
-    <span class="code-keyword">public</span> <span class="code-type">Date</span> HireDate { <span class="code-keyword">get</span>; }   <span class="code-comment">// Employee HAS-A Date</span>
+    <span class="code-keyword">public</span> <span class="code-type">Date</span> BirthDate { <span class="code-keyword">get</span>; }
+    <span class="code-keyword">public</span> <span class="code-type">Date</span> HireDate { <span class="code-keyword">get</span>; }
 }
 
-<span class="code-comment">// ═══ List&lt;T&gt; (Generic koleksiyon) ═══</span>
-<span class="code-keyword">var</span> items = <span class="code-keyword">new</span> <span class="code-type">List</span>&lt;<span class="code-keyword">string</span>&gt;{ <span class="code-string">"elma"</span>, <span class="code-string">"armut"</span> };
-
-items.Add(<span class="code-string">"muz"</span>);           <span class="code-comment">// Sona ekle</span>
-items.Insert(<span class="code-number">0</span>, <span class="code-string">"çilek"</span>);    <span class="code-comment">// İndekse ekle</span>
-items.Remove(<span class="code-string">"armut"</span>);       <span class="code-comment">// Değere göre sil</span>
-items.RemoveAt(<span class="code-number">0</span>);           <span class="code-comment">// İndekse göre sil</span>
-<span class="code-keyword">bool</span> has = items.Contains(<span class="code-string">"muz"</span>); <span class="code-comment">// Arama</span>
-<span class="code-keyword">int</span> count = items.Count;      <span class="code-comment">// Eleman sayısı (Length değil!)</span>
-<span class="code-keyword">int</span> cap = items.Capacity;     <span class="code-comment">// Kapasite</span></pre></div>
-<div class="tip-box"><span class="keyword">List&lt;T&gt;</span> dinamik boyutludur (diziden farklı olarak). <span class="keyword">Count</span> mevcut eleman sayısı, <span class="keyword">Capacity</span> yeniden boyutlandırma olmadan tutabileceği eleman sayısıdır.</div>`},
-            { title: "🛡️ Exception Handling (try-catch)", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">try</span>
-{
-    Console.Write(<span class="code-string">"Sayı girin: "</span>);
-    <span class="code-keyword">int</span> num = <span class="code-keyword">int</span>.Parse(Console.ReadLine());
-    <span class="code-keyword">int</span> result = <span class="code-number">100</span> / num;
-}
-<span class="code-keyword">catch</span> (<span class="code-type">FormatException</span> ex)
-{
-    Console.WriteLine(<span class="code-string">"Geçersiz format!"</span>);
-}
-<span class="code-keyword">catch</span> (<span class="code-type">DivideByZeroException</span> ex)
-{
-    Console.WriteLine(<span class="code-string">"Sıfıra bölünemez!"</span>);
-}
-<span class="code-keyword">finally</span>
-{
-    Console.WriteLine(<span class="code-string">"Her durumda çalışır"</span>);
-}</pre></div>
-<div class="important-box"><span class="keyword">try</span> bloğunda tanımlanan değişkenler <span class="keyword">catch</span> bloğunda erişilemez! (farklı scope)</div>`}
+<span class="code-comment">// List&lt;T&gt; kullanımı</span>
+<span class="code-keyword">var</span> items = <span class="code-keyword">new</span> <span class="code-type">List</span>&lt;<span class="code-keyword">string</span>&gt; { <span class="code-string">"a"</span>, <span class="code-string">"b"</span>, <span class="code-string">"c"</span> };
+items.Add(<span class="code-string">"d"</span>);        <span class="code-comment">// Eleman ekle</span>
+items.Remove(<span class="code-string">"b"</span>);     <span class="code-comment">// Eleman sil</span>
+items.Insert(<span class="code-number">0</span>, <span class="code-string">"x"</span>); <span class="code-comment">// İndekse ekle</span>
+<span class="code-keyword">int</span> cnt = items.Count;  <span class="code-comment">// Eleman sayısı</span></pre></div>
+                <div class="tip-box">Exception handling: <span class="keyword">try-catch</span> bloğu ile hataları yakalayın. <span class="keyword">try</span> bloğunda tanımlanan değişkenler <span class="keyword">catch</span> bloğunda erişilemez!</div>`
+            }
         ]
     },
 
-    // ===== TOPIC 5: Kalıtım (FİNAL AĞIRLIKLI) =====
+    // ===== TOPIC 5: Kalıtım (PRIORITY HIGH) =====
     {
-        id: 5, title: "Kalıtım (Inheritance) 🔥", subtitle: "base, virtual, override, protected — FİNALDE AĞIRLIKLI",
+        id: 5,
+        title: "Kalıtım (Inheritance)",
+        subtitle: "base, virtual, override, protected — FİNALDE AĞIRLIKLI",
         content: [
-            { title: "🧬 Kalıtım Kavramı ve Terminoloji", body: `<p>Kalıtım (Inheritance), mevcut bir sınıfın üyelerini yeni bir sınıfa aktarır. <strong>is-a</strong> ilişkisini temsil eder.</p>
-<ul><li><strong>Base class (Taban/Üst sınıf):</strong> Kalıtım veren sınıf</li>
-<li><strong>Derived class (Türeyen/Alt sınıf):</strong> Kalıtım alan sınıf</li>
-<li><strong>Direct base class:</strong> Doğrudan kalıtım alınan sınıf</li>
-<li><strong>Indirect base class:</strong> Hiyerarşide daha yukarıdaki sınıf</li>
-<li>Tüm sınıflar doğrudan veya dolaylı olarak <span class="keyword">object</span> sınıfından türer</li></ul>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Taban sınıf</span>
-<span class="code-keyword">public class</span> <span class="code-type">CommissionEmployee</span>
+            {
+                title: "🧬 Kalıtım Temelleri",
+                body: `<p>Kalıtım, mevcut bir sınıfın üyelerini yeni bir sınıfa aktarır. <strong>is-a</strong> ilişkisini temsil eder.</p>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">CommissionEmployee</span>
 {
     <span class="code-keyword">public string</span> FirstName { <span class="code-keyword">get</span>; }
     <span class="code-keyword">public string</span> LastName { <span class="code-keyword">get</span>; }
@@ -445,92 +336,85 @@ items.RemoveAt(<span class="code-number">0</span>);           <span class="code-
         CommissionRate = rate;
     }
 
-    <span class="code-comment">// virtual: Türeyen sınıflarda override edilebilir</span>
     <span class="code-keyword">public virtual decimal</span> <span class="code-method">Earnings</span>()
         => GrossSales * CommissionRate;
 
-    <span class="code-comment">// object.ToString() zaten virtual, override ediyoruz</span>
     <span class="code-keyword">public override string</span> <span class="code-method">ToString</span>()
-        => $<span class="code-string">"{FirstName} {LastName}\n"</span>
-         + $<span class="code-string">"gross sales: {GrossSales:C}\n"</span>
-         + $<span class="code-string">"commission rate: {CommissionRate:F2}"</span>;
-}</pre></div>`},
-            { title: "🔗 Türeyen Sınıf: base Anahtar Kelimesi", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// : ile kalıtım alınır</span>
-<span class="code-keyword">public class</span> <span class="code-type">BasePlusCommissionEmployee</span> : <span class="code-type">CommissionEmployee</span>
+        => $<span class="code-string">"{FirstName} {LastName}"</span>;
+}</pre></div>
+                <ul>
+                    <li><strong>Doğrudan (direct) taban sınıf:</strong> Türeyen sınıfın doğrudan kalıtım aldığı sınıf</li>
+                    <li><strong>Dolaylı (indirect) taban sınıf:</strong> Hiyerarşide daha yukarıdaki sınıflar</li>
+                    <li>Hiyerarşi <span class="keyword">object</span> sınıfı ile başlar</li>
+                </ul>`
+            },
+            {
+                title: "🔗 Türeyen Sınıf ve base Anahtar Kelimesi",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">BasePlusCommissionEmployee</span> : <span class="code-type">CommissionEmployee</span>
 {
     <span class="code-keyword">public decimal</span> BaseSalary { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 
-    <span class="code-comment">// base() ile taban sınıf constructor'ını çağır</span>
+    <span class="code-comment">// base ile taban sınıf constructor'ını çağır</span>
     <span class="code-keyword">public</span> <span class="code-method">BasePlusCommissionEmployee</span>(<span class="code-keyword">string</span> first,
         <span class="code-keyword">string</span> last, <span class="code-keyword">decimal</span> sales, <span class="code-keyword">decimal</span> rate,
         <span class="code-keyword">decimal</span> salary)
-        : <span class="code-keyword">base</span>(first, last, sales, rate)  <span class="code-comment">// ← Taban constructor çağrısı</span>
+        : <span class="code-keyword">base</span>(first, last, sales, rate)
     {
         BaseSalary = salary;
     }
 
-    <span class="code-comment">// override: Taban sınıf virtual/abstract metodunu yeniden tanımla</span>
+    <span class="code-comment">// base.Earnings() ile taban sınıf metodunu çağır</span>
     <span class="code-keyword">public override decimal</span> <span class="code-method">Earnings</span>()
-        => BaseSalary + <span class="code-keyword">base</span>.Earnings();  <span class="code-comment">// ← Taban metodu çağır</span>
+        => BaseSalary + <span class="code-keyword">base</span>.Earnings();
 
     <span class="code-keyword">public override string</span> <span class="code-method">ToString</span>()
-        => $<span class="code-string">"base-salaried {base.ToString()}\n"</span>  <span class="code-comment">// ← Taban ToString</span>
-         + $<span class="code-string">"base salary: {BaseSalary:C}"</span>;
+        => $<span class="code-string">"base salary: {BaseSalary} + {base.ToString()}"</span>;
 }</pre></div>
-<div class="important-box"><strong>ÇOK ÖNEMLİ KURALLAR:</strong>
-<ul><li><span class="keyword">base(...)</span> ile taban sınıf constructor'ı <strong>mutlaka</strong> çağrılmalı (explicit veya implicit)</li>
-<li>Taban sınıfın <span class="keyword">private</span> üyelerine türeyen sınıftan <strong>doğrudan erişilemez!</strong> Public property'ler üzerinden erişilir</li>
-<li><span class="keyword">protected</span> üyeler: Sınıf içinden VE türeyen sınıflardan erişilebilir, dışarıdan erişilemez</li>
-<li>Constructor'lar <strong>ASLA</strong> kalıtılmaz!</li>
-<li>Constructor çağrı sırası: Önce en üstteki taban sınıf, sonra aşağıya doğru</li></ul></div>`},
-            { title: "🔑 virtual, override ve Metot İmzası", body: `<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Anahtar Kelime</th><th style="padding:8px;border:1px solid var(--border)">Kullanım Yeri</th><th style="padding:8px;border:1px solid var(--border)">Açıklama</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">virtual</span></td><td style="padding:8px;border:1px solid var(--border)">Taban sınıf</td><td style="padding:8px;border:1px solid var(--border)">Metodu override edilebilir yapar (gövdesi VAR)</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">abstract</span></td><td style="padding:8px;border:1px solid var(--border)">Abstract sınıf</td><td style="padding:8px;border:1px solid var(--border)">Gövdesi YOK, türeyen ZORUNLU override eder</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">override</span></td><td style="padding:8px;border:1px solid var(--border)">Türeyen sınıf</td><td style="padding:8px;border:1px solid var(--border)">Taban sınıf virtual/abstract metodu yeniden tanımlar</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">sealed</span></td><td style="padding:8px;border:1px solid var(--border)">Türeyen sınıf</td><td style="padding:8px;border:1px solid var(--border)">Override edilen metodu daha alt sınıflarda override edilmez yapar</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">new</span></td><td style="padding:8px;border:1px solid var(--border)">Türeyen sınıf</td><td style="padding:8px;border:1px solid var(--border)">Taban sınıf metodu gizler (hiding - tavsiye edilmez)</td></tr></table>
-<div class="tip-box"><strong>Override kuralı:</strong> Override eden metot, taban sınıf metodu ile <strong>aynı imzaya</strong> (ad, parametre sayısı/tipleri, dönüş tipi) sahip olmalıdır. <span class="keyword">override</span> modifier'ı, metodu implicitly <span class="keyword">virtual</span> yapar.</div>`},
-            { title: "🔗 Constructor Zincirleme Sırası", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">class</span> <span class="code-type">A</span>
-{
-    <span class="code-keyword">public</span> <span class="code-method">A</span>() { Console.Write(<span class="code-string">"A "</span>); }
-}
-
-<span class="code-keyword">class</span> <span class="code-type">B</span> : <span class="code-type">A</span>
-{
-    <span class="code-keyword">public</span> <span class="code-method">B</span>() { Console.Write(<span class="code-string">"B "</span>); }
-}
-
-<span class="code-keyword">class</span> <span class="code-type">C</span> : <span class="code-type">B</span>
-{
-    <span class="code-keyword">public</span> <span class="code-method">C</span>() { Console.Write(<span class="code-string">"C "</span>); }
-}
-
-<span class="code-comment">// new C(); → Çıktı: "A B C"</span>
-<span class="code-comment">// Önce en üstteki taban sınıf constructor'ı çalışır!</span></pre></div>
-<div class="important-box">Constructor çalışma sırası: Hiyerarşinin <strong>en tepesinden</strong> başlar, aşağıya doğru iner. Yani: object → A → B → C</div>`}
+                <div class="important-box">
+                    <ul>
+                        <li><span class="keyword">base</span> ile taban sınıf constructor ve metotlarına erişilir</li>
+                        <li>Taban sınıf <span class="keyword">private</span> üyelerine doğrudan erişilemez, <span class="keyword">public</span> property'ler üzerinden erişilir</li>
+                        <li>Constructor'lar kalıtılmaz! Her constructor kendi taban sınıf constructor'ını çağırmalıdır</li>
+                    </ul>
+                </div>`
+            },
+            {
+                title: "🔑 virtual, override ve Erişim Seviyeleri",
+                body: `<ul>
+                    <li><span class="keyword">virtual</span>: Taban sınıfta metodu override edilebilir olarak işaretler</li>
+                    <li><span class="keyword">override</span>: Türeyen sınıfta taban sınıf metodunu yeniden tanımlar</li>
+                    <li><span class="keyword">protected</span>: Sınıf ve türeyen sınıflardan erişilebilir, dışarıdan erişilemez</li>
+                    <li><span class="keyword">private</span> üyeler kalıtılır ama doğrudan erişilemez</li>
+                </ul>
+                <div class="tip-box"><span class="keyword">ToString()</span> metodu <span class="keyword">object</span> sınıfından kalıtılır. Override etmek için imza (ad, parametreler, dönüş tipi) aynı olmalıdır.</div>`
+            }
         ]
     },
 
-    // ===== TOPIC 6: Çok Biçimlilik (FİNAL AĞIRLIKLI) =====
+    // ===== TOPIC 6: Çok Biçimlilik (PRIORITY HIGH) =====
     {
-        id: 6, title: "Çok Biçimlilik (Polymorphism) 🔥", subtitle: "abstract, sealed, casting, as/is — FİNALDE AĞIRLIKLI",
+        id: 6,
+        title: "Çok Biçimlilik (Polymorphism)",
+        subtitle: "abstract, sealed, upcasting, downcasting — FİNALDE AĞIRLIKLI",
         content: [
-            { title: "🎭 Polimorfizm Kavramı", body: `<p>Polymorphism, aynı taban sınıfı paylaşan farklı türdeki nesnelerin, taban sınıf referansı üzerinden işlenmesidir. Her nesne <strong>kendi versiyonunu</strong> çalıştırır.</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Taban sınıf dizisi ile polimorfik kullanım</span>
-<span class="code-type">Employee</span>[] employees = {
-    <span class="code-keyword">new</span> <span class="code-type">SalariedEmployee</span>(<span class="code-string">"Ali"</span>, <span class="code-string">"Veli"</span>, <span class="code-number">800</span>),
-    <span class="code-keyword">new</span> <span class="code-type">HourlyEmployee</span>(<span class="code-string">"Ayşe"</span>, <span class="code-string">"Kaya"</span>, <span class="code-number">16.75M</span>, <span class="code-number">40</span>),
-    <span class="code-keyword">new</span> <span class="code-type">CommissionEmployee</span>(<span class="code-string">"Mehmet"</span>, <span class="code-string">"Can"</span>, <span class="code-number">10000</span>, <span class="code-number">0.06M</span>)
-};
+            {
+                title: "🎭 Çok Biçimlilik Kavramı",
+                body: `<p>Polymorphism, aynı taban sınıfı paylaşan nesneleri taban sınıf nesneleri gibi işlemenizi sağlar.</p>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Taban sınıf referansı ile türeyen sınıf nesnesi tutma</span>
+<span class="code-type">SpaceObject</span>[] arr = <span class="code-keyword">new</span> <span class="code-type">SpaceObject</span>[<span class="code-number">5</span>];
+arr[<span class="code-number">0</span>] = <span class="code-keyword">new</span> <span class="code-type">Martian</span>();
+arr[<span class="code-number">1</span>] = <span class="code-keyword">new</span> <span class="code-type">Venusian</span>();
+arr[<span class="code-number">2</span>] = <span class="code-keyword">new</span> <span class="code-type">SpaceShip</span>();
 
-<span class="code-comment">// Runtime'da her nesne KENDİ Earnings() metodunu çağırır</span>
-<span class="code-keyword">foreach</span> (<span class="code-type">Employee</span> emp <span class="code-keyword">in</span> employees)
+<span class="code-comment">// Polimorfik çağrı - her nesne kendi Draw'ını çağırır</span>
+<span class="code-keyword">foreach</span> (<span class="code-type">SpaceObject</span> obj <span class="code-keyword">in</span> arr)
 {
-    Console.WriteLine(emp);            <span class="code-comment">// Polimorfik ToString()</span>
-    Console.WriteLine(emp.Earnings()); <span class="code-comment">// Polimorfik Earnings()</span>
-}</pre></div>
-<div class="tip-box"><strong>Polimorfizmin avantajı:</strong> Yeni alt sınıf eklendiğinde mevcut kodu değiştirmek gerekmez. foreach döngüsü olduğu gibi çalışmaya devam eder → <strong>genişletilebilirlik (extensibility)</strong></div>`},
-            { title: "🔷 Abstract Sınıflar ve Metotlar", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public abstract class</span> <span class="code-type">Employee</span>
+    obj.Draw();  <span class="code-comment">// Runtime'da doğru metot çağrılır</span>
+}</pre></div>`
+            },
+            {
+                title: "🔷 Abstract Sınıflar ve Metotlar",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public abstract class</span> <span class="code-type">Employee</span>
 {
     <span class="code-keyword">public string</span> FirstName { <span class="code-keyword">get</span>; }
     <span class="code-keyword">public string</span> LastName { <span class="code-keyword">get</span>; }
@@ -541,222 +425,152 @@ items.RemoveAt(<span class="code-number">0</span>);           <span class="code-
         LastName = last;
     }
 
-    <span class="code-comment">// Abstract metot: Gövdesi YOK!</span>
+    <span class="code-comment">// Abstract metot: Gövdesi YOK, türeyen sınıf ZORUNLU override eder</span>
     <span class="code-keyword">public abstract decimal</span> <span class="code-method">Earnings</span>();
 
-    <span class="code-comment">// Concrete (gövdeli) metot da olabilir</span>
     <span class="code-keyword">public override string</span> <span class="code-method">ToString</span>()
         => $<span class="code-string">"{FirstName} {LastName}"</span>;
 }
 
-<span class="code-comment">// ═══ Concrete (somut) sınıflar ═══</span>
 <span class="code-keyword">public class</span> <span class="code-type">SalariedEmployee</span> : <span class="code-type">Employee</span>
 {
     <span class="code-keyword">public decimal</span> WeeklySalary { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 
-    <span class="code-keyword">public</span> <span class="code-method">SalariedEmployee</span>(<span class="code-keyword">string</span> f, <span class="code-keyword">string</span> l, <span class="code-keyword">decimal</span> s)
-        : <span class="code-keyword">base</span>(f, l) { WeeklySalary = s; }
+    <span class="code-keyword">public</span> <span class="code-method">SalariedEmployee</span>(<span class="code-keyword">string</span> first, <span class="code-keyword">string</span> last,
+        <span class="code-keyword">decimal</span> salary) : <span class="code-keyword">base</span>(first, last)
+    {
+        WeeklySalary = salary;
+    }
 
     <span class="code-keyword">public override decimal</span> <span class="code-method">Earnings</span>() => WeeklySalary;
-}
-
-<span class="code-keyword">public class</span> <span class="code-type">HourlyEmployee</span> : <span class="code-type">Employee</span>
-{
-    <span class="code-keyword">public decimal</span> Wage { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-    <span class="code-keyword">public decimal</span> Hours { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-
-    <span class="code-keyword">public</span> <span class="code-method">HourlyEmployee</span>(<span class="code-keyword">string</span> f, <span class="code-keyword">string</span> l,
-        <span class="code-keyword">decimal</span> w, <span class="code-keyword">decimal</span> h) : <span class="code-keyword">base</span>(f, l)
-    {
-        Wage = w; Hours = h;
-    }
-
-    <span class="code-keyword">public override decimal</span> <span class="code-method">Earnings</span>()
-    {
-        <span class="code-keyword">if</span> (Hours <= <span class="code-number">40</span>)
-            <span class="code-keyword">return</span> Wage * Hours;
-        <span class="code-keyword">else</span>
-            <span class="code-keyword">return</span> <span class="code-number">40</span> * Wage + (Hours - <span class="code-number">40</span>) * Wage * <span class="code-number">1.5M</span>;
-    }
 }</pre></div>
-<div class="important-box"><strong>Abstract sınıf kuralları:</strong>
-<ul><li><span class="keyword">new</span> ile <strong>oluşturulamaz!</strong> (instantiate edilemez)</li>
-<li>Abstract metot/property içeren sınıf <strong>mutlaka abstract</strong> olmalı</li>
-<li>Abstract metotlar implicitly <span class="keyword">virtual</span>'dır</li>
-<li>Constructor ve static metotlar <strong>abstract/virtual olamaz</strong></li>
-<li>Concrete sınıflar tüm abstract üyeleri <strong>override etmek zorunda</strong></li>
-<li>Abstract sınıflar constructor tanımlayabilir (türeyen sınıflar base ile çağırır)</li>
-<li>Abstract sınıf referansları, concrete türeyen sınıf nesnelerini tutabilir</li></ul></div>`},
-            { title: "🔒 sealed Sınıf ve Metot", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// sealed sınıf: Kalıtılamaz (hiçbir sınıf bundan türeyemez)</span>
-<span class="code-keyword">public sealed class</span> <span class="code-type">FinalClass</span> { }
-<span class="code-comment">// class Child : FinalClass { }  → DERLEME HATASI!</span>
-<span class="code-comment">// Örnek: string sınıfı sealed'dır</span>
+                <div class="important-box">
+                    <ul>
+                        <li>Abstract sınıflar <strong>new ile oluşturulamaz!</strong></li>
+                        <li>Abstract metot/property içeren sınıf <strong>mutlaka</strong> abstract olmalı</li>
+                        <li>Abstract metotlar implicitly <span class="keyword">virtual</span>'dır</li>
+                        <li>Constructor ve static metotlar abstract/virtual olamaz</li>
+                        <li>Concrete (somut) sınıflar tüm abstract üyeleri override etmeli</li>
+                    </ul>
+                </div>`
+            },
+            {
+                title: "🔒 sealed ve Tür Dönüşümleri",
+                body: `<ul>
+                    <li><span class="keyword">sealed</span> metot: Override edilemez</li>
+                    <li><span class="keyword">sealed</span> sınıf: Kalıtılamaz (örn: <span class="keyword">string</span>)</li>
+                    <li><span class="keyword">private</span> ve <span class="keyword">static</span> metotlar implicitly sealed'dır</li>
+                    <li><span class="keyword">override sealed</span>: Override eder ama daha aşağıda override edilemez</li>
+                </ul>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Upcasting (güvenli - implicit)</span>
+<span class="code-type">Employee</span> emp = <span class="code-keyword">new</span> <span class="code-type">SalariedEmployee</span>(<span class="code-string">"Ali"</span>, <span class="code-string">"Veli"</span>, <span class="code-number">1000</span>);
 
-<span class="code-comment">// sealed metot: Override edilemez (daha alt sınıflarda)</span>
-<span class="code-keyword">public class</span> <span class="code-type">B</span> : <span class="code-type">A</span>
-{
-    <span class="code-keyword">public sealed override void</span> <span class="code-method">Method</span>()
-    {
-        <span class="code-comment">// A'dan override eder AMA daha alt sınıflar bunu override edemez</span>
-    }
-}</pre></div>
-<ul><li><span class="keyword">private</span> metotlar implicitly sealed'dır</li>
-<li><span class="keyword">static</span> metotlar implicitly sealed'dır</li>
-<li>sealed metot çağrıları <strong>static binding</strong> ile çözülür (derleme zamanında)</li></ul>`},
-            { title: "🔄 Tür Dönüşümleri: Upcasting ve Downcasting", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// ═══ UPCASTING (Güvenli - implicit) ═══</span>
-<span class="code-comment">// Türeyen sınıf referansı → Taban sınıf değişkenine</span>
-<span class="code-type">Employee</span> emp = <span class="code-keyword">new</span> <span class="code-type">SalariedEmployee</span>(<span class="code-string">"Ali"</span>, <span class="code-string">"V"</span>, <span class="code-number">5000</span>);
-<span class="code-comment">// ✅ Her SalariedEmployee bir Employee'dir</span>
+<span class="code-comment">// Downcasting (tehlikeli - explicit cast gerekir)</span>
+<span class="code-type">SalariedEmployee</span> sal = (<span class="code-type">SalariedEmployee</span>)emp;  <span class="code-comment">// InvalidCastException riski!</span>
 
-<span class="code-comment">// ═══ DOWNCASTING (Tehlikeli - explicit cast gerekli) ═══</span>
-<span class="code-comment">// Taban sınıf referansı → Türeyen sınıf değişkenine</span>
-<span class="code-type">SalariedEmployee</span> sal = (<span class="code-type">SalariedEmployee</span>)emp;
-<span class="code-comment">// ⚠️ Eğer emp gerçekten SalariedEmployee değilse → InvalidCastException!</span>
-
-<span class="code-comment">// ═══ GÜVENLİ DOWNCASTING: as operatörü ═══</span>
+<span class="code-comment">// Güvenli downcasting: as operatörü</span>
 <span class="code-type">SalariedEmployee</span> sal2 = emp <span class="code-keyword">as</span> <span class="code-type">SalariedEmployee</span>;
-<span class="code-keyword">if</span> (sal2 != <span class="code-keyword">null</span>)
-{
-    Console.WriteLine(sal2.WeeklySalary);  <span class="code-comment">// Güvenle kullan</span>
-}
+<span class="code-keyword">if</span> (sal2 != <span class="code-keyword">null</span>) { <span class="code-comment">/* güvenle kullan */</span> }
 
-<span class="code-comment">// ═══ is operatörü ═══</span>
-<span class="code-keyword">if</span> (emp <span class="code-keyword">is</span> <span class="code-type">SalariedEmployee</span>)
-{
-    <span class="code-type">SalariedEmployee</span> s = (<span class="code-type">SalariedEmployee</span>)emp;  <span class="code-comment">// Güvenle cast</span>
-}
-
-<span class="code-comment">// ═══ GetType() ═══</span>
-Console.WriteLine(emp.GetType());       <span class="code-comment">// SalariedEmployee</span>
-Console.WriteLine(emp.GetType().Name);  <span class="code-comment">// SalariedEmployee</span></pre></div>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Atama</th><th style="padding:8px;border:1px solid var(--border)">Sonuç</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Taban → Taban</td><td style="padding:8px;border:1px solid var(--border)">✅ Normal</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Türeyen → Türeyen</td><td style="padding:8px;border:1px solid var(--border)">✅ Normal</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Türeyen → Taban (Upcasting)</td><td style="padding:8px;border:1px solid var(--border)">✅ Güvenli, implicit</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Taban → Türeyen (Downcasting)</td><td style="padding:8px;border:1px solid var(--border)">⚠️ Derleme hatası! Explicit cast gerekir</td></tr></table>`}
+<span class="code-comment">// GetType() ile tür kontrolü</span>
+Console.WriteLine(emp.GetType());  <span class="code-comment">// SalariedEmployee</span></pre></div>
+                <div class="tip-box">
+                    <ul>
+                        <li>Türeyen → Taban: Güvenli (implicit)</li>
+                        <li>Taban → Türeyen: Derleme hatası, explicit cast gerekir</li>
+                        <li><span class="keyword">as</span> operatörü: Geçersiz cast'de exception yerine <span class="keyword">null</span> döner</li>
+                    </ul>
+                </div>`
+            }
         ]
     },
 
-    // ===== TOPIC 7: Arayüzler (FİNAL AĞIRLIKLI) =====
+    // ===== TOPIC 7: Arayüzler (PRIORITY HIGH) =====
     {
-        id: 7, title: "Arayüzler (Interfaces) 🔥", subtitle: "interface, IComparable, IPayable — FİNALDE AĞIRLIKLI",
+        id: 7,
+        title: "Arayüzler (Interfaces)",
+        subtitle: "interface, IComparable, IPayable — FİNALDE AĞIRLIKLI",
         content: [
-            { title: "🔌 Interface Tanımı ve Kullanımı", body: `<p>Interface, sınıfların <strong>uygulaması gereken</strong> public servisleri (metot ve property) belirtir. Sözleşme (contract) gibi düşünülebilir.</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Interface tanımı - gövde YOK!</span>
+            {
+                title: "🔌 Interface Kavramı",
+                body: `<p>Interface'ler sınıfların <strong>uygulaması gereken</strong> public servisleri (metot ve property) belirtir.</p>
+                <div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Interface tanımı</span>
 <span class="code-keyword">public interface</span> <span class="code-type">IPayable</span>
 {
-    <span class="code-keyword">decimal</span> <span class="code-method">GetPaymentAmount</span>();  <span class="code-comment">// Sadece imza</span>
+    <span class="code-keyword">decimal</span> <span class="code-method">GetPaymentAmount</span>();  <span class="code-comment">// gövde yok!</span>
 }
 
-<span class="code-comment">// Interface uygulayan sınıf</span>
+<span class="code-comment">// Interface uygulama</span>
 <span class="code-keyword">public class</span> <span class="code-type">Invoice</span> : <span class="code-type">IPayable</span>
 {
     <span class="code-keyword">public string</span> PartDescription { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
     <span class="code-keyword">public decimal</span> PricePerItem { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
     <span class="code-keyword">public int</span> Quantity { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 
-    <span class="code-comment">// Interface metodunu UYGULAMAK ZORUNLU</span>
     <span class="code-keyword">public decimal</span> <span class="code-method">GetPaymentAmount</span>()
         => Quantity * PricePerItem;
 }
 
-<span class="code-comment">// Employee sınıfı da IPayable uygulayabilir</span>
-<span class="code-keyword">public abstract class</span> <span class="code-type">Employee</span> : <span class="code-type">IPayable</span>
+<span class="code-comment">// Hem sınıftan kalıtım hem interface uygulama</span>
+<span class="code-keyword">public class</span> <span class="code-type">SalariedEmployee</span> : <span class="code-type">Employee</span>, <span class="code-type">IPayable</span>
 {
-    <span class="code-keyword">public abstract decimal</span> <span class="code-method">Earnings</span>();
-
-    <span class="code-keyword">public decimal</span> <span class="code-method">GetPaymentAmount</span>()
-        => Earnings();  <span class="code-comment">// Interface metodu abstract metodu çağırır</span>
-}
-
-<span class="code-comment">// ═══ Polimorfik kullanım ═══</span>
-<span class="code-type">IPayable</span>[] payables = {
-    <span class="code-keyword">new</span> <span class="code-type">Invoice</span>(<span class="code-string">"Vida"</span>, <span class="code-number">2.50M</span>, <span class="code-number">100</span>),
-    <span class="code-keyword">new</span> <span class="code-type">SalariedEmployee</span>(<span class="code-string">"Ali"</span>, <span class="code-string">"V"</span>, <span class="code-number">5000</span>)
-};
-
-<span class="code-keyword">foreach</span> (<span class="code-type">IPayable</span> p <span class="code-keyword">in</span> payables)
-    Console.WriteLine(p.GetPaymentAmount());  <span class="code-comment">// Polimorfik!</span></pre></div>`},
-            { title: "📋 Interface vs Abstract Sınıf — Kritik Farklar", body: `<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:10px;border:1px solid var(--border)">Özellik</th><th style="padding:10px;border:1px solid var(--border)">Interface</th><th style="padding:10px;border:1px solid var(--border)">Abstract Sınıf</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Default uygulama</td><td style="padding:8px;border:1px solid var(--border)">❌ Yok</td><td style="padding:8px;border:1px solid var(--border)">✅ Olabilir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Çoklu kalıtım</td><td style="padding:8px;border:1px solid var(--border)">✅ Birden fazla uygulanabilir</td><td style="padding:8px;border:1px solid var(--border)">❌ Sadece bir tane</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Constructor</td><td style="padding:8px;border:1px solid var(--border)">❌ Yok</td><td style="padding:8px;border:1px solid var(--border)">✅ Olabilir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Alanlar (fields)</td><td style="padding:8px;border:1px solid var(--border)">❌ Yok</td><td style="padding:8px;border:1px solid var(--border)">✅ Olabilir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Erişim belirleyici</td><td style="padding:8px;border:1px solid var(--border)">Hepsi public (implicit)</td><td style="padding:8px;border:1px solid var(--border)">Her türlü olabilir</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)">Ne zaman?</td><td style="padding:8px;border:1px solid var(--border)">İlişkisiz sınıflar arasında ortak davranış</td><td style="padding:8px;border:1px solid var(--border)">İlişkili sınıflar için ortak temel</td></tr></table>
-<div class="important-box"><strong>C#'da çoklu kalıtım YOKTUR!</strong> Bir sınıf sadece bir sınıftan kalıtım alabilir. Ancak birden fazla interface uygulayabilir. Sıralama: <code>class A : BaseClass, IInterface1, IInterface2</code> (sınıf adı ÖNCE!)</div>`},
-            { title: "📊 IComparable<T> ve Sıralama", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Employee</span> : <span class="code-type">IComparable</span>&lt;<span class="code-type">Employee</span>&gt;
+    <span class="code-keyword">public decimal</span> <span class="code-method">GetPaymentAmount</span>() => Earnings();
+}</pre></div>
+                <div class="important-box">
+                    <ul>
+                        <li>Interface'ler <span class="keyword">default implementation</span> sağlamaz (abstract sınıflar sağlayabilir)</li>
+                        <li>Bir sınıf <strong>birden fazla</strong> interface uygulayabilir: <code>ClassName : Interface1, Interface2</code></li>
+                        <li>Hem sınıf hem interface varsa: <code>ClassName : BaseClass, Interface1</code> (sınıf önce!)</li>
+                        <li>Tüm metot ve property'ler implement edilmeli</li>
+                    </ul>
+                </div>`
+            },
+            {
+                title: "📊 IComparable ve Sıralama",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Employee</span> : <span class="code-type">IComparable</span>&lt;<span class="code-type">Employee</span>&gt;
 {
     <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-    <span class="code-keyword">public decimal</span> Salary { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
     <span class="code-keyword">public</span> <span class="code-type">DateTime</span> BirthDate { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 
-    <span class="code-comment">// IComparable&lt;T&gt; uygulaması - ZORUNLU</span>
+    <span class="code-comment">// IComparable&lt;T&gt; uygulaması</span>
     <span class="code-keyword">public int</span> <span class="code-method">CompareTo</span>(<span class="code-type">Employee</span> other)
     {
-        <span class="code-comment">// Negatif: this küçük, 0: eşit, Pozitif: this büyük</span>
         <span class="code-keyword">return</span> BirthDate.CompareTo(other.BirthDate);
     }
 }
 
-<span class="code-comment">// Kullanım:</span>
+<span class="code-comment">// Kullanım</span>
 <span class="code-type">Employee</span>[] employees = { emp1, emp2, emp3 };
-Array.Sort(employees);  <span class="code-comment">// CompareTo metodunu otomatik kullanır</span>
-
-<span class="code-comment">// IComparer: Dış sınıf ile sıralama</span>
-<span class="code-keyword">public class</span> <span class="code-type">SalaryComparer</span> : <span class="code-type">IComparer</span>&lt;<span class="code-type">Employee</span>&gt;
-{
-    <span class="code-keyword">public int</span> <span class="code-method">Compare</span>(<span class="code-type">Employee</span> x, <span class="code-type">Employee</span> y)
-        => x.Salary.CompareTo(y.Salary);
-}
-Array.Sort(employees, <span class="code-keyword">new</span> <span class="code-type">SalaryComparer</span>());</pre></div>
-<div class="tip-box"><span class="keyword">IComparable&lt;T&gt;</span>: Sınıfın kendi içinde karşılaştırma (natural ordering). <span class="keyword">IComparer&lt;T&gt;</span>: Dış sınıf ile farklı kriterlere göre sıralama.</div>`},
-            { title: "🔗 Çoklu Kalıtım Problemi ve Çözüm", body: `<p>C#'da çoklu sınıf kalıtımı yasaktır, ancak interface ile çözülür:</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Payable interface</span>
-<span class="code-keyword">public interface</span> <span class="code-type">IPayable</span>
-{
-    <span class="code-keyword">void</span> <span class="code-method">Pay</span>();
-}
-
-<span class="code-comment">// Employee abstract sınıfı</span>
-<span class="code-keyword">public abstract class</span> <span class="code-type">Employee</span> : <span class="code-type">IPayable</span>, <span class="code-type">IComparable</span>&lt;<span class="code-type">Employee</span>&gt;
-{
-    <span class="code-keyword">public string</span> Name { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-    <span class="code-keyword">public decimal</span> MonthlySalary { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-
-    <span class="code-keyword">public virtual void</span> <span class="code-method">Pay</span>()
-        => Console.WriteLine($<span class="code-string">"{Name}: {MonthlySalary:C} ödendi"</span>);
-
-    <span class="code-keyword">public int</span> <span class="code-method">CompareTo</span>(<span class="code-type">Employee</span> other)
-        => MonthlySalary.CompareTo(other.MonthlySalary);
-}
-
-<span class="code-comment">// Salesman: Hem Employee'den kalıtım hem de interface'ler</span>
-<span class="code-keyword">public class</span> <span class="code-type">Salesman</span> : <span class="code-type">Employee</span>
-{
-    <span class="code-keyword">public decimal</span> SalesAmount { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-    <span class="code-keyword">public decimal</span> CommissionRate { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
-
-    <span class="code-keyword">public override void</span> <span class="code-method">Pay</span>()
-    {
-        <span class="code-keyword">decimal</span> total = MonthlySalary + SalesAmount * CommissionRate;
-        Console.WriteLine($<span class="code-string">"{Name}: {total:C} ödendi (komisyon dahil)"</span>);
-    }
-}</pre></div>`}
+Array.Sort(employees);  <span class="code-comment">// CompareTo metodunu kullanır</span></pre></div>
+                <div class="tip-box">C#'da çoklu kalıtıma izin verilmez! Ancak birden fazla interface uygulanabilir. Bu, çoklu kalıtım ihtiyacını karşılar.</div>`
+            },
+            {
+                title: "🆚 Interface vs Abstract Sınıf",
+                body: `<table style="width:100%; border-collapse: collapse; margin-top: 12px;">
+                <tr style="background: rgba(108,92,231,0.1);">
+                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border);">Özellik</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border);">Interface</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border);">Abstract Sınıf</th>
+                </tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid var(--border);">Default uygulama</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">❌ Hayır</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">✅ Evet</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid var(--border);">Çoklu kalıtım</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">✅ Evet</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">❌ Hayır</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid var(--border);">Constructor</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">❌ Hayır</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">✅ Evet</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid var(--border);">Alanlar (fields)</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">❌ Hayır</td><td style="padding: 10px; border-bottom: 1px solid var(--border);">✅ Evet</td></tr>
+                <tr><td style="padding: 10px;">Ne zaman kullan?</td><td style="padding: 10px;">İlişkisiz sınıflar arasında ortak davranış</td><td style="padding: 10px;">İlişkili sınıflar için ortak temel</td></tr>
+                </table>`
+            }
         ]
     },
 
-    // ===== TOPIC 8: Generic Sınıflar & Koleksiyonlar (FİNAL AĞIRLIKLI) =====
+    // ===== TOPIC 8: Generic Sınıflar & Koleksiyonlar (PRIORITY HIGH) =====
     {
-        id: 8, title: "Generic & Koleksiyonlar 🔥", subtitle: "Generic metot/sınıf, type constraint, List<T>, Stack<T>",
+        id: 8,
+        title: "Generic Sınıflar & Koleksiyonlar",
+        subtitle: "Generic metot, type constraint, List<T>, Stack<T> — FİNALDE AĞIRLIKLI",
         content: [
-            { title: "🔄 Generic Metotlar — Neden Gerekli?", body: `<p>Aynı işi farklı tipler için yapan overloaded metotlar yerine <strong>tek bir generic metot</strong> yazılabilir:</p>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// ❌ KÖTÜ: Her tip için ayrı metot</span>
-<span class="code-keyword">static void</span> <span class="code-method">DisplayArray</span>(<span class="code-keyword">int</span>[] arr) { ... }
-<span class="code-keyword">static void</span> <span class="code-method">DisplayArray</span>(<span class="code-keyword">double</span>[] arr) { ... }
-<span class="code-keyword">static void</span> <span class="code-method">DisplayArray</span>(<span class="code-keyword">char</span>[] arr) { ... }
-
-<span class="code-comment">// ✅ İYİ: Tek generic metot</span>
+            {
+                title: "🔄 Generic Metotlar",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Overloaded metotlar yerine tek generic metot</span>
 <span class="code-keyword">static void</span> <span class="code-method">DisplayArray</span>&lt;<span class="code-type">T</span>&gt;(<span class="code-type">T</span>[] arr)
 {
     <span class="code-keyword">foreach</span> (<span class="code-type">T</span> element <span class="code-keyword">in</span> arr)
@@ -764,16 +578,18 @@ Array.Sort(employees, <span class="code-keyword">new</span> <span class="code-ty
     Console.WriteLine();
 }
 
-<span class="code-comment">// Kullanım - compiler tipi otomatik çıkarır (type inference)</span>
+<span class="code-comment">// Kullanım - tip otomatik çıkarılır</span>
 <span class="code-keyword">int</span>[] intArr = { <span class="code-number">1</span>, <span class="code-number">2</span>, <span class="code-number">3</span> };
-<span class="code-keyword">double</span>[] dblArr = { <span class="code-number">1.1</span>, <span class="code-number">2.2</span>, <span class="code-number">3.3</span> };
-<span class="code-keyword">char</span>[] chrArr = { <span class="code-string">'H'</span>, <span class="code-string">'e'</span>, <span class="code-string">'l'</span> };
+<span class="code-keyword">double</span>[] dblArr = { <span class="code-number">1.1</span>, <span class="code-number">2.2</span> };
+<span class="code-keyword">char</span>[] chrArr = { <span class="code-string">'A'</span>, <span class="code-string">'B'</span> };
 
-DisplayArray(intArr);           <span class="code-comment">// T → int (implicit)</span>
-DisplayArray(dblArr);           <span class="code-comment">// T → double (implicit)</span>
-DisplayArray&lt;<span class="code-keyword">char</span>&gt;(chrArr);    <span class="code-comment">// T → char (explicit)</span></pre></div>
-<div class="tip-box"><strong>Value type</strong> argümanlar için compiler tipe özel versiyon üretir. <strong>Reference type</strong> argümanlar için tek bir paylaşımlı versiyon üretir.</div>`},
-            { title: "🔒 Type Constraints (Tip Kısıtlamaları)", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// where ile tip kısıtlaması</span>
+DisplayArray(intArr);     <span class="code-comment">// T → int</span>
+DisplayArray(dblArr);     <span class="code-comment">// T → double</span>
+DisplayArray&lt;<span class="code-keyword">char</span>&gt;(chrArr); <span class="code-comment">// Explicit tip belirtme</span></pre></div>`
+            },
+            {
+                title: "🔒 Type Constraints (Tip Kısıtlamaları)",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// where ile tip kısıtlaması</span>
 <span class="code-keyword">static</span> <span class="code-type">T</span> <span class="code-method">Maximum</span>&lt;<span class="code-type">T</span>&gt;(<span class="code-type">T</span> x, <span class="code-type">T</span> y, <span class="code-type">T</span> z)
     <span class="code-keyword">where</span> <span class="code-type">T</span> : <span class="code-type">IComparable</span>&lt;<span class="code-type">T</span>&gt;
 {
@@ -781,21 +597,20 @@ DisplayArray&lt;<span class="code-keyword">char</span>&gt;(chrArr);    <span cla
     <span class="code-keyword">if</span> (y.CompareTo(max) > <span class="code-number">0</span>) max = y;
     <span class="code-keyword">if</span> (z.CompareTo(max) > <span class="code-number">0</span>) max = z;
     <span class="code-keyword">return</span> max;
-}
-
-<span class="code-comment">// Kullanım:</span>
-<span class="code-keyword">int</span> maxInt = Maximum(<span class="code-number">3</span>, <span class="code-number">7</span>, <span class="code-number">5</span>);      <span class="code-comment">// 7</span>
-<span class="code-keyword">double</span> maxDbl = Maximum(<span class="code-number">1.1</span>, <span class="code-number">3.3</span>, <span class="code-number">2.2</span>); <span class="code-comment">// 3.3</span>
-<span class="code-keyword">string</span> maxStr = Maximum(<span class="code-string">"a"</span>, <span class="code-string">"c"</span>, <span class="code-string">"b"</span>); <span class="code-comment">// "c"</span></pre></div>
-<p><strong>Tüm constraint türleri:</strong></p>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Constraint</th><th style="padding:8px;border:1px solid var(--border)">Açıklama</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">where T : class</span></td><td style="padding:8px;border:1px solid var(--border)">T referans tipi olmalı</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">where T : struct</span></td><td style="padding:8px;border:1px solid var(--border)">T değer tipi olmalı</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">where T : ClassName</span></td><td style="padding:8px;border:1px solid var(--border)">T belirtilen sınıf veya alt sınıfı olmalı</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">where T : InterfaceName</span></td><td style="padding:8px;border:1px solid var(--border)">T belirtilen interface'i uygulamalı</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">where T : new()</span></td><td style="padding:8px;border:1px solid var(--border)">T parametresiz constructor'a sahip olmalı</td></tr></table>
-<div class="important-box"><strong>Birden fazla kısıtlama sırası:</strong> <code>class/struct</code> → <code>ClassName</code> → <code>InterfaceName</code> → <code>new()</code>. Örnek: <code>where T : class, IComparable&lt;T&gt;, new()</code></div>`},
-            { title: "📚 Generic Sınıf: Stack<T> Örneği", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Stack</span>&lt;<span class="code-type">T</span>&gt;
+}</pre></div>
+                <p><strong>Type Constraint Türleri:</strong></p>
+                <ul>
+                    <li><span class="keyword">where T : ClassName</span> → T belirtilen sınıf veya alt sınıfı olmalı</li>
+                    <li><span class="keyword">where T : InterfaceName</span> → T belirtilen interface'i uygulamalı</li>
+                    <li><span class="keyword">where T : class</span> → T referans tipi olmalı</li>
+                    <li><span class="keyword">where T : struct</span> → T değer tipi olmalı</li>
+                    <li><span class="keyword">where T : new()</span> → T parametresiz constructor'a sahip olmalı</li>
+                </ul>
+                <div class="important-box">Birden fazla kısıtlama virgülle ayrılır. Sıralama: class/struct → ClassName → InterfaceName → new()</div>`
+            },
+            {
+                title: "📚 Generic Sınıf: Stack<T>",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-keyword">public class</span> <span class="code-type">Stack</span>&lt;<span class="code-type">T</span>&gt;
 {
     <span class="code-keyword">private int</span> top;
     <span class="code-keyword">private</span> <span class="code-type">T</span>[] elements;
@@ -809,85 +624,53 @@ DisplayArray&lt;<span class="code-keyword">char</span>&gt;(chrArr);    <span cla
     <span class="code-keyword">public void</span> <span class="code-method">Push</span>(<span class="code-type">T</span> value)
     {
         <span class="code-keyword">if</span> (top == elements.Length - <span class="code-number">1</span>)
-            <span class="code-keyword">throw new</span> <span class="code-type">FullStackException</span>(<span class="code-string">"Stack dolu!"</span>);
+            <span class="code-keyword">throw new</span> <span class="code-type">FullStackException</span>();
         elements[++top] = value;
     }
 
     <span class="code-keyword">public</span> <span class="code-type">T</span> <span class="code-method">Pop</span>()
     {
         <span class="code-keyword">if</span> (top == -<span class="code-number">1</span>)
-            <span class="code-keyword">throw new</span> <span class="code-type">EmptyStackException</span>(<span class="code-string">"Stack boş!"</span>);
+            <span class="code-keyword">throw new</span> <span class="code-type">EmptyStackException</span>();
         <span class="code-keyword">return</span> elements[top--];
     }
 }
 
-<span class="code-comment">// Kullanım:</span>
+<span class="code-comment">// Kullanım</span>
 <span class="code-keyword">var</span> intStack = <span class="code-keyword">new</span> <span class="code-type">Stack</span>&lt;<span class="code-keyword">int</span>&gt;(<span class="code-number">5</span>);
-intStack.Push(<span class="code-number">1</span>);
-intStack.Push(<span class="code-number">2</span>);
-intStack.Push(<span class="code-number">3</span>);
-Console.WriteLine(intStack.Pop());  <span class="code-comment">// 3 (LIFO)</span>
-Console.WriteLine(intStack.Pop());  <span class="code-comment">// 2</span>
-
-<span class="code-keyword">var</span> strStack = <span class="code-keyword">new</span> <span class="code-type">Stack</span>&lt;<span class="code-keyword">string</span>&gt;(<span class="code-number">3</span>);
-strStack.Push(<span class="code-string">"Ali"</span>);
-strStack.Push(<span class="code-string">"Veli"</span>);
-Console.WriteLine(strStack.Pop());  <span class="code-comment">// "Veli"</span></pre></div>`},
-            { title: "🔀 Generic Metot Overloading", body: `<ul>
-<li>Generic metotlar <strong>overload</strong> edilebilir</li>
-<li>Aynı isimle farklı parametre listesiyle birden fazla generic metot tanımlanabilir</li>
-<li>Generic metot, non-generic metotla da overload edilebilir</li>
-<li>Compiler, çağrı için <strong>en uygun eşleşmeyi</strong> arar (non-generic varsa onu tercih eder)</li>
-</ul>
-<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Generic</span>
-<span class="code-keyword">static void</span> <span class="code-method">Print</span>&lt;<span class="code-type">T</span>&gt;(<span class="code-type">T</span> value) => Console.WriteLine(value);
-
-<span class="code-comment">// Non-generic overload (daha spesifik)</span>
-<span class="code-keyword">static void</span> <span class="code-method">Print</span>(<span class="code-keyword">string</span> value) => Console.WriteLine($<span class="code-string">"String: {value}"</span>);
-
-Print(<span class="code-number">42</span>);         <span class="code-comment">// Generic versiyon çağrılır → "42"</span>
-Print(<span class="code-string">"hello"</span>);    <span class="code-comment">// Non-generic versiyon çağrılır → "String: hello"</span></pre></div>`}
+intStack.Push(<span class="code-number">42</span>);
+<span class="code-keyword">int</span> val = intStack.Pop();</pre></div>`
+            }
         ]
     },
 
     // ===== TOPIC 9: Dosyalar ve Akışlar =====
     {
-        id: 9, title: "Dosyalar ve Akışlar", subtitle: "FileStream, StreamReader/Writer, Serialization",
+        id: 9,
+        title: "Dosyalar ve Akışlar",
+        subtitle: "FileStream, StreamReader, StreamWriter, Serialization",
         content: [
-            { title: "📁 Dosya ve Stream Kavramları", body: `<p>C# dosyaları <strong>ardışık byte akışı (sequential stream of bytes)</strong> olarak görür.</p>
-<ul><li>Dosyadaki veri <strong>persistent data</strong> (kalıcı veri) olarak adlandırılır</li>
-<li><span class="keyword">Console.In</span> → Standart giriş (klavye) — TextReader türü</li>
-<li><span class="keyword">Console.Out</span> → Standart çıkış (ekran) — TextWriter türü</li>
-<li><span class="keyword">Console.Error</span> → Standart hata çıkışı — TextWriter türü</li></ul>
-<p><strong>Stream Sınıf Hiyerarşisi (System.IO):</strong></p>
-<table style="width:100%;border-collapse:collapse;margin:12px 0;"><tr style="background:rgba(108,92,231,0.1)"><th style="padding:8px;border:1px solid var(--border)">Sınıf</th><th style="padding:8px;border:1px solid var(--border)">Türediği</th><th style="padding:8px;border:1px solid var(--border)">Kullanım</th></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">StreamReader</span></td><td style="padding:8px;border:1px solid var(--border)">TextReader</td><td style="padding:8px;border:1px solid var(--border)">Dosyadan metin okuma</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">StreamWriter</span></td><td style="padding:8px;border:1px solid var(--border)">TextWriter</td><td style="padding:8px;border:1px solid var(--border)">Dosyaya metin yazma</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">FileStream</span></td><td style="padding:8px;border:1px solid var(--border)">Stream</td><td style="padding:8px;border:1px solid var(--border)">Dosyaya binary okuma/yazma</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">MemoryStream</span></td><td style="padding:8px;border:1px solid var(--border)">Stream</td><td style="padding:8px;border:1px solid var(--border)">Bellekte veri transferi (hızlı)</td></tr>
-<tr><td style="padding:8px;border:1px solid var(--border)"><span class="keyword">BufferedStream</span></td><td style="padding:8px;border:1px solid var(--border)">Stream</td><td style="padding:8px;border:1px solid var(--border)">Tamponlama ile veri transferi</td></tr></table>`},
-            { title: "📝 Metin Dosya İşlemleri", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// ═══ Dosyaya yazma ═══</span>
-<span class="code-keyword">using</span> (<span class="code-keyword">var</span> writer = <span class="code-keyword">new</span> <span class="code-type">StreamWriter</span>(<span class="code-string">"data.txt"</span>))
-{
-    writer.WriteLine(<span class="code-string">"100 Ali Yılmaz 1234.56"</span>);
-    writer.WriteLine(<span class="code-string">"200 Ayşe Kaya 987.65"</span>);
-}  <span class="code-comment">// using bloğu bitince dosya otomatik kapanır</span>
-
-<span class="code-comment">// ═══ Dosyadan okuma ═══</span>
-<span class="code-keyword">using</span> (<span class="code-keyword">var</span> reader = <span class="code-keyword">new</span> <span class="code-type">StreamReader</span>(<span class="code-string">"data.txt"</span>))
-{
-    <span class="code-keyword">string</span> line;
-    <span class="code-keyword">while</span> ((line = reader.ReadLine()) != <span class="code-keyword">null</span>)
-    {
-        Console.WriteLine(line);
-    }
-}
-
-<span class="code-comment">// FileStream ile binary erişim</span>
-<span class="code-keyword">var</span> fs = <span class="code-keyword">new</span> <span class="code-type">FileStream</span>(<span class="code-string">"data.dat"</span>,
-    FileMode.OpenOrCreate, FileAccess.ReadWrite);</pre></div>
-<div class="tip-box"><span class="keyword">using</span> bloğu, IDisposable nesneleri otomatik kapatır (Dispose çağırır). Dosya sızıntısını önler!</div>`},
-            { title: "💾 Object Serialization", body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// [Serializable] attribute ile sınıfı serileştirilebilir yap</span>
+            {
+                title: "📁 Dosya Kavramları",
+                body: `<ul>
+                    <li>C# dosyaları <strong>ardışık byte akışı</strong> olarak görür</li>
+                    <li><span class="keyword">Console.In</span> → Standart giriş (klavye)</li>
+                    <li><span class="keyword">Console.Out</span> → Standart çıkış (ekran)</li>
+                    <li><span class="keyword">Console.Error</span> → Standart hata çıkışı</li>
+                    <li>Dosyadaki veri <strong>persistent data</strong> olarak adlandırılır</li>
+                </ul>
+                <p><strong>Stream Sınıfları (System.IO):</strong></p>
+                <ul>
+                    <li><span class="keyword">FileStream</span> → Dosyaya okuma/yazma</li>
+                    <li><span class="keyword">MemoryStream</span> → Bellekte veri transferi (hızlı)</li>
+                    <li><span class="keyword">BufferedStream</span> → Tamponlama ile veri transferi</li>
+                    <li><span class="keyword">StreamReader</span> → Dosyadan metin okuma (TextReader'dan türer)</li>
+                    <li><span class="keyword">StreamWriter</span> → Dosyaya metin yazma (TextWriter'dan türer)</li>
+                </ul>`
+            },
+            {
+                title: "💾 Serialization (Serileştirme)",
+                body: `<div class="code-block"><span class="lang-tag">C#</span><pre><span class="code-comment">// Serializable sınıf</span>
 [<span class="code-type">Serializable</span>]
 <span class="code-keyword">public class</span> <span class="code-type">RecordSerializable</span>
 {
@@ -897,30 +680,1182 @@ Print(<span class="code-string">"hello"</span>);    <span class="code-comment">/
     <span class="code-keyword">public decimal</span> Balance { <span class="code-keyword">get</span>; <span class="code-keyword">set</span>; }
 }
 
-<span class="code-comment">// Serialize (nesneyi dosyaya yaz)</span>
+<span class="code-comment">// BinaryFormatter ile serileştirme</span>
 <span class="code-keyword">var</span> formatter = <span class="code-keyword">new</span> <span class="code-type">BinaryFormatter</span>();
-<span class="code-keyword">using</span> (<span class="code-keyword">var</span> fs = <span class="code-keyword">new</span> <span class="code-type">FileStream</span>(<span class="code-string">"data.ser"</span>, FileMode.Create))
-{
-    formatter.Serialize(fs, record);
-}
+formatter.Serialize(fileStream, record);  <span class="code-comment">// Yazma</span>
 
-<span class="code-comment">// Deserialize (dosyadan nesneyi oku)</span>
-<span class="code-keyword">using</span> (<span class="code-keyword">var</span> fs = <span class="code-keyword">new</span> <span class="code-type">FileStream</span>(<span class="code-string">"data.ser"</span>, FileMode.Open))
-{
-    <span class="code-comment">// Cast ZORUNLU! Deserialize object döner</span>
-    <span class="code-keyword">var</span> rec = (<span class="code-type">RecordSerializable</span>)formatter.Deserialize(fs);
-}</pre></div>
-<div class="important-box"><strong>Serialization kuralları:</strong>
-<ul><li><span class="keyword">[Serializable]</span> attribute VEYA <span class="keyword">ISerializable</span> interface uygulanmalı</li>
-<li>Sınıfın <strong>tüm instance variable'ları</strong> da serializable olmalı</li>
-<li>Simple type (int, string, vb.) ve diziler otomatik serializable</li>
-<li>Binary dosyalar insan tarafından <strong>okunamaz</strong></li>
-<li>Deserialize sonucunda <strong>explicit cast</strong> gerekir</li>
-<li>Hata durumunda <span class="keyword">SerializationException</span> fırlatılır</li></ul></div>`}
+<span class="code-comment">// Deserialize</span>
+<span class="code-keyword">var</span> record = (<span class="code-type">RecordSerializable</span>)formatter.Deserialize(fileStream);</pre></div>
+                <div class="important-box">
+                    <ul>
+                        <li><span class="keyword">[Serializable]</span> attribute veya <span class="keyword">ISerializable</span> interface uygulanmalı</li>
+                        <li>Sınıfın tüm instance variable'ları da serializable olmalı</li>
+                        <li>Simple type ve string'ler otomatik serializable</li>
+                        <li>Binary dosyalar insan tarafından okunamaz</li>
+                    </ul>
+                </div>`
+            }
         ]
     }
 ];
 
 // ============================================
-// QUIZ & EXAM QUESTIONS (ayrı dosyadan yüklenir)
+// QUIZ QUESTIONS
 // ============================================
+
+const QUESTIONS = [
+    // ========== INHERITANCE QUESTIONS ==========
+    {
+        id: 1,
+        type: 'fillblank',
+        topic: 'inheritance',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Aşağıdaki kodda boşlukları doldurun: BasePlusCommissionEmployee sınıfı CommissionEmployee sınıfından türetilmektedir.',
+        code: `public class BasePlusCommissionEmployee : CommissionEmployee
+{
+    public decimal BaseSalary { get; set; }
+
+    public BasePlusCommissionEmployee(string first, string last,
+        decimal sales, decimal rate, decimal salary)
+        : _____(first, last, sales, rate)
+    {
+        BaseSalary = salary;
+    }
+
+    public _____ decimal Earnings()
+        => BaseSalary + _____.Earnings();
+}`,
+        blanks: ['base', 'override', 'base'],
+        explanation: '`base` anahtar kelimesi taban sınıf constructor\'ını ve metotlarını çağırır. `override` taban sınıf virtual/abstract metodunu yeniden tanımlar.'
+    },
+    {
+        id: 2,
+        type: 'fillblank',
+        topic: 'inheritance',
+        difficulty: 'medium',
+        points: 8,
+        question: 'Aşağıdaki sınıf tanımında boşlukları doldurun:',
+        code: `public class CommissionEmployee
+{
+    public string FirstName { get; }
+    public decimal GrossSales { get; set; }
+    public decimal CommissionRate { get; set; }
+
+    // Bu metot türeyen sınıflarda override edilebilir
+    public _____ decimal Earnings()
+        => GrossSales * CommissionRate;
+
+    // object sınıfından gelen ToString metodunu override ediyoruz
+    public _____ string ToString()
+        => $"{FirstName}";
+}`,
+        blanks: ['virtual', 'override'],
+        explanation: '`virtual` bir metodu override edilebilir yapar. `ToString()` object sınıfından kalıtılır ve zaten virtual olduğu için `override` ile yeniden tanımlanır.'
+    },
+    {
+        id: 3,
+        type: 'concept',
+        topic: 'inheritance',
+        difficulty: 'medium',
+        points: 5,
+        question: 'Taban sınıfın private üyeleri hakkında hangisi doğrudur?',
+        options: [
+            'Türeyen sınıflar tarafından kalıtılmaz',
+            'Türeyen sınıflar tarafından kalıtılır ama doğrudan erişilemez',
+            'Türeyen sınıflardan doğrudan erişilebilir',
+            'Sadece static metotlardan erişilebilir'
+        ],
+        correct: 1,
+        explanation: 'Private üyeler kalıtılır ama türeyen sınıf metotları ve property\'lerinden doğrudan erişilemez. Public property\'ler üzerinden erişilir.'
+    },
+    {
+        id: 4,
+        type: 'concept',
+        topic: 'inheritance',
+        difficulty: 'easy',
+        points: 5,
+        question: 'Constructor\'lar hakkında hangisi doğrudur?',
+        options: [
+            'Constructor\'lar kalıtılır',
+            'Constructor\'lar kalıtılmaz, her sınıf kendi constructor\'ını tanımlamalıdır',
+            'Constructor\'lar sadece abstract sınıflarda kalıtılır',
+            'Constructor\'lar sadece sealed sınıflarda kalıtılmaz'
+        ],
+        correct: 1,
+        explanation: 'Constructor\'lar ASLA kalıtılmaz. Her türeyen sınıf kendi constructor\'ını tanımlamalı ve base() ile taban sınıf constructor\'ını çağırmalıdır.'
+    },
+    {
+        id: 5,
+        type: 'output',
+        topic: 'inheritance',
+        difficulty: 'hard',
+        points: 15,
+        question: 'Aşağıdaki kodun ekran çıktısını yazın:',
+        code: `class A
+{
+    public virtual void Yaz()
+    {
+        Console.Write("A ");
+    }
+}
+
+class B : A
+{
+    public override void Yaz()
+    {
+        base.Yaz();
+        Console.Write("B ");
+    }
+}
+
+class C : B
+{
+    public override void Yaz()
+    {
+        base.Yaz();
+        Console.Write("C ");
+    }
+}
+
+// Main:
+A obj = new C();
+obj.Yaz();`,
+        answer: 'A B C',
+        explanation: 'C.Yaz() → base.Yaz() (B) → B.Yaz() → base.Yaz() (A) → A.Yaz() yazı "A " → sonra "B " → sonra "C ". Polimorfizm sayesinde runtime\'da C tipinin metodu çağrılır.'
+    },
+
+    // ========== POLYMORPHISM QUESTIONS ==========
+    {
+        id: 6,
+        type: 'fillblank',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Abstract Employee sınıfını tamamlayın:',
+        code: `public _____ class Employee
+{
+    public string Name { get; }
+
+    public Employee(string name)
+    {
+        Name = name;
+    }
+
+    // Türeyen sınıflar ZORUNLU olarak bu metodu uygulamalı
+    public _____ decimal Earnings();
+}
+
+public class SalariedEmployee : Employee
+{
+    public decimal Salary { get; set; }
+
+    public SalariedEmployee(string name, decimal salary)
+        : _____(name)
+    {
+        Salary = salary;
+    }
+
+    public _____ decimal Earnings() => Salary;
+}`,
+        blanks: ['abstract', 'abstract', 'base', 'override'],
+        explanation: 'Abstract sınıf ve abstract metot tanımlanır. Türeyen sınıf base ile constructor çağırır ve override ile abstract metodu uygular.'
+    },
+    {
+        id: 7,
+        type: 'concept',
+        topic: 'polymorphism',
+        difficulty: 'medium',
+        points: 5,
+        question: 'Abstract sınıflar hakkında hangisi YANLIŞTIR?',
+        options: [
+            'Abstract sınıflar new ile oluşturulamaz (instantiate edilemez)',
+            'Abstract sınıf referansları concrete sınıf nesnelerini tutabilir',
+            'Abstract metotların gövdesi yoktur',
+            'Abstract sınıfların constructor\'ı olamaz'
+        ],
+        correct: 3,
+        explanation: 'Abstract sınıfların constructor\'ı OLABILIR! Constructor\'lar abstract/virtual olamaz ama abstract sınıflar constructor tanımlayabilir.'
+    },
+    {
+        id: 8,
+        type: 'concept',
+        topic: 'polymorphism',
+        difficulty: 'medium',
+        points: 5,
+        question: 'sealed anahtar kelimesi hakkında hangisi doğrudur?',
+        options: [
+            'sealed sınıftan kalıtım alınabilir',
+            'sealed metot override edilemez, sealed sınıftan kalıtım alınamaz',
+            'sealed sadece abstract sınıflarda kullanılır',
+            'Private metotlar sealed değildir'
+        ],
+        correct: 1,
+        explanation: 'sealed metot override edilemez, sealed sınıftan kalıtım alınamaz. private ve static metotlar implicitly sealed\'dır. string sınıfı sealed\'dır.'
+    },
+    {
+        id: 9,
+        type: 'output',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 15,
+        question: 'Aşağıdaki kodun çıktısını yazın:',
+        code: `abstract class Sekil
+{
+    public abstract double Alan();
+    public override string ToString() => GetType().Name;
+}
+
+class Daire : Sekil
+{
+    double yaricap;
+    public Daire(double r) { yaricap = r; }
+    public override double Alan() => 3.14 * yaricap * yaricap;
+}
+
+class Kare : Sekil
+{
+    double kenar;
+    public Kare(double k) { kenar = k; }
+    public override double Alan() => kenar * kenar;
+}
+
+// Main:
+Sekil[] sekiller = { new Daire(5), new Kare(4) };
+foreach (Sekil s in sekiller)
+    Console.WriteLine($"{s}: {s.Alan()}");`,
+        answer: 'Daire: 78.5\nKare: 16',
+        explanation: 'GetType().Name sınıf adını döner (Daire, Kare). Alan() polimorfik olarak her nesnenin kendi implementasyonunu çağırır.'
+    },
+    {
+        id: 10,
+        type: 'fillblank',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Güvenli downcasting kodunu tamamlayın:',
+        code: `Employee emp = new SalariedEmployee("Ali", 5000);
+
+// Güvenli downcasting
+SalariedEmployee sal = emp _____ SalariedEmployee;
+if (sal _____ null)
+{
+    Console.WriteLine(sal.Salary);
+}
+
+// Tür bilgisi alma
+Console.WriteLine(emp._____());`,
+        blanks: ['as', '!=', 'GetType'],
+        explanation: '`as` operatörü güvenli downcasting yapar (başarısız olursa null döner). `GetType()` nesnenin gerçek türünü döner.'
+    },
+
+    // ========== INTERFACE QUESTIONS ==========
+    {
+        id: 11,
+        type: 'fillblank',
+        topic: 'interface',
+        difficulty: 'hard',
+        points: 10,
+        question: 'IPayable interface\'ini ve uygulayan sınıfı tamamlayın:',
+        code: `public _____ IPayable
+{
+    decimal GetPaymentAmount();
+}
+
+public class Invoice : _____
+{
+    public int Quantity { get; set; }
+    public decimal Price { get; set; }
+
+    public decimal _____()
+        => Quantity * Price;
+}`,
+        blanks: ['interface', 'IPayable', 'GetPaymentAmount'],
+        explanation: 'interface anahtar kelimesi ile arayüz tanımlanır. Sınıf IPayable\'ı uygular ve tüm metotlarını implement eder.'
+    },
+    {
+        id: 12,
+        type: 'fillblank',
+        topic: 'interface',
+        difficulty: 'hard',
+        points: 10,
+        question: 'IComparable<T> interface\'ini uygulayan sınıfı tamamlayın:',
+        code: `public class Student : IComparable<_____ >
+{
+    public string Name { get; set; }
+    public double Average { get; set; }
+
+    public int _____(Student other)
+    {
+        return Average.CompareTo(other.Average);
+    }
+}
+
+// Main:
+Student[] students = { s1, s2, s3 };
+Array._____(students);  // CompareTo kullanarak sıralar`,
+        blanks: ['Student', 'CompareTo', 'Sort'],
+        explanation: 'IComparable<T> interface\'i CompareTo metodunu zorunlu kılar. Array.Sort() bu metodu kullanarak sıralama yapar.'
+    },
+    {
+        id: 13,
+        type: 'concept',
+        topic: 'interface',
+        difficulty: 'medium',
+        points: 5,
+        question: 'Interface ve abstract sınıf karşılaştırmasında hangisi doğrudur?',
+        options: [
+            'Bir sınıf birden fazla abstract sınıftan kalıtım alabilir',
+            'Interface\'ler default implementasyon sağlayabilir',
+            'Bir sınıf birden fazla interface uygulayabilir',
+            'Interface\'ler constructor tanımlayabilir'
+        ],
+        correct: 2,
+        explanation: 'C#\'da bir sınıf sadece BİR sınıftan kalıtım alabilir ama BİRDEN FAZLA interface uygulayabilir.'
+    },
+    {
+        id: 14,
+        type: 'fillblank',
+        topic: 'interface',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Hem sınıftan kalıtım hem interface uygulayan sınıfı tamamlayın:',
+        code: `// Sınıf adı ÖNCE, interface adları SONRA yazılır
+public class Salesman : _____, _____
+{
+    public decimal MonthlySales { get; set; }
+    public decimal CommissionRate { get; set; }
+
+    public Salesman(string name, decimal salary,
+        decimal sales, decimal rate)
+        : _____(name, salary)
+    {
+        MonthlySales = sales;
+        CommissionRate = rate;
+    }
+
+    public decimal GetPaymentAmount()
+        => MonthlySalary + MonthlySales * CommissionRate;
+}`,
+        blanks: ['Employee', 'IPayable', 'base'],
+        explanation: 'Kalıtımda sınıf adı önce, interface adları sonra yazılır: `class A : BaseClass, IInterface1, IInterface2`'
+    },
+
+    // ========== GENERIC QUESTIONS ==========
+    {
+        id: 15,
+        type: 'fillblank',
+        topic: 'generic',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Generic Maximum metodunu tamamlayın:',
+        code: `static T Maximum<T>(T x, T y, T z)
+    _____ T : IComparable<T>
+{
+    T max = x;
+    if (y._____(max) > 0)
+        max = y;
+    if (z._____(max) > 0)
+        max = z;
+    return max;
+}`,
+        blanks: ['where', 'CompareTo', 'CompareTo'],
+        explanation: '`where` type constraint belirtir. IComparable<T> interface\'inin CompareTo metodu karşılaştırma yapar.'
+    },
+    {
+        id: 16,
+        type: 'fillblank',
+        topic: 'generic',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Generic Stack sınıfını tamamlayın:',
+        code: `public class Stack<_____ >
+{
+    private int top;
+    private _____[] elements;
+
+    public Stack(int size)
+    {
+        top = -1;
+        elements = new _____[size];
+    }
+
+    public void Push(_____ value)
+    {
+        if (top == elements.Length - 1)
+            throw new FullStackException();
+        elements[++top] = value;
+    }
+
+    public _____ Pop()
+    {
+        if (top == -1)
+            throw new EmptyStackException();
+        return elements[top--];
+    }
+}`,
+        blanks: ['T', 'T', 'T', 'T', 'T'],
+        explanation: 'Generic sınıflarda T tip parametresidir. Tüm somut tipler yerine T kullanılır.'
+    },
+    {
+        id: 17,
+        type: 'concept',
+        topic: 'generic',
+        difficulty: 'medium',
+        points: 5,
+        question: 'Type constraint sıralaması hangisinde doğrudur?',
+        options: [
+            'new() → class → InterfaceName',
+            'InterfaceName → class → new()',
+            'class/struct → InterfaceName → new()',
+            'class → new() → InterfaceName'
+        ],
+        correct: 2,
+        explanation: 'Doğru sıralama: class/struct → ClassName → InterfaceName → new(). class/struct ilk olmalı, new() son olmalı.'
+    },
+    {
+        id: 18,
+        type: 'output',
+        topic: 'generic',
+        difficulty: 'medium',
+        points: 10,
+        question: 'Aşağıdaki generic kodun çıktısını yazın:',
+        code: `static void DisplayArray<T>(T[] arr)
+{
+    foreach (T elem in arr)
+        Console.Write($"{elem} ");
+    Console.WriteLine();
+}
+
+// Main:
+int[] nums = {1, 2, 3};
+string[] words = {"Ali", "Veli"};
+DisplayArray(nums);
+DisplayArray(words);`,
+        answer: '1 2 3 \nAli Veli',
+        explanation: 'Generic metot her tür için çalışır. Compiler tip çıkarımı yaparak int ve string versiyonlarını otomatik üretir.'
+    },
+
+    // ========== CLASS QUESTIONS ==========
+    {
+        id: 19,
+        type: 'fillblank',
+        topic: 'class',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Sınıf tanımını tamamlayın (sınav formatı):',
+        code: `class Aday
+{
+    public string Isim { get; set; }
+    private int oySayisi;
+    public int OySayisi
+    {
+        get { return oySayisi; }
+        set
+        {
+            if(value > 0)
+            {
+                _____ = value;
+            }
+        }
+    }
+
+    public Aday(string isim)
+    {
+        _____ = isim;
+    }
+}`,
+        blanks: ['oySayisi', 'Isim'],
+        explanation: 'Property\'nin set accessor\'ında value > 0 kontrolü ile oySayisi field\'ına atama yapılır. Constructor\'da Isim property\'sine atama yapılır.'
+    },
+    {
+        id: 20,
+        type: 'fillblank',
+        topic: 'class',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Seçim sınıfını tamamlayın (sınav formatı):',
+        code: `class Secim
+{
+    private int aktifAdaySayisi;
+    private Aday[] adaylar;
+
+    public Secim(int maxAdaySayisi)
+    {
+        adaylar = _____ Aday[maxAdaySayisi];
+        aktifAdaySayisi = _____;
+    }
+
+    public void AdayEkle(Aday aday)
+    {
+        adaylar[_____] = _____;
+        _____++;
+    }
+
+    public void OyKullan(Aday aday)
+    {
+        aday.OySayisi _____;
+    }
+
+    public void SonuclariYazdir()
+    {
+        foreach(Aday aday in _____)
+        {
+            if(_____ != null)
+                Console.WriteLine("Aday: " + aday.Isim +
+                    " Oy Sayisi:" + aday.OySayisi);
+        }
+    }
+}`,
+        blanks: ['new', '0', 'aktifAdaySayisi', 'aday', 'aktifAdaySayisi', '+= 1', 'adaylar', 'aday'],
+        explanation: 'Bu soru vize sınavı formatında. new ile dizi oluşturma, aktifAdaySayisi ile indeksleme, += 1 ile oy artırma ve null kontrolü yapılır.'
+    },
+    {
+        id: 21,
+        type: 'concept',
+        topic: 'class',
+        difficulty: 'easy',
+        points: 5,
+        question: 'static metotlar hakkında hangisi doğrudur?',
+        options: [
+            'static metotlar this anahtar kelimesini kullanabilir',
+            'static metotlar non-static üyelere doğrudan erişebilir',
+            'static metotlar non-static üyelere doğrudan erişemez ve this kullanamaz',
+            'static metotlar sadece private olabilir'
+        ],
+        correct: 2,
+        explanation: 'static metotlar belirli bir nesneye bağlı değildir, bu yüzden this kullanamaz ve non-static üyelere doğrudan erişemez.'
+    },
+    {
+        id: 22,
+        type: 'output',
+        topic: 'class',
+        difficulty: 'hard',
+        points: 15,
+        question: 'Aşağıdaki kodun çıktısını yazın (linked list benzeri yapı - vize sınavı formatı):',
+        code: `public class Element
+{
+    int item;
+    Element next;
+    public Element(int item, Element next)
+    {
+        this.item = item;
+        this.next = next;
+    }
+    public override string ToString()
+    {
+        return item + " " + (next == null ? " " : next.ToString());
+    }
+}
+
+// Main:
+Element e1 = new Element(2022, null);
+Element e2 = new Element(2020, e1);
+Element e3 = new Element(2018, e1);
+Element e4 = new Element(2016, e2);
+Element e5 = new Element(2014, e3);
+Console.WriteLine(e5);
+Console.WriteLine(e4);`,
+        answer: '2014 2018 2022  \n2016 2020 2022',
+        explanation: 'e5 → e3 → e1 → null: "2014 2018 2022  "\ne4 → e2 → e1 → null: "2016 2020 2022  "\nHer element kendi item\'ını yazdırır, sonra next.ToString() çağrılır.'
+    },
+
+    // ========== ARRAY QUESTIONS ==========
+    {
+        id: 23,
+        type: 'error',
+        topic: 'array',
+        difficulty: 'medium',
+        points: 10,
+        question: 'Bu metottaki hataları bulun ve düzeltin (vize sınavı formatı):',
+        code: `public static void kareler(int[] dizi)  // Hata 1: return type void olmalı
+{
+    foreach (int eleman in dizi)
+        eleman *= eleman;   // Hata 2: foreach değişkeni readonly!
+
+    return dizi;             // Hata 3: void metot return yapamaz!
+}`,
+        answer: `Hata 1: Metot void olmalı (return dizi ile çelişir) VEYA dönüş tipi int[] olmalı
+Hata 2: foreach döngü değişkeni (eleman) read-only'dir, değiştirilemez! for döngüsü kullanılmalı
+Hata 3: void metot değer döndüremez
+
+Düzeltilmiş hali:
+public static void kareler(int[] dizi)
+{
+    for (int i = 0; i < dizi.Length; i++)
+        dizi[i] *= dizi[i];
+}`,
+        explanation: 'foreach döngüsünde iteration variable read-only\'dir. Dizi elemanlarını değiştirmek için for döngüsü kullanılmalı.'
+    },
+    {
+        id: 24,
+        type: 'fillblank',
+        topic: 'array',
+        difficulty: 'medium',
+        points: 8,
+        question: 'Dizi işlemlerini tamamlayın:',
+        code: `// Rectangular dizi tanımı
+int[_____] matrix = { {1, 2, 3}, {4, 5, 6} };
+int val = matrix[1_____ 2];  // 6
+
+// Jagged dizi tanımı
+int[_____][_____] jagged = new int[2][];
+jagged[0] = new int[] {1, 2, 3};
+jagged[1] = new int[] {4, 5};
+int val2 = jagged[1]_____1];  // 5`,
+        blanks: [',', ',', '', '', '['],
+        explanation: 'Rectangular: [,] ve [satır, sütun]. Jagged: [][] ve [satır][sütun].'
+    },
+
+    // ========== CONTROL FLOW QUESTIONS ==========
+    {
+        id: 25,
+        type: 'output',
+        topic: 'control',
+        difficulty: 'medium',
+        points: 8,
+        question: 'Aşağıdaki kodun çıktısını yazın:',
+        code: `for (int i = 1; i <= 5; i++)
+{
+    if (i == 3)
+        continue;
+    if (i == 5)
+        break;
+    Console.Write(i + " ");
+}`,
+        answer: '1 2 4',
+        explanation: 'i=1: yazdır, i=2: yazdır, i=3: continue (atla), i=4: yazdır, i=5: break (çık). Çıktı: "1 2 4 "'
+    },
+    {
+        id: 26,
+        type: 'concept',
+        topic: 'control',
+        difficulty: 'easy',
+        points: 5,
+        question: '&& ve & operatörleri arasındaki fark nedir?',
+        options: [
+            'Fark yoktur, ikisi de aynı işi yapar',
+            '&& short-circuit yapar (ilk operand false ise ikincisi değerlendirilmez), & her iki tarafı da değerlendirir',
+            '& short-circuit yapar, && yapmaz',
+            '&& sadece boolean ifadelerde kullanılır, & sadece bit işlemlerinde'
+        ],
+        correct: 1,
+        explanation: '&& (conditional AND) short-circuit evaluation yapar. & (boolean logical AND) her iki tarafı da değerlendirir.'
+    },
+
+    // ========== FILE QUESTIONS ==========
+    {
+        id: 27,
+        type: 'concept',
+        topic: 'file',
+        difficulty: 'medium',
+        points: 5,
+        question: 'Serialization hakkında hangisi doğrudur?',
+        options: [
+            'Serializable sınıfların [Serializable] attribute kullanması gerekmez',
+            'Binary dosyalar insan tarafından okunabilir',
+            '[Serializable] attribute ile işaretlenen sınıfın tüm instance variable\'ları da serializable olmalıdır',
+            'Deserialize sonucunda tip dönüşümü gerekmez'
+        ],
+        correct: 2,
+        explanation: 'Serializable sınıfın tüm instance variable\'ları da serializable olmalıdır. Deserialize sonucunda cast gerekir.'
+    },
+    {
+        id: 28,
+        type: 'fillblank',
+        topic: 'file',
+        difficulty: 'medium',
+        points: 8,
+        question: 'Dosya stream sınıflarını eşleştirin:',
+        code: `// Dosyadan metin okuma için:
+_____ reader = new StreamReader("dosya.txt");
+
+// Dosyaya metin yazma için:
+_____ writer = new StreamWriter("dosya.txt");
+
+// Dosya hem okuma hem yazma:
+_____ fs = new FileStream("dosya.dat",
+    FileMode.OpenOrCreate);`,
+        blanks: ['StreamReader', 'StreamWriter', 'FileStream'],
+        explanation: 'StreamReader metin okuma, StreamWriter metin yazma, FileStream her iki yönde binary erişim sağlar.'
+    },
+
+    // ========== MORE INHERITANCE/POLY QUESTIONS ==========
+    {
+        id: 29,
+        type: 'output',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 15,
+        question: 'Aşağıdaki polimorfik kodun çıktısını yazın:',
+        code: `abstract class Hayvan
+{
+    public abstract string SesCikar();
+    public override string ToString()
+        => $"{GetType().Name} der: {SesCikar()}";
+}
+
+class Kedi : Hayvan
+{
+    public override string SesCikar() => "Miyav";
+}
+
+class Kopek : Hayvan
+{
+    public override string SesCikar() => "Hav";
+}
+
+// Main:
+Hayvan[] hayvanlar = { new Kedi(), new Kopek(), new Kedi() };
+foreach (Hayvan h in hayvanlar)
+    Console.WriteLine(h);`,
+        answer: 'Kedi der: Miyav\nKopek der: Hav\nKedi der: Miyav',
+        explanation: 'Console.WriteLine otomatik ToString() çağırır. GetType().Name sınıf adını, SesCikar() polimorfik olarak doğru sesi döner.'
+    },
+    {
+        id: 30,
+        type: 'fillblank',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 12,
+        question: 'Shape hiyerarşisini tamamlayın (sınav formatı):',
+        code: `public _____ class Shape
+{
+    public _____ double GetArea();
+
+    public override string ToString()
+        => GetType().Name;
+}
+
+public class Circle : _____
+{
+    public double Radius { get; set; }
+
+    public Circle(double r) { Radius = r; }
+
+    public _____ double GetArea()
+        => Math.PI * Radius * Radius;
+}
+
+public class Cube : _____
+{
+    public double Side { get; set; }
+
+    public Cube(double s) { Side = s; }
+
+    public _____ double GetArea()
+        => 6 * Side * Side;
+
+    public double GetVolume()
+        => Side * Side * Side;
+}`,
+        blanks: ['abstract', 'abstract', 'Shape', 'override', 'Shape', 'override'],
+        explanation: 'Shape abstract sınıf, GetArea abstract metot. Circle ve Cube Shape\'den türer ve GetArea\'yı override eder.'
+    },
+
+    // ========== ADDITIONAL EXAM-STYLE QUESTIONS ==========
+    {
+        id: 31,
+        type: 'fillblank',
+        topic: 'generic',
+        difficulty: 'hard',
+        points: 10,
+        question: 'Generic metot ile List kullanımını tamamlayın:',
+        code: `// List oluşturma ve kullanma
+var liste = new List<_____ > { "elma", "armut", "muz" };
+liste._____ ("portakal");     // Sona ekle
+liste._____ (0, "çilek");     // Başa ekle
+int adet = liste._____;       // Eleman sayısı
+liste._____ ("armut");         // Eleman sil`,
+        blanks: ['string', 'Add', 'Insert', 'Count', 'Remove'],
+        explanation: 'List<T> generic koleksiyondur. Add sona ekler, Insert belirtilen konuma ekler, Count eleman sayısını verir, Remove elemanı siler.'
+    },
+    {
+        id: 32,
+        type: 'concept',
+        topic: 'class',
+        difficulty: 'medium',
+        points: 5,
+        question: 'const ve readonly arasındaki fark nedir?',
+        options: [
+            'Fark yoktur, ikisi de aynı işi yapar',
+            'const derleme zamanında atanmalı, readonly constructor\'da atanabilir',
+            'readonly derleme zamanında atanmalı, const çalışma zamanında atanabilir',
+            'const sadece string tipinde kullanılabilir'
+        ],
+        correct: 1,
+        explanation: 'const derleme zamanında (compile-time) atanmalı. readonly constructor\'da veya bildirimde atanabilir (execution-time).'
+    },
+    {
+        id: 33,
+        type: 'output',
+        topic: 'inheritance',
+        difficulty: 'hard',
+        points: 15,
+        question: 'Constructor zincirleme çıktısını yazın:',
+        code: `class Base
+{
+    public Base()
+    {
+        Console.Write("Base ");
+    }
+    public Base(int x) : this()
+    {
+        Console.Write($"Base({x}) ");
+    }
+}
+
+class Derived : Base
+{
+    public Derived() : base(5)
+    {
+        Console.Write("Derived ");
+    }
+}
+
+// Main:
+Derived d = new Derived();`,
+        answer: 'Base Base(5) Derived',
+        explanation: 'new Derived() → Derived() çağırır base(5) ile → Base(int x) çağırır this() ile → Base() çalışır "Base " → Base(int x) devam "Base(5) " → Derived() devam "Derived "'
+    },
+    {
+        id: 34,
+        type: 'fillblank',
+        topic: 'interface',
+        difficulty: 'hard',
+        points: 12,
+        question: 'Payable interface ve Employee/Tax sınıflarını tamamlayın:',
+        code: `public interface Payable
+{
+    void _____();
+}
+
+public class Employee : _____
+{
+    public string Name { get; set; }
+    public decimal MonthlySalary { get; set; }
+
+    public void Pay()
+    {
+        Console.WriteLine($"{Name}: {MonthlySalary} TL ödendi");
+    }
+}
+
+public class Tax : _____
+{
+    public int Year { get; set; }
+    public decimal Amount { get; set; }
+    public bool IsPaid { get; set; }
+
+    public void Pay()
+    {
+        IsPaid = _____;
+        Console.WriteLine($"{Year} vergi: {Amount} TL ödendi");
+    }
+}
+
+// Polimorfik kullanım:
+_____[] items = { new Employee(), new Tax() };
+foreach (var item in items)
+    item.Pay();`,
+        blanks: ['Pay', 'Payable', 'Payable', 'true', 'Payable'],
+        explanation: 'Payable interface\'i Pay metodunu tanımlar. Employee ve Tax farklı sınıflar olmasına rağmen aynı interface üzerinden polimorfik olarak kullanılabilir.'
+    },
+    {
+        id: 35,
+        type: 'concept',
+        topic: 'polymorphism',
+        difficulty: 'hard',
+        points: 8,
+        question: 'Aşağıdaki atamalardan hangisi derleme hatası verir?',
+        options: [
+            'Employee emp = new SalariedEmployee("Ali", 5000);',
+            'SalariedEmployee sal = new SalariedEmployee("Ali", 5000);',
+            'SalariedEmployee sal = new Employee("Ali");  // Employee abstract',
+            'A ve C'
+        ],
+        correct: 3,
+        explanation: 'A: Upcasting, güvenli. B: Normal atama. C: İKİ hata - Employee abstract olduğu için new ile oluşturulamaz VE taban sınıf referansı türeyen sınıfa atanamaz (downcast gerekir).'
+    }
+];
+
+// ============================================
+// EXAM SIMULATION QUESTIONS
+// ============================================
+
+const EXAM_QUESTIONS = [
+    {
+        num: 1,
+        points: 25,
+        title: 'Sınıf Hiyerarşisi ve Boşluk Doldurma',
+        description: 'Aşağıda verilen sınıf kodlarındaki boşlukları doldurun. Employee abstract sınıfından türeyen HourlyEmployee sınıfını tamamlayın.',
+        code: `public ___①___ class Employee
+{
+    public string FirstName { get; }
+    public string LastName { get; }
+
+    public Employee(string first, string last)
+    {
+        FirstName = first;
+        LastName = last;
+    }
+
+    public ___②___ decimal Earnings();
+
+    public ___③___ string ToString()
+        => $"{FirstName} {LastName}";
+}
+
+public class HourlyEmployee : ___④___
+{
+    public decimal Wage { get; set; }
+    public decimal Hours { get; set; }
+
+    public HourlyEmployee(string first, string last,
+        decimal wage, decimal hours)
+        : ___⑤___(first, last)
+    {
+        Wage = wage;
+        Hours = hours;
+    }
+
+    public ___⑥___ decimal Earnings()
+    {
+        if (Hours <= 40)
+            return Wage * Hours;
+        else
+            return 40 * Wage + (Hours - 40) * Wage * 1.5M;
+    }
+
+    public ___⑦___ string ToString()
+        => $"hourly employee: {___⑧___.ToString()}\\n"
+         + $"wage: {Wage}; hours: {Hours}";
+}`,
+        blanks: [
+            { num: 1, answer: 'abstract', hint: 'Soyut sınıf anahtar kelimesi' },
+            { num: 2, answer: 'abstract', hint: 'Gövdesi olmayan metot' },
+            { num: 3, answer: 'override', hint: 'object.ToString() yeniden tanımlanıyor' },
+            { num: 4, answer: 'Employee', hint: 'Hangi sınıftan türüyor?' },
+            { num: 5, answer: 'base', hint: 'Taban sınıf constructor çağrısı' },
+            { num: 6, answer: 'override', hint: 'Abstract metodu uygulama' },
+            { num: 7, answer: 'override', hint: 'ToString yeniden tanımlanıyor' },
+            { num: 8, answer: 'base', hint: 'Taban sınıf metodu çağrısı' }
+        ]
+    },
+    {
+        num: 2,
+        points: 20,
+        title: 'Kod Çıktısı',
+        description: 'Aşağıdaki kodun ekran çıktısını yazın.',
+        code: `abstract class Vehicle
+{
+    public abstract string Type();
+    public virtual void Info()
+    {
+        Console.WriteLine($"Vehicle: {Type()}");
+    }
+}
+
+class Car : Vehicle
+{
+    string model;
+    public Car(string m) { model = m; }
+    public override string Type() => "Car";
+    public override void Info()
+    {
+        base.Info();
+        Console.WriteLine($"Model: {model}");
+    }
+}
+
+class Truck : Vehicle
+{
+    int tonnage;
+    public Truck(int t) { tonnage = t; }
+    public override string Type() => "Truck";
+    public override void Info()
+    {
+        Console.WriteLine($"Truck {tonnage}T");
+    }
+}
+
+// Main:
+Vehicle[] vehicles = { new Car("BMW"), new Truck(18), new Car("Audi") };
+foreach (Vehicle v in vehicles)
+{
+    v.Info();
+    Console.WriteLine("---");
+}`,
+        answer: `Vehicle: Car
+Model: BMW
+---
+Truck 18T
+---
+Vehicle: Car
+Model: Audi
+---`
+    },
+    {
+        num: 3,
+        points: 20,
+        title: 'Interface ve Generic Boşluk Doldurma',
+        description: 'IShape interface\'ini ve generic metodu tamamlayın.',
+        code: `public ___①___ IShape
+{
+    double GetArea();
+    string Name { get; }
+}
+
+public class Rectangle : ___②___
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    public string Name => "Rectangle";
+
+    public Rectangle(double w, double h)
+    {
+        Width = w;
+        Height = h;
+    }
+
+    public double GetArea() => Width * Height;
+}
+
+public class Circle : ___③___
+{
+    public double Radius { get; set; }
+    public string Name => "Circle";
+
+    public Circle(double r) { Radius = r; }
+
+    public double GetArea() => Math.PI * Radius * Radius;
+}
+
+// Generic metot - en büyük alanlı şekli bul
+static T FindLargest<T>(T[] shapes) ___④___ T : ___⑤___
+{
+    T largest = shapes[0];
+    for (int i = 1; i < shapes.Length; i++)
+    {
+        if (shapes[i].GetArea() > largest.GetArea())
+            largest = shapes[i];
+    }
+    return largest;
+}`,
+        blanks: [
+            { num: 1, answer: 'interface', hint: 'Arayüz tanımlama' },
+            { num: 2, answer: 'IShape', hint: 'Rectangle hangi interface\'i uyguluyor?' },
+            { num: 3, answer: 'IShape', hint: 'Circle hangi interface\'i uyguluyor?' },
+            { num: 4, answer: 'where', hint: 'Tip kısıtlaması anahtar kelimesi' },
+            { num: 5, answer: 'IShape', hint: 'T hangi interface\'i uygulamalı?' }
+        ]
+    },
+    {
+        num: 4,
+        points: 15,
+        title: 'Hata Bulma ve Düzeltme',
+        description: 'Aşağıdaki kodda 5 hata bulun ve düzeltin.',
+        code: `abstract class Animal
+{
+    public abstract void Speak();
+}
+
+class Dog : Animal
+{
+    // Hata 1: abstract metot override edilmemiş
+    public void Speak()
+    {
+        Console.WriteLine("Hav!");
+    }
+}
+
+class Cat : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("Miyav!");
+    }
+}
+
+// Main:
+Animal a = new Animal();          // Hata 2
+Dog d = new Cat();                // Hata 3
+Animal[] animals = { new Dog(), new Cat() };
+foreach (Animal animal in animals)
+{
+    animal.speak();               // Hata 4
+}
+Cat c = animals[0];               // Hata 5`,
+        answer: `Hata 1: "public void Speak()" → "public override void Speak()" 
+         (override anahtar kelimesi eksik)
+Hata 2: "new Animal()" → Abstract sınıf new ile oluşturulamaz!
+Hata 3: "Dog d = new Cat()" → Cat, Dog'un alt sınıfı değil!
+         "Animal d = new Cat()" olmalı
+Hata 4: "animal.speak()" → "animal.Speak()" 
+         (C# case-sensitive, büyük S olmalı)
+Hata 5: "Cat c = animals[0]" → explicit cast gerekli:
+         "Cat c = (Cat)animals[0];" veya
+         "Cat c = animals[0] as Cat;"`
+    },
+    {
+        num: 5,
+        points: 20,
+        title: 'Sınıf Tasarımı ve Kod Tamamlama',
+        description: 'Aşağıdaki sınıf hiyerarşisini tamamlayın. Payable interface, Employee sınıfı ve türeyen Salesman sınıfı.',
+        code: `___①___ IPayable
+{
+    decimal GetPaymentAmount();
+}
+
+public ___②___ class Employee : IPayable
+{
+    public string Name { get; }
+    public decimal MonthlySalary { get; set; }
+
+    public Employee(string name, decimal salary)
+    {
+        Name = name;
+        MonthlySalary = salary;
+    }
+
+    public ___③___ decimal GetPaymentAmount()
+        => MonthlySalary * 12;
+
+    public ___④___ string ToString()
+        => $"Employee: {Name}, Salary: {MonthlySalary}";
+
+    // IComparable implementation
+    public int CompareTo(Employee other)
+        => MonthlySalary.___⑤___(other.MonthlySalary);
+}
+
+public class Salesman : ___⑥___
+{
+    public decimal SalesAmount { get; set; }
+    public decimal CommissionRate { get; set; }
+
+    public Salesman(string name, decimal salary,
+        decimal sales, decimal rate)
+        : ___⑦___(name, salary)
+    {
+        SalesAmount = sales;
+        CommissionRate = rate;
+    }
+
+    public ___⑧___ decimal GetPaymentAmount()
+        => ___⑨___.GetPaymentAmount()
+         + SalesAmount * CommissionRate * 12;
+}`,
+        blanks: [
+            { num: 1, answer: 'public interface', hint: 'Interface tanımı' },
+            { num: 2, answer: 'abstract', hint: 'Soyut sınıf' },
+            { num: 3, answer: 'virtual', hint: 'Override edilebilir metot' },
+            { num: 4, answer: 'override', hint: 'object.ToString() yeniden tanımlanıyor' },
+            { num: 5, answer: 'CompareTo', hint: 'IComparable karşılaştırma metodu' },
+            { num: 6, answer: 'Employee', hint: 'Hangi sınıftan türüyor?' },
+            { num: 7, answer: 'base', hint: 'Taban sınıf constructor çağrısı' },
+            { num: 8, answer: 'override', hint: 'Taban sınıf metodunu yeniden tanımlama' },
+            { num: 9, answer: 'base', hint: 'Taban sınıf metodu çağrısı' }
+        ]
+    }
+];
