@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYP Final Çalışma Sitesi - Nesneye Yönelik Programlama</title>
+    <meta name="description" content="C# Nesneye Yönelik Programlama final sınavına hazırlık sitesi. Konu anlatımı, boşluk doldurma ve pratik sorular.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">⚡</span>
+            <span class="brand-text">NYP<span class="accent">Final</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-section="home">Ana Sayfa</a>
+            <a href="#" class="nav-link" data-section="topics">Konular</a>
+            <a href="#" class="nav-link" data-section="quiz">Soru Çöz</a>
+            <a href="#" class="nav-link" data-section="exam">Sınav Simülasyonu</a>
+        </div>
+        <div class="nav-progress">
+            <div class="progress-ring">
+                <svg viewBox="0 0 36 36">
+                    <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="progress-fill" id="progressRing" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
+                </svg>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section class="section home-section active" id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">C# · Nesneye Yönelik Programlama · Final 2026</div>
+                <h1 class="hero-title">
+                    Final Sınavına<br>
+                    <span class="gradient-text">100 Puan</span> ile Hazırlan
+                </h1>
+                <p class="hero-desc">Kalıtım, Çok Biçimlilik, Arayüzler, Generic Sınıflar ve daha fazlası. İnteraktif konu anlatımı ve sınav formatında sorularla tam hazırlık.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="navigateTo('topics')">
+                        <span>📚</span> Konulara Başla
+                    </button>
+                    <button class="btn btn-secondary" onclick="navigateTo('quiz')">
+                        <span>🎯</span> Soru Çöz
+                    </button>
+                    <button class="btn btn-accent" onclick="navigateTo('exam')">
+                        <span>📝</span> Sınav Simülasyonu
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Konu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❓</div>
+                    <div class="stat-number" id="totalQuestions">60+</div>
+                    <div class="stat-label">Soru</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number" id="correctCount">0</div>
+                    <div class="stat-label">Doğru</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-number" id="streakCount">0</div>
+                    <div class="stat-label">Seri</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Topic Cards -->
+        <div class="topic-overview">
+            <h2 class="section-title">Final'de Ağırlıklı Konular</h2>
+            <div class="topic-grid">
+                <div class="topic-card priority-high" onclick="showTopic(5)">
+                    <div class="topic-priority">🔴 ÇOK ÖNEMLİ</div>
+                    <h3>Kalıtım (Inheritance)</h3>
+                    <p>base, override, virtual, protected, constructor zincirleme</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="5"></div></div>
+                </div>
+                <div class="topic-card priority-high" onclick="showTopic(6)">
+                    <div class="topic-priority">🔴 ÇOK ÖNEMLİ</div>
+                    <h3>Çok Biçimlilik (Polymorphism)</h3>
+                    <p>abstract, virtual, override, sealed, upcasting/downcasting</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="6"></div></div>
+                </div>
+                <div class="topic-card priority-high" onclick="showTopic(7)">
+                    <div class="topic-priority">🔴 ÇOK ÖNEMLİ</div>
+                    <h3>Arayüzler (Interfaces)</h3>
+                    <p>interface, IComparable, IPayable, çoklu arayüz uygulama</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="7"></div></div>
+                </div>
+                <div class="topic-card priority-high" onclick="showTopic(8)">
+                    <div class="topic-priority">🔴 ÇOK ÖNEMLİ</div>
+                    <h3>Generic Sınıflar & Koleksiyonlar</h3>
+                    <p>Generic metot, type constraint, List&lt;T&gt;, Stack&lt;T&gt;</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="8"></div></div>
+                </div>
+                <div class="topic-card priority-medium" onclick="showTopic(4)">
+                    <div class="topic-priority">🟡 ÖNEMLİ</div>
+                    <h3>Sınıflar ve Nesneler</h3>
+                    <p>this, constructor, static, readonly, composition, List&lt;T&gt;</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="4"></div></div>
+                </div>
+                <div class="topic-card priority-medium" onclick="showTopic(9)">
+                    <div class="topic-priority">🟡 ÖNEMLİ</div>
+                    <h3>Dosyalar ve Akışlar</h3>
+                    <p>StreamReader, StreamWriter, Serialization, FileStream</p>
+                    <div class="topic-progress-bar"><div class="topic-progress-fill" data-topic="9"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOPICS SECTION -->
+    <section class="section topics-section" id="topics">
+        <div class="topics-sidebar" id="topicsSidebar">
+            <h3 class="sidebar-title">Konular</h3>
+            <div class="topic-list">
+                <button class="topic-btn" data-topic="0" onclick="showTopic(0)">
+                    <span class="topic-num">1</span>
+                    <span class="topic-name">UML & Giriş</span>
+                    <span class="topic-check" id="check-0">○</span>
+                </button>
+                <button class="topic-btn" data-topic="1" onclick="showTopic(1)">
+                    <span class="topic-num">2</span>
+                    <span class="topic-name">Kontrol İfadeleri 1</span>
+                    <span class="topic-check" id="check-1">○</span>
+                </button>
+                <button class="topic-btn" data-topic="2" onclick="showTopic(2)">
+                    <span class="topic-num">3</span>
+                    <span class="topic-name">Kontrol İfadeleri 2</span>
+                    <span class="topic-check" id="check-2">○</span>
+                </button>
+                <button class="topic-btn" data-topic="3" onclick="showTopic(3)">
+                    <span class="topic-num">4</span>
+                    <span class="topic-name">Diziler</span>
+                    <span class="topic-check" id="check-3">○</span>
+                </button>
+                <button class="topic-btn" data-topic="4" onclick="showTopic(4)">
+                    <span class="topic-num">5</span>
+                    <span class="topic-name">Sınıflar ve Nesneler</span>
+                    <span class="topic-check" id="check-4">○</span>
+                </button>
+                <button class="topic-btn active" data-topic="5" onclick="showTopic(5)">
+                    <span class="topic-num">6</span>
+                    <span class="topic-name">Kalıtım 🔥</span>
+                    <span class="topic-check" id="check-5">○</span>
+                </button>
+                <button class="topic-btn" data-topic="6" onclick="showTopic(6)">
+                    <span class="topic-num">7</span>
+                    <span class="topic-name">Çok Biçimlilik 🔥</span>
+                    <span class="topic-check" id="check-6">○</span>
+                </button>
+                <button class="topic-btn" data-topic="7" onclick="showTopic(7)">
+                    <span class="topic-num">8</span>
+                    <span class="topic-name">Arayüzler 🔥</span>
+                    <span class="topic-check" id="check-7">○</span>
+                </button>
+                <button class="topic-btn" data-topic="8" onclick="showTopic(8)">
+                    <span class="topic-num">9</span>
+                    <span class="topic-name">Generic & Koleksiyonlar 🔥</span>
+                    <span class="topic-check" id="check-8">○</span>
+                </button>
+                <button class="topic-btn" data-topic="9" onclick="showTopic(9)">
+                    <span class="topic-num">10</span>
+                    <span class="topic-name">Dosyalar ve Akışlar</span>
+                    <span class="topic-check" id="check-9">○</span>
+                </button>
+            </div>
+        </div>
+        <div class="topics-content" id="topicsContent">
+            <!-- Content loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section class="section quiz-section" id="quiz">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2 class="section-title">🎯 Soru Çöz</h2>
+                <div class="quiz-filters">
+                    <button class="filter-btn active" onclick="filterQuiz('all')">Tümü</button>
+                    <button class="filter-btn" onclick="filterQuiz('fillblank')">Boşluk Doldurma</button>
+                    <button class="filter-btn" onclick="filterQuiz('output')">Çıktı Bulma</button>
+                    <button class="filter-btn" onclick="filterQuiz('error')">Hata Bulma</button>
+                    <button class="filter-btn" onclick="filterQuiz('concept')">Kavram</button>
+                </div>
+                <div class="quiz-topic-filter">
+                    <select id="quizTopicSelect" onchange="filterQuizByTopic(this.value)">
+                        <option value="all">Tüm Konular</option>
+                        <option value="inheritance">Kalıtım</option>
+                        <option value="polymorphism">Çok Biçimlilik</option>
+                        <option value="interface">Arayüzler</option>
+                        <option value="generic">Generic & Koleksiyonlar</option>
+                        <option value="class">Sınıflar ve Nesneler</option>
+                        <option value="array">Diziler</option>
+                        <option value="control">Kontrol İfadeleri</option>
+                        <option value="file">Dosyalar</option>
+                    </select>
+                </div>
+            </div>
+            <div class="quiz-body" id="quizBody">
+                <!-- Questions loaded dynamically -->
+            </div>
+            <div class="quiz-score" id="quizScore">
+                <div class="score-display">
+                    <span class="score-correct" id="scoreCorrect">0</span> / <span class="score-total" id="scoreTotal">0</span>
+                </div>
+                <button class="btn btn-primary" onclick="resetQuiz()">Soruları Sıfırla</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAM SIMULATION SECTION -->
+    <section class="section exam-section" id="exam">
+        <div class="exam-container">
+            <div class="exam-header" id="examHeader">
+                <h2>📝 Final Sınav Simülasyonu</h2>
+                <p>Gerçek sınav formatında boşluk doldurma ve kod yazma soruları</p>
+                <div class="exam-info">
+                    <div class="info-item"><span>⏱️</span> Süre: 60 dakika</div>
+                    <div class="info-item"><span>📊</span> Toplam: 100 puan</div>
+                    <div class="info-item"><span>📋</span> Format: Boşluk doldurma + Kod çıktısı</div>
+                </div>
+                <button class="btn btn-primary btn-lg" onclick="startExam()">
+                    <span>🚀</span> Sınava Başla
+                </button>
+            </div>
+            <div class="exam-body" id="examBody" style="display:none;">
+                <!-- Exam loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

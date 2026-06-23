@@ -1,0 +1,323 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Polymorphism enables you to write apps that process objects that 
+share the same base class in a class hierarchy as if they were all objects 
+of the base class.
+Polymorphism promotes extensibility.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 3 ---
+If class Rectangle is derived from class Quadrilateral, then a 
+Rectangle is a more specific version of a Quadrilateral.
+Any operation that can be performed on a Quadrilateral object can 
+also be performed on a Rectangle object.
+These operations also can be performed on other Quadrilaterals, 
+such as Squares, Parallelograms and Trapezoids.
+The polymorphism occurs when an app invokes a method through a 
+base-class variable.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+Quadrilateral
+Rectangle
+Parallelogram
+Square
+Trapezoid
+Object
+(namespace: System)
+implicit inheritance
+explicit inheritance
+
+--- Page 5 ---
+As another example, suppose we design a video game that manipulates 
+objects of many different types, including objects of classes Martian, 
+Venusian, Plutonian, SpaceShip and LaserBeam.
+Each class inherits from the common base class SpaceObject, which 
+contains method Draw.
+A screen-manager app maintains a collection (e.g., a SpaceObject
+array) of references to objects of the various classes. 
+To refresh the screen, the screen manager periodically sends each 
+object the same message—namely, Draw, while object responds in a 
+unique way.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+SpaceObject
+Martian
+Plutonian
+Venutian
+SpaceShip
+Object
+(namespace: System)
+implicit inheritance
+explicit inheritance
+
+--- Page 7 ---
+A screen-manager program may contain a SpaceObject array of references to 
+objects of various classes that derive from SpaceObject
+arrOfSpaceObjects[ 0 ] = martian1;
+arrOfSpaceObjects[ 1 ] = martian2;
+arrOfSpaceObjects[ 2 ] = venutian1;
+arrOfSpaceObjects[ 3 ] = plutonian1;
+arrOfSpaceObjects[ 4 ] = spaceShip1;
+…
+To refresh the screen, the screen-manager calls DrawYourself on each object in 
+the array
+foreach(SpaceObject spaceObject in arrOfSpaceObjects)
+{
+spaceObject.DrawYourself
+}
+The program polymorphically calls the appropriate version of DrawYourself
+on each object, based on the type of that object
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Abstract classes
+Cannot be instantiated
+Used as base classes
+Class definitions are not complete
+Derived classes must define the missing pieces
+Can contain abstract methods and/or abstract properties
+Have no implementation
+Derived classes must override inherited abstract methods and abstract 
+properties to enable instantiation
+Abstract methods and abstract properties are implicitly virtual 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 9 ---
+• An abstract class is used to provide an appropriate base class from which 
+other classes may inherit (concrete classes)
+• Abstract base classes are too generic to define (by instantiation) real 
+objects
+• To define an abstract class, use keyword abstract in the declaration
+• To declare a method or property abstract, use keyword abstract in the 
+declaration
+• Abstract methods and properties have no implementation
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 10 ---
+Concrete classes use the keyword override to provide 
+implementations for all the abstract methods and properties of the 
+base-class
+Any class with an abstract method or property must be declared 
+abstract
+Even though abstract classes cannot be instantiated,
+we can use abstract class references to refer to instances of any 
+concrete class derived from the abstract class
+Constructors and static methods cannot be declared abstract or 
+virtual
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 11 ---
+Abstract property declarations have the form:
+public abstract PropertyType MyProperty { get; set; } 
+An abstract property omits implementations for the get accessor 
+and/or the set accessor.
+Concrete derived classes must provide implementations for every 
+accessor declared in the abstract property.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 12 ---
+A company pays its employees on a weekly basis. The employees are of four 
+types: 
+Salaried employees are paid a fixed weekly salary regardless of the number of hours worked, 
+hourly employees are paid by the hour and receive "time-and-a-half" overtime pay for all 
+hours worked in excess of 40 hours, 
+commission employees are paid a percentage of their sales, and 
+salaried-commission employees receive a base salary plus a percentage of their sales.
+For the current pay period, the company has decided to reward salaried-
+commission employees by adding 10% to their base salaries. The company 
+wants to implement an app that performs its payroll calculations 
+polymorphically.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 13 ---
+We use abstract class Employee to represent the general concept of 
+an employee.
+SalariedEmployee, CommissionEmployee and HourlyEmployee
+extend Employee.
+Class BasePlusCommissionEmployee—which extends 
+CommissionEmployee—represents the last employee type.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 14 ---
+The UML class diagram  shows the inheritance hierarchy for our 
+polymorphic employee payroll app.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+The diagram shows each of the 
+five classes in the hierarchy 
+down the left side and methods 
+Earnings and ToString
+across the top.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Class Employee provides methods Earnings and ToString, in 
+addition to the properties that manipulate Employee’s instance 
+variables.
+Each earnings calculation depends on the employee’s class, so we 
+declare Earnings as abstract.
+The app iterates through the array and calls method Earnings for each 
+Employee object. These method calls are processed polymorphically.
+Each derived class overrides method ToString to create a string
+representation of an object of that class.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+The app tests our Employee hierarchy. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+You can avoid a potential InvalidCastException by using the as 
+operator to perform a downcast rather than a cast operator.
+If the downcast is invalid, the expression will be null instead of throwing an 
+exception.
+Method GetType returns an object of class Type
+(of namespace System), which contains information about the object’s 
+type, including its class name, the names of its methods, and the name 
+of its base class.
+The Type class’s ToString method returns the class name.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 42 ---
+• Assigning a base-class reference to a base-class variable is straightforward.
+• Assigning a derived-class reference to a derived-class variable is straightfor-
+ward.
+• Assigning a derived-class reference to a base-class variable is safe, because the 
+derived-class object is an object of its base class. However, this reference can be 
+used to refer only to base-class members.
+• Attempting to assign a base-class reference to a derived-class variable is a 
+compilation error. To avoid this error, the base-class reference must be cast to a 
+derived-class type explicitly.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 43 ---
+A method declared sealed in a base class cannot be overridden in a 
+derived class.
+Methods that are declared private are implicitly sealed.
+Methods that are declared static also are implicitly sealed, because 
+static methods cannot be overridden either.
+A derived-class method declared both override and sealed can 
+override a base-class method, but cannot be overridden in classes 
+further down the inheritance hierarchy. 
+Calls to sealed methods (and non-virtual methods) are resolved at 
+compile time—this is known as static binding. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 44 ---
+A class that is declared sealed cannot be a base class (i.e., a class 
+cannot extend a sealed class).
+All methods in a sealed class are implicitly sealed.
+Class string is a sealed class. This class cannot be extended, so apps 
+that use strings can rely on the functionality of string objects as 
+specified in the Framework Class Library.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 45 ---
+
+--- Page 46 ---
+•
+TwoDimensionalShape sınıfı ve ThreeDimensionalShape sınıfı tarafında 
+kalıtılacak Shape soyut sınıfının  oluşturulmalıdır. 
+• Shape soyut sınıfında 
+• ilgili nesnenin ismini (Circle, Square vb..) döndürecek şekilde uygulanmış bir toString() 
+metottu olmalıdır.
+• Her bir alt sınıf için ilgili getArea() metotlar özelleştirilmelidir. 
+• TwoDimensionalShape sınıfında
+• getArea() metodu 
+• ThreeDimensionalShape sınıfında
+• getArea() ve getVolume()  metotları olmalıdır.
+• Bu özellikleri sağlayacak şekilde sınıf hiyerarşisi ve sınıf içleri doldurulmalı, 
+Main() metodu bun göre dizayn edilmelidir.

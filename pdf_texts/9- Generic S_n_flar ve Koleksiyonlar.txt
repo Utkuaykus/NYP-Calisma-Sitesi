@@ -1,0 +1,301 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Overloaded methods are often used to perform similar operations on different 
+types of data. 
+To understand the motivation for generic methods, let’s begin with an example 
+that contains three overloaded DisplayArray methods. 
+These methods display the elements of an int array, a double array and a char
+array, respectively. 
+Soon, we’ll reimplement this program more concisely and elegantly using a 
+single generic method
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+This example effectively demonstrates the expressive power of 
+generics. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+Value Types vs. Reference Types in Generics
+The compiler handles value and reference types differently in generic method 
+calls. 
+When a value-type argument is used for a given type parameter, the compiler 
+generates a version of the method that’s specific to the value type—if one has 
+been generated previously, the compiler reuses that one. 
+If DisplayArray were called with a reference type, the compiler would also 
+generate a single version of the method that’s used by all reference types. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+Explicit Type Arguments
+You also can use explicit type arguments to indicate the exact type that should 
+be used to call a generic function. For example, line 15 could be written as
+DisplayArray<int>(intArray); // pass an int array argument
+The preceding method call explicitly provides the type argument (int) that 
+should be used to replace type parameter T in line 23. 
+Though not required here, an explicit type argument would be required if the 
+compiler cannot infer the type from the method’s argument(s).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+IComparable<T> Interface 
+It’s possible to compare two objects of the same type if that type implements the 
+generic interface IComparable<T> (of namespace System). 
+A benefit of implementing interface IComparable<T> is that IComparable<T>
+objects can be used with the sorting and searching methods of classes in the 
+System.Collections.Generic namespace—we will discuss those methods. 
+The structures in the Framework Class Library that correspond to the simple 
+types all implement this interface. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+Specifying Type Constraints
+Even though IComparable objects can be compared, they cannot be used with 
+generic code by default, because not all types implement interface 
+IComparable<T>. 
+However, we can restrict the types that can be used with a generic method or 
+class to ensure that they meet certain requirements. 
+This feature—known as a type constraint—restricts the type of the argument 
+supplied to a particular type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+Figure declares method Maximum (lines 18–35) with a type 
+constraint that requires each of the method’s arguments to be of 
+type IComparable<T>. 
+This restriction is important, because not all objects can be 
+compared. 
+However, all IComparable<T> objects are guaranteed to have a 
+CompareTo method that can be used in method Maximum to 
+determine the largest of its three arguments.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+C# provides several kinds of type constraints. 
+A class constraint indicates that the type argument must be an object of 
+a specific base class or one of its subclasses. 
+An interface constraint indicates that the type argument’s class must 
+implement a specific interface. 
+The type constraint in line 18 is an interface constraint, because 
+IComparable<T> is an interface. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+You can specify that the type argument must be a reference type or a 
+value type by using the reference-type constraint (class) or the value-
+type constraint (struct), respectively. 
+Finally, you can specify a constructor constraint—new()—to 
+indicate that the generic code can use operator new to create new 
+objects of the type represented by the type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+If a type parameter is specified with a constructor constraint, the type 
+argument’s class must provide a public parameterless or default 
+constructor to ensure that objects of the class can be created without 
+passing constructor arguments; otherwise, a compilation error occurs.
+It’s possible to apply multiple constraints to a type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+To do so, simply provide a comma-separated list of constraints in the 
+where clause. 
+If you have a class constraint, reference-type constraint or value-type 
+constraint, it must be listed first—only one of these types of 
+constraints can be used for each type parameter. 
+Interface constraints (if any) are listed next. 
+The constructor constraint is listed last (if there is one).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+A generic method may be overloaded. 
+Each overloaded method must have a unique signature
+A class can provide two or more generic methods with the same name 
+but different method parameters. 
+A generic method can be overloaded by nongeneric methods with the 
+same method name. 
+When the compiler encounters a method call, it searches for the 
+method declaration that best matches the method name and the 
+argument types specified in the call. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+With a generic class, you can use a simple, concise notation to indicate 
+the actual type(s) that should be used in place of the class’s type 
+parameter(s). 
+At compilation time, the compiler ensures your code’s type safety, and 
+the runtime system replaces type parameters with type arguments to 
+enable your client code to interact with the generic class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+One generic Stack class, for example, could be the basis for creating 
+many Stack classes (e.g., “Stack of double,” “Stack of int,” “Stack of 
+char,” “Stack of Employee”). 
+Figure presents a generic Stack class declaration. 
+This class should not be confused with the class Stack from 
+namespace System.Collections.Generics. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+Classes FullStackException and EmptyStackException each 
+provide a parameterless constructor, a one-argument constructor of 
+exception classes and a two-argument constructor for creating a new 
+exception using an existing one. 
+The parameterless constructor sets the default error message while the 
+other two constructors set custom error messages.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+Now, let’s consider an app that uses the Stack generic class. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+Figure 20.9 declares generic method TestPush (lines 33–53) to 
+perform the same tasks as TestPushDouble and TestPushInt in Fig. 
+20.8—that is, Push values onto a Stack<T>. 
+Similarly, generic method TestPop (lines 56–77) performs the same 
+tasks as TestPopDouble and TestPopInt in Fig. 20.8—that is, Pop
+values off a Stack<T>.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+
+--- Page 50 ---
+
+--- Page 51 ---
+
+--- Page 52 ---
+
+--- Page 53 ---
+
+--- Page 54 ---
+
+--- Page 55 ---
+
+--- Page 56 ---
+
+--- Page 57 ---
+
+--- Page 58 ---
+
+--- Page 59 ---
+
+--- Page 60 ---
+
+--- Page 61 ---
+
+--- Page 62 ---
+
+--- Page 63 ---
+
+--- Page 64 ---
+
+--- Page 65 ---
+
+--- Page 66 ---
+
+--- Page 67 ---
+
+--- Page 68 ---
+
+--- Page 69 ---
+
+--- Page 70 ---
+
+--- Page 71 ---
+
+--- Page 72 ---

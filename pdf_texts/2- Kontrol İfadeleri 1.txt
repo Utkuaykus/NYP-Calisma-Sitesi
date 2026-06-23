@@ -1,0 +1,391 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Computers solve problems by executing a series of actions 
+in a specific order.
+An algorithm is a procedure for solving a problem, in terms 
+of:
+the actions to be executed and
+the order in which these actions are executed
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+Consider the “rise-and-shine algorithm” followed by one 
+junior executive for getting out of bed and going to work:
+(1) get out of bed, 
+(2) take off pajamas, 
+(3) take a shower, 
+(4) get dressed, 
+(5) eat breakfast and 
+(6) carpool to work. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+Suppose that the same steps are performed in a different order:
+(1) get out of bed, 
+(2) take off pajamas, 
+(3) get dressed, 
+(4) take a shower, 
+(5) eat breakfast, 
+(6) carpool to work.
+In this case, the junior executive shows up for work soaking wet. 
+The order in which statements execute is called program control.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Pseudocode is similar to English—it’s not a programming 
+language.
+It helps you “think out” an app before attempting to write it.
+A carefully prepared pseudocode app can easily be 
+converted to a corresponding C# app. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+The pseudocode of Fig. 5.1 corresponds to the algorithm 
+that inputs two integers from the user, adds these integers 
+and displays their sum. 
+The pseudocode statements are simply English statements 
+that convey what task is to be performed in C#. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Normally, statements execute one after the other in sequential 
+execution.
+Various C# statements enable you to specify the next statement to 
+execute. This is called transfer of control.
+Structured apps are clearer, easier to debug and modify, and more 
+likely to be bug free. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+C# has three types of selection structures, which from this 
+point forward we shall refer to as selection statements. 
+The if statement performs (selects) an action if a condition is 
+true or skips the action if the condition is false. 
+The if…else statement performs an action if a condition is true
+or performs a different action if the condition is false. 
+The switch statement performs one of many different actions, 
+depending on the value of an expression.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+C# provides four iteration statements (sometimes called 
+repetition statements or looping statements) that enable 
+programs to perform statements repeatedly as long as a condition 
+(called the loop-continuation condition) remains true. 
+while, do…while, for and foreach statements. 
+The while, for and foreach statements perform the action (or 
+group of actions) in their bodies zero or more times. 
+The do…while statement performs the action (or group of actions) 
+in its body one or more times. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+if grade is greater than or equal to 60
+display “Passed”
+The preceding pseudocode if statement may be written
+in C# as:
+if (grade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+The C# code corresponds closely to the pseudocode.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+bool Simple Type
+A decision can be based on any expression that evaluates to 
+true or false. 
+C# provides the simple type bool for Boolean variables that 
+can hold only the values true and false—each of these is a 
+C# keyword.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+if grade is greater than or equal to 60
+display “Passed”
+else
+display “Failed”
+The preceding if…else pseudocode statement can be written in C# as
+if (grade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+else
+{
+Console.WriteLine("Failed");
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Nested if…else Statements
+An app can test multiple cases with nested if…else statements:
+if grade is greater than or equal to 90
+display “A”
+else 
+if grade is greater than or equal to 80
+display “B”
+else 
+if grade is greater than or equal to 70 
+display “C”
+else 
+if grade is greater than or equal to 60 
+display “D”
+else
+display “F”
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+
+if (studentGrade >= 90) 
+{
+Console.WriteLine("A");
+}
+else if (studentGrade >= 80) 
+{
+Console.WriteLine("B");
+}
+else if (studentGrade >= 70)
+{
+Console.WriteLine("C");
+}
+else if (studentGrade >= 60)
+{
+Console.WriteLine("D");
+}
+else
+{
+Console.WriteLine("F");
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+Statements contained within a pair of braces ({ and }) form a block:
+if (studentGrade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+else 
+{
+Console.WriteLine("Failed");
+Console.WriteLine("You must take this course again.");
+}
+Without the braces, the last statement in the else block would execute 
+regardless of whether the grade was less than 60.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+The conditional operator (?:) can be used in place of an 
+if…else statement.
+Console.WriteLine(
+studentGrade >= 60 ? "Passed" : "Failed");
+The first operand is a boolean expression that evaluates to true
+or false.
+The second operand is the value if the expression is true
+The third operand is the value if the expression is false. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+The following example demonstrates a nested if…else statement that 
+determines a student’s letter grade based on the student’s average in a 
+course. 
+Read-only property LetterGrade (lines 39–68) uses nested if…else
+statements to determine the Student’s letter grade based on the 
+Student’s average. 
+A read-only property provides only a get accessor. 
+Local variable letterGrade is initialized to string.Empty (line 43), 
+which represents the empty string (that is, a string containing no 
+characters). 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+A iteration statement allows you to specify that an app should repeat 
+an action:
+While there are more items on my shopping list
+put next item in cart and cross it off my list
+As an example of C#’s while iteration statement, consider a code 
+segment designed to find the first power of 3 larger than 100:
+int product = 3;
+while (product <= 100) 
+{
+product = 3 * product;
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+Consider the following problem statement:
+A class of 10 students took a quiz. The grades (integers in
+the range 0 to 100) for this quiz are available to you.
+Determine the class average on the quiz.
+The algorithm must input each grade, keep track of the total of all 
+grades input, perform the averaging calculation and display the result. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+Pseudocode Algorithm with Counter-Controlled Iteration
+We use counter-controlled iteration to input the grades one at a time.
+A variable called a counter controls the number of times a set of 
+statements will execute.
+Counter-controlled iteration is often called definite iteration, because 
+the number of iterations is known before the loop begins executing.
+A total is a variable used to accumulate the sum of several values.
+A counter is a variable used to  count.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+Dividing two integers results in integer division.
+Any fractional part of the result is lost (i.e., truncated, not rounded).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+Consider the following problem:
+Develop a class-averaging app that processes grades for an arbitrary number of 
+students each time it’s run.
+In this example, no indication is given of how many grades the user will 
+enter during the app’s execution. 
+A sentinel value can be entered to indicate “end of data entry.” This is 
+called sentinel-controlled iteration.
+Sentinel-controlled iteration is often called indefinite iteration because 
+the number of iterations is not known before the loop begins.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+To perform a floating-point calculation with integer values, we 
+temporarily treat these values as floating-point numbers.
+A unary cast operator such as (double) performs explicit conversion.
+C# performs an operation called promotion (or implicit conversion) on 
+selected operands for use in the expression.
+The cast operator is formed by placing parentheses around the name of 
+a type. 
+This operator is a unary operator (i.e., an operator that takes only one 
+operand).
+Cast operators have the second highest precedence.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+We’ve seen that control statements can be stacked on top of one 
+another (in sequence). 
+In this case study, we examine the only other structured way control 
+statements can be connected, namely, by nesting one control 
+statement within another.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+A college offers a course that prepares students for the state licensing 
+exam for real estate brokers. Last year, 10 of the students who 
+completed this course took the exam. The college wants to know how 
+well its students did on the exam. You’ve been asked to write an app to 
+summarize the results. You’ve been given a list of these 10 students. 
+Next to each name is written a 1 if the student passed the exam or a 2 if 
+the student failed.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+• C# provides several compound assignment operators
+• For example, you can abbreviate the statement
+c = c + 3;
+• with the addition compound assignment operator, +=, as
+c += 3;
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+• C# requires all variables to have a type.
+• Instance variables of types char, byte, sbyte, short, ushort, int, 
+uint, long, ulong, float, double, and decimal are all given the 
+value 0 by default.
+• Instance variables of type bool are given the value false by default. 
+Reference-type instance variables are initialized by default to the value 
+null.
+© 2018 Pearson Education, Ltd. All Rights Reserved.

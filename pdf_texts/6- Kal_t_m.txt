@@ -1,0 +1,244 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Inheritance allows a new class to absorb an existing class’s 
+members.
+A derived class normally adds its own fields and methods to 
+represent a more specialized group of objects.
+Inheritance saves time by reusing proven and debugged high-quality 
+software.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+The direct base class is the base class which the derived class 
+explicitly inherits.
+An indirect base class is any class above the direct base class in the 
+class hierarchy.
+The class hierarchy begins with class object.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+The is-a relationship represents inheritance.
+For example, a car is a vehicle, and a truck is a vehicle.
+New classes can inherit from thousands of pre-built classes in class
+libraries.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Objects of all classes that extend a common base class can be treated 
+as objects of that base class.
+However, base-class objects cannot be treated as objects of their 
+derived classes.
+A derived class can customize methods it inherits from its base class. 
+In such cases, the derived class can override (redefine) the base-
+class method with an appropriate implementation.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+A base class’s private members are inherited by derived classes, 
+but are not directly accessible by derived-class methods and 
+properties.
+A base class’s protected members can be accessed by members of 
+that base class and by members of its derived classes, but not by 
+clients of the class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+CommissionEmployee represents an employee who is paid 
+a percentage of their sales.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+Declaring instance variables as private and providing public properties to 
+manipulate and validate them helps enforce good software engineering.
+Constructors are not inherited.
+Either explicitly or implicitly, a call to the base-class constructor is made.
+Class object’s default (empty) constructor does nothing.
+Even if a class does not have constructors, the default constructor will call the 
+base class’s default or parameterless constructor.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+CommissionEmployee Method ToString
+Method ToString is special—it’s one of the methods that every class inherits directly 
+or indirectly from class object.
+Method ToString returns a string representing an object.
+Class object’s ToString method is primarily a placeholder that typically should be 
+overridden by a derived class.
+To override a base-class method, a derived class must declare a method with keyword
+override.
+The method must have the same signature (method name, number of parameters and 
+parameter types) and return type as the base-class method.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+Now we declare class BasePlusCommissionEmployee , 
+which extends class CommissionEmployee
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+A BasePlusCommissionEmployee object is a
+CommissionEmployee.
+Each derived-class constructor must implicitly or explicitly call its 
+base-class constructor to ensure that the instance variables 
+inherited from the base class are initialized properly. 
+A constructor initializer with keyword base invokes the base-class 
+constructor.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+BasePlusCommissionEmployee Method Earnings
+The virtual and abstract keywords indicate that a base-
+class method can be overridden in derived classes.
+The override modifier declares that a derived-class method 
+overrides a virtual or abstract base-class method.
+This modifier also implicitly declares the derived-class 
+method virtual. 
+We need to declare CommissionEmployee’s Earnings
+method virtual.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+The compiler generates additional errors because base class CommissionEmployee’s
+instance variables are private.
+The errors can be prevented by using the public properties inherited from class 
+CommissionEmployee.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Class BasePlusCommissionEmployee inherits from 
+CommissionEmployee’s and can access the private base-
+class members via the inherited public properties. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+Class BasePlusCommissionEmployee’s Earnings overrides class 
+CommissionEmployee’s Earnings method. 
+The new version obtains the portion of the employee’s earnings 
+based on commission alone by calling CommissionEmployee’s
+Earnings method with the expression base.Earnings()
+This method invocation is a good software engineering practice—by 
+having BasePlusCommissionEmployee’s Earnings method invoke 
+CommissionEmployee’s Earnings method to calculate part of a 
+BasePlusCommissionEmployee object’s earnings, we avoid 
+duplicating the code and reduce code-maintenance problems
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+Class BasePlusCommissionEmployeeTest
+Class BasePlusCommissionEmployeeTest performs the 
+same manipulations on a BasePlusCommissionEmployee
+object and produces the same output, so we do not show it 
+here.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+• The derived-class constructor, before performing its own tasks, 
+invokes its direct base class’s constructor.
+• This is done either explicitly or implicitly.
+• If the base class is derived from another class, the base-class 
+constructor invokes the constructor of the next class up in the 
+hierarchy, and so on.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+• When a new class extends an existing class, the new class inherits the 
+members of the existing class.
+• We can customize the new class to meet our needs by including additional 
+members and by overriding base-class members.
+• Independent software vendors (ISVs) can develop and sell proprietary 
+classes.
+• Users then can derive new classes from these library classes without 
+accessing the source code.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+Effective software reuse improves the software-
+development process.
+Object-oriented programming facilitates software reuse, 
+potentially shortening development time.
+The availability of substantial and useful class libraries 
+helps deliver the maximum benefits of software reuse 
+through inheritance.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+All classes inherit directly or indirectly from the object class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.

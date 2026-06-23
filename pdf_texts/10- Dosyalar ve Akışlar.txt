@@ -1,0 +1,383 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Variables and arrays offer only temporary storage of data—the data is 
+lost when a local variable “goes out of scope” or when the program 
+terminates. 
+By contrast, files (and databases) are used for long-term retention of 
+large amounts of data, even after the program that created the data 
+terminates. 
+Data maintained in files often is called persistent data. 
+Data maintained in files often is called persistent data. Computers 
+store files on secondary storage devices, such as hard drives, solid-
+state drives, flash drives, DVDs and tapes
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+C# views each file as a sequential stream of bytes. 
+Each file ends either with an end-of-file marker or at a specific byte 
+number that’s recorded in a system-maintained administrative data 
+structure. 
+When a file is opened, an object is created and a stream is associated 
+with the object. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+When a console app executes, the runtime environment creates three 
+stream objects that are accessible via properties Console.Out, 
+Console.In and Console.Error, respectively. 
+These objects use streams to facilitate communication between a 
+program and a particular file or device. 
+Console.In refers to the standard input stream object, which enables 
+a program to input data from the keyboard. 
+Console.Out refers to the standard output stream object, which 
+enables a program to output data to the screen. 
+Console.Error refers to the standard error stream object, which 
+enables a program to output error messages to the screen.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Abstract class Stream provides functionality for representing streams 
+as bytes. Classes FileStream, MemoryStream and BufferedStream
+(all from namespace System.IO) inherit from class Stream. 
+Class FileStream can be used to write data to and read data from 
+files. 
+Class MemoryStream enables the transfer of data directly to and from 
+memory—this is much faster than reading from and writing to external 
+devices. 
+Class BufferedStream uses buffering to transfer data to or from a 
+stream. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+The System.IO namespace includes stream classes such as 
+StreamReader (for text input from a file), StreamWriter (for text 
+output to a file) and FileStream (for both input from and output to a 
+file). 
+These stream classes inherit from abstract classes TextReader, 
+TextWriter and Stream, respectively. 
+Properties Console.In and Console.Out are of type TextReader
+and TextWriter, respectively. 
+The system creates objects of TextReader and TextWriter derived 
+classes to initialize Console properties Console.In and 
+Console.Out.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+C# imposes no structure on files. 
+Thus, the concept of a “record” does not exist in C# files. 
+This means that you must structure files to meet the requirements of 
+your apps. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Class BankUIForm
+The following examples demonstrate file processing in a bank-account 
+maintenance app. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+Using visual inheritance, you can extend this class to create the GUIs for 
+several examples. 
+Recall that to reuse class BankUIForm, you must compile the GUI into a 
+class library, then add a reference to the new class library in each 
+project that will reuse it. 
+This library (BankLibrary) is provided with the code for this example. 
+You might need to re-add the references to this library in our examples 
+when you copy them to your system, since the library most likely will 
+reside in a different location on your system.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+Class Record
+Record class is used for maintaining the information in each record 
+that’s written to or read from a file. 
+This class also belongs to the BankLibrary DLL, so it’s located in the 
+same project as class BankUIForm.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Using a Character Stream to Create an Output File
+Class CreateFileForm uses instances of class Record to create a 
+sequential-access file that might be used in an accounts-receivable 
+system—i.e., a program that organizes data regarding money owed by a 
+company’s credit clients. 
+For each client, the program obtains an account number and the 
+client’s first name, last name and balance (i.e., the amount of money 
+that the client owes to the company for previously received goods and 
+services). 
+The data obtained for each client constitutes a record for that client. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+In this app, the account number is used as the record key—files are 
+created and maintained in account-number order. 
+This program assumes that the user enters records in account-number 
+order. However, a comprehensive accounts-receivable system would 
+provide a sorting capability, so the user could enter the records in any 
+order.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+Sample Data
+To test the program, we entered information for the accounts shown in 
+the Table. 
+The program does not depict how the data records are stored in the 
+file. 
+To verify that the file has been created successfully, we create a 
+program in the next section to read and display the file. 
+Since this is a text file, you can actually open it in any text editor to see 
+its contents.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Class ReadSequentialAccessFileForm reads records from the file 
+created by the program, then displays the contents of each record. 
+Much of the code in this example is similar to that program, so we 
+discuss only the unique aspects of the app.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+In the prior examples, Record was used to aggregate the information 
+for one record. 
+When the instance variables for a Record were output to a disk file, 
+certain information was lost, such as the type of each value. 
+For instance, if the value "3" is read from a file, there’s no way to tell if 
+the value came from an int, a string or a decimal. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+We have only data, not type information, on disk. 
+If the program that’s going to read this data “knows” what object type 
+the data corresponds to, then the data can be read directly into objects 
+of that type. 
+For example, we know that we are inputting an int (the account 
+number), the first and last name strings and a decimal (the balance). 
+We also know that these values are separated by commas, with only 
+one record on each line. 
+So, we are able to parse the strings and convert the account number 
+to an int and the balance to a decimal. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+Sometimes it would be easier to read or write entire objects. 
+C# provides such a mechanism, called object serialization. 
+A serialized object is an object represented as a sequence of bytes that 
+includes the object’s data, as well as information about the object’s 
+type and the types of data stored in the object. 
+After a serialized object has been written to a file, it can be read from 
+the file and deserialized—that is, the type information and bytes that 
+represent the object and its data can be used to recreate the object in 
+memory.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+Class BinaryFormatter (namespace 
+System.Runtime.Serialization.Formatters.Binary) enables 
+entire objects to be written to or read from a stream. 
+BinaryFormatter method Serialize writes an object’s 
+representation to a file. 
+BinaryFormatter method Deserialize reads this representation 
+from a file and reconstructs the original object. 
+Both methods throw a SerializationException if an error occurs 
+during serialization or deserialization. 
+Both methods require a Stream object (e.g., the FileStream) as a 
+parameter so that the BinaryFormatter can access the correct 
+stream.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+Next, we create and manipulate sequential-access files using object 
+serialization. 
+Object serialization is performed with byte-based streams, so the 
+sequential files created and manipulated will be binary files. 
+Binary files are not human readable. 
+For this reason, we write a separate app that reads and displays 
+serialized objects.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+We begin by creating and writing serialized objects to a sequential-
+access file. 
+In this section, we reuse much of the code from earlier sections, so we 
+focus only on the new features.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+Defining the RecordSerializable Class
+Class RecordSerializable (part of the BankLibrary project) is 
+marked with the [Serializable] attribute, which indicates to the 
+CLR that RecordSerializable objects can be serialized. 
+Classes that represent serializable types must include this attribute in 
+their declarations or must implement interface ISerializable.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+In a class that’s marked with the [Serializable] attribute or that 
+implements interface ISerializable, you must ensure that every 
+instance variable of the class is also serializable. 
+All simple-type variables and strings are serializable. 
+For variables of reference types, you must check the class declaration 
+(and possibly its base classes) to ensure that the type is serializable. 
+By default, array objects are serializable. 
+However, if the array contains references to other objects, those objects 
+may or may not be serializable.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+Using a Serialization Stream to Create an Output File
+Next, we’ll create a sequential-access file with serialization. 
+To test this program, we used the sample data from the table to create a 
+file named clients.ser. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+The program does not show how the data records actually appear in 
+the file. 
+Remember that we are now using binary files, which are not human 
+readable. 
+To verify that the file was created successfully, the next section 
+presents a program to read the file’s contents.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 58 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 59 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 60 ---
+The preceding section showed how to create a sequential-access file 
+using object serialization. 
+In this section, we discuss how to read serialized objects sequentially 
+from a file.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 61 ---
+The program reads objects from a file in event handler 
+nextButton_Click.
+We use method Deserialize to read the data. 
+Note that we cast the result of Deserialize to type 
+RecordSerializable—this cast is necessary, because Deserialize
+returns a reference of type object and we need to access properties that 
+belong to class RecordSerializable. 
+If an error occurs during deserialization or the end of the file is 
+reached, a SerializationException is thrown, and the FileStream
+object is closed. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 62 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 63 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 64 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 65 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 66 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.

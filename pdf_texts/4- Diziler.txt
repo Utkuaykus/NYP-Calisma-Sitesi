@@ -1,0 +1,454 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Data structures are collections of related data items.
+Arrays are data structures consisting of related data items 
+of the same type.
+Arrays are fixed-length entities—they remain the same 
+length once they’re created.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+An array is a group of variables—called elements—
+containing values that all have the same type.
+Arrays are reference types—what we typically think of as an 
+array is actually a reference to an array object.
+The elements of an array can be either value types or 
+reference types.
+To refer to a particular element in an array, we specify the 
+name of the reference to the array the element’s position in 
+the array, which is called the element’s index.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Since arrays are objects, they’re typically created with 
+keyword new.
+To create an array object, specify the type and the number 
+of array elements as part of an array-creation expression
+that uses keyword new.
+The following declaration and array-creation expression 
+create an array object containing 12 int elements and store 
+the array’s reference in variable c:
+int[] c = new int[12];
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+Creating the array also can be performed as follows:
+int[] c; // declare the array variable
+c = new int[12]; // create the array; assign to array variable
+The square brackets following int indicate that c
+will refer to an array of ints.
+The array variable c receives the reference to a new 
+array object of 12 int elements.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+The number of elements can also be specified as an 
+expression that's calculated at execution time.
+When an array is created, each element of the array 
+receives a default value:
+0 for the numeric simple-type elements.
+false for bool elements.
+null for references.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Resizing an Array
+Though arrays are fixed-length entities, you can use the 
+static Array method Resize which takes two 
+arguments—the array to be resized and the new length—
+to create a new array with the specified length.
+Copies the contents of the old array into the new array
+Sets the array variable to reference the new array.
+Any content that cannot fit into the new array is truncated 
+without warning.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+8.4.2 Using an Array Initializer
+An app can create an array and initialize its elements with an array 
+initializer, a comma-separated list of expressions (called an 
+initializer list) enclosed in braces.
+The array length is determined by the number of elements in the 
+initializer list.
+The app in Fig. 8.3 initializes an integer array with 5 values (line 10) 
+and displays the array in tabular format. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+The foreach statement iterates through the elements of an entire
+array or collection.
+The syntax of a foreach statement is:
+foreach (type identifier in arrayName)
+{
+statement
+}
+type and identifier are the type and name (e.g., int number) of 
+the iteration variable.
+arrayName is the array through which to iterate.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+Using Bar Charts to Display Array Data Graphically
+The app stores grade distribution data in an array of 11 elements, each 
+corresponding to a category of grades. 
+array[0] indicates the number of grades in the range 0–9.
+array[7] indicates the number of grades in the range 70–79.
+array[10] indicates the number of 100 grades. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+The app uses arrays to summarize data collected in a 
+survey: 
+Twenty students were asked to rate on a scale of 1 to 5 the quality 
+of the food in the student cafeteria, with 1 being “awful” and 5 
+being “excellent.” Place the 20 responses in an integer array and 
+determine the frequency of each rating. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+Pass-By-Value vs. Pass-By-Reference
+When an argument to a method is an entire array or an 
+individual array element of a reference type, the called 
+method receives a copy of the reference.
+When an argument to a method is an individual array 
+element of a value type, the called method receives a copy of 
+the element’s value.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+Storing Student Grades in an Array in Class GradeBook  
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+Class GradeBookTest That Demonstrates Class 
+GradeBook  
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+Two-dimensional arrays are often used to represent 
+tables of values consisting of information arranged in rows
+and columns.
+To identify a particular table element, we must specify two 
+indices. By convention, the first identifies the element’s row 
+and the second its column.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+Rectangular Arrays
+In rectangular arrays, each row has the same number of 
+columns.
+Figure illustrates a three-by-four rectangular array
+named a.
+An array with m rows and n columns is called an m-
+by-n array.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+Array-Access Expression for a Two-Dimensional Rectangular Array
+Every element in array a is identified by an array-access expression 
+of the form a[row, column];
+Array Initializer for a Two-Dimensional Rectangular Array
+A two-by-two rectangular array b can be declared and initialized 
+with nested array initializers as follows:
+int[,] b = {{1, 2}, {3, 4}};
+The initializer values are grouped by row in braces.
+The compiler will generate an error if the number of initializers in 
+each row is not the same, because every row of a rectangular array 
+must have the same number of columns
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+Jagged Arrays
+• A jagged array is a one-dimensional array whose elements 
+are one-dimensional arrays.
+• The lengths of the rows in the array need not be the same.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+Array Initializer for a Two-Dimensional Jagged Array
+• Elements in a jagged array are accessed using an array-
+access expression of the form arrayName[row][column].
+• A jagged array with three rows of different lengths could be 
+declared and initialized as follows:
+int[][] jagged = {new int[] {1, 2},
+new int[] {3},
+new int[] {4, 5, 6}};
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 58 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 59 ---
+Creating Two-Dimensional Arrays with Array-Creation Expressions
+• A rectangular array can be created with an array-creation expression:
+int[,] b;
+b = new int[3, 4];
+• A jagged array cannot be completely created with a single array-
+creation expression. Each one-dimensional array must be initialized 
+separately.
+• A jagged array can be created as follows:
+int[][] c;
+c = new int[2][]; // create 2 rows
+c[0] = new int[5]; // create 5 columns for row 0
+c[1] = new int[3]; // create 3 columns for row 1
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 60 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 61 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 62 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 63 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 64 ---
+Storing Student Grades in a Rectangular Array in Class 
+GradeBook 
+• Figure shows the output of a program that manipulates a 
+GradeBook that uses a rectangular array grades to store the 
+grades of a number of students on multiple exams. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 65 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 66 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 67 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 68 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 69 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 70 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 71 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 72 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 73 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 74 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 75 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 76 ---
+Class GradeBookTest That Demonstrates Class GradeBook
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 77 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 78 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 79 ---
+Variable-length argument lists allow you to create methods 
+that receive an arbitrary number of arguments.
+The necessary params modifier can occur only in the 
+parameter list’s last parameter. 
+Figure demonstrates method Average, which receives a 
+variable-length sequence of doubles. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 80 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 81 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 82 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 83 ---
+• You can pass command-line arguments to an app by including a 
+parameter of type string[] in the parameter list of Main.
+• By convention, this parameter is named args.
+• The execution environment passes the command-line arguments as 
+an array to the app’s Main method.
+• The number of arguments passed from the command line is obtained 
+by accessing the array’s Length property.
+• Command-line arguments are separated by whitespace, not commas.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 84 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 85 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 86 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 87 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 88 ---
+Changes to the local copy of a value-type argument in a called 
+method do not affect the original variable in the caller.
+If the argument is of a reference type, the method makes a copy of 
+the reference, not a copy of the actual object that's referenced.
+You can use keyword ref to pass a reference-type variable by 
+reference, which allows the called method to modify the original 
+variable in the caller and make that variable refer to a different 
+object.
+This is a subtle capability, which, if misused, can lead to problems.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 89 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 90 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 91 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 92 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 93 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 94 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 95 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 96 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 97 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.

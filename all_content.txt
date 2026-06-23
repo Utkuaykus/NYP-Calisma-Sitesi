@@ -1,0 +1,3217 @@
+
+================================================================================
+FILE: 1- Giriş. UML diagram.txt
+================================================================================
+--- Page 1 ---
+Nesne Tabanlı Programlama
+B¨ol¨um 10
+UML Class Diyagramları
+1/32
+
+--- Page 2 ---
+Ders ˙I¸ceri˘gi
+ UML
+ Namespace, Enum kullanımı
+ Visual Studio eklenti y¨ukleme
+ ¨Ornekler
+2/32
+
+--- Page 3 ---
+UML
+ Unified Modeling Language (UML) bir sistemin tasarımını g¨orselle¸stirmek i¸cin
+yazılım m¨uhendisli˘gi alanında genel ama¸clı modelleme dilidir.
+ Yazılı bir dil de˘gildir.
+ UML, sistem ve yazılım geli¸stiricilerin yazılım sistemlerinin eserlerini belirleme,
+g¨orselle¸stirme, olu¸sturma ve belgelemenin yanı sıra i¸s modellemesi i¸cin geli¸stirilen
+bir y¨ontemdir.
+ 1995 yılında, yazılımlarda bir standart yakla¸sım olu¸sturmak i¸cin geli¸stirilmi¸stir.
+ UML, b¨uy¨uk ve karma¸sık sistemlerin modellenmesinde ba¸sarısı kanıtlanmı¸s en iyi
+m¨uhendislik uygulamalarının bir koleksiyonunu temsil eder.
+3/32
+
+--- Page 4 ---
+UML
+ UML, nesne y¨onelimli yazılım geli¸stirmenin ve yazılım geli¸stirme s¨urecinin ¸cok
+¨onemli bir par¸casıdır.
+ UML, yazılım projelerinin tasarımını ifade etmek i¸cin ¸co˘gunlukla grafik g¨osterimler
+kullanır.
+ UML’yi kullanmak, proje ekiplerinin ileti¸sim kurmasına, potansiyel tasarımları
+ke¸sfetmesine ve yazılımın mimari tasarımını do˘grulamasına yardımcı olur.
+ UML diyagramları ile ¨onceden modelledi˘giniz bir nesne tabanlı modelinizi di˘ger
+insanlarında anlayabilece˘gi (ba¸ska programla dili kullanan kullanıcılar veya
+programlama bilmeyen ki¸siler) formata ¸ceviriyorsunuz
+ Bu sayede yazılım geli¸stiren ki¸siler arasında ortak bir dil olu¸sturuyor.
+4/32
+
+--- Page 5 ---
+UML C¸e¸sitleri
+ Yaygın olarak bilinen 14 ¸ce¸sit UML t¨ur¨u bulunmaktadır.
+ Yapısal ve davranı¸ssal olmak ¨uzere iki gruba ayrılmaktadır.
+ Structure Diagrams(Yapısal Diyagramlar), modellenmekte olan sistemde
+bulunması gerekenler i¸cin kullanılır.
+ Bu ders kapsanında inceleyece˘gimiz Class Diagram, Structure Diagram altında
+bulunmaktadır.
+ Tasarlanan OOP modelin herkes tarafından anla¸sılabilecek yapısını g¨ostermek i¸cin
+kullanılır.
+5/32
+
+--- Page 6 ---
+UML Types
+6/32
+
+--- Page 7 ---
+¨Ornek
+ Animal t¨ur¨unde bir sınıfımızın oldu˘gunu d¨u¸s¨unelim.
+ Bu sınıfımızın private olarak metin t¨ur¨unde name, integer t¨ur¨unde id ve age
+¨ozellikleri olsun.
+ Name ¨ozelli˘gini set etmek i¸cin setName adına public olarak eri¸silebilen bir metodu
+olsun.
+ Eat ismininde dı¸sardan eri¸sebilen bir metodu olsun.
+ ˙Ilgili sınıfın c# kodunu ve UML Class diagram’ını inceleyelim.
+7/32
+
+--- Page 8 ---
+Source code
+8/32
+
+--- Page 9 ---
+UML Class Diagram
+9/32
+
+--- Page 10 ---
+UML Class Diagram
+ Class diyagramlarında sınıflar yukarıda g¨or¨uld¨u˘g¨u gibi ifade edilir.
+ En ¨ust kısımda Class (sınıf) adı yazar.
+ ˙Ikinci kısım Attributes (¨ozellik) kısmıdır.
+ Alt kısım ise Methods kısmını g¨ostermektedir.
+ - ifadesi private , + ifadesi public olarak eri¸sildi˘gini ifade edilmektedir.
+ Internal (sadece olu¸sturulan proje i¸cerisinden eri¸silebilen modifier t¨ur¨u) ∼ile ifade
+edilir. Protected # ile ifade edilir.
+ readOnly {readOnly} olarak, statik ise altı ¸cizi (under line) olarak ifade edilir.
+10/32
+
+--- Page 11 ---
+¨Ornek
+11/32
+
+--- Page 12 ---
+Ger¸cek hayatta kar¸sınıza ¸cıkacak UML Class Diagram
+12/32
+
+--- Page 13 ---
+C# Inheritance in UML
+ Sınıfların kalıtımı (inheritance) do˘grudan UML kullanılarak modellenebilir.
+ UML genellemesini kullanarak bir alt sınıfı bir ¨ust sınıfa ba˘glayabilirsiniz.
+Genellemenin ¨u¸cgen ba¸s oku, bir alt sınıftan bir ¨ust sınıfa i¸saret eder.
+13/32
+
+--- Page 14 ---
+C# Nested Classes in UML
+ Ba˘glı sınıflar (nested classes), UML i¸cerme ili¸skisi kullanılarak tanımlanabilir.
+ Ba˘glayıcı, i¸cinde artı i¸sareti olan bir daire olarak g¨osterilir. Dairenin ucu kapsayıcı
+sınıfına, di˘ger ucu i¸c sınıfa ba˘glıdır.
+14/32
+
+--- Page 15 ---
+C# Class Composition in UML
+ UML kompozisyon (Composition) ili¸skilendirmesini kullanarak bir sınıfı ba¸ska bir
+sınıfın alan t¨ur¨u olarak kullanılabilir.
+ Bu ¸sekilde, sınıflar karma¸sık olarak olu¸sturabilir.
+15/32
+
+--- Page 16 ---
+C# Interfaces in UML
+ Aray¨uzler (Interfaces), bir sınıflandırıcıdan hangi ¨uyelerin beklendi˘gini tanımlar.
+ C# Interfaces, UML aray¨uzleri kullanılarak modellenebilir. UML arabirimleri,
+notkalı ¸cizgi ili¸skisi kullanılarak sınıflarla ili¸skilendirilir.
+16/32
+
+--- Page 17 ---
+C# Enum in UML
+ Numaralandırılan de˘gerler (enumeration), bir adlandırılmı¸s de˘gerler k¨umesini
+tanımlar. Belirli numaralandırma ¨o˘geleri i¸cin sayısal de˘gerler tanımlanabilir. C#
+numaralandırmaları, UML numaralandırmaları kullanılarak modellenmi¸stir.
+Enumaration i¸cin flag kullanılır.
+17/32
+
+--- Page 18 ---
+C# Namespace in UML
+ Namespace ortak sınıfları bir arada tutmak i¸cin kullanılan yapıdır. K¨ut¨uphane adı
+olarak ge¸cer.
+ Using ibaresi ile kullanılır ve UML i¸cerisinde a¸sa˘gıda g¨osterildi˘gi gibi ifade edilir.
+18/32
+
+--- Page 19 ---
+Visual Studio eklenti y¨ukleme
+ UML olu¸sturmak i¸cin bir¸cok hazır program bulunmaktadır.
+ Visual studio i¸cin geli¸stirilen eklenti ile otomatik olarak UML diyagramınızı
+olu¸sturabilirsiniz.
+ Windows ba¸slangı¸c men¨us¨unden Visual Studio Installer a¸cın.
+ Visual studo s¨ur¨um¨un¨unden de˘gi¸stir (change) i¸saretleyin.
+ Individual components (ba˘gımsız bile¸senler) tabında bulunan Code tools
+(Kod ara¸cları) kategorisi alındaki Class Designer (Sınıf Tasarımcısı) i¸saretleyin.
+19/32
+
+--- Page 20 ---
+Visual Studio Eklenti
+20/32
+
+--- Page 21 ---
+Visual Studio Eklenti
+21/32
+
+--- Page 22 ---
+Visual Studio Eklenti (ingilizce)
+22/32
+
+--- Page 23 ---
+Kurulum i¸sleminden sonra
+23/32
+
+--- Page 24 ---
+¨Ornek
+ Sınıfları yeni bir namespace i¸cerisinde oluturan,
+ Cinsiyet i¸cin Enum kullanan
+ Person sınıfı i¸cin abstract class kullanan
+ Employee, student ve Customer sınıflarınının birer person oldu˘gunu ve doWork
+yeteneklerini oldu˘gunu
+ Sistemin kodlayalım ve UML diyagramını olu¸sturulalım.
+24/32
+
+--- Page 25 ---
+Harici Namespace ve do˘gal olarka sınıflar ekleme
+25/32
+
+--- Page 26 ---
+Namespace
+26/32
+
+--- Page 27 ---
+Enum
+27/32
+
+--- Page 28 ---
+Person Class
+28/32
+
+--- Page 29 ---
+Student ve Empoloyee Clesses
+29/32
+
+--- Page 30 ---
+Customer Class
+30/32
+
+--- Page 31 ---
+UML Class Diagram
+31/32
+
+--- Page 32 ---
+¨Odev
+ Asp.Net Web Application veya Windows Form ile football oyunu kodlayınız.
+ Yetenekleri g¨ostermek (¸sut atma vs top tutma) i¸cin Interface yapısı kullanılmalıdır.
+ Futbolcuları olu¸stururken (kaleci, ¨on libero, forvet vb.) inheritance class kullanılmalıdır.
+
+¨Odevleriniz ¨ozg¨un olsun.
+ Kullandı˘gınız objeler (btn vb.) classlardan olu¸sturdu˘gunuz nesneler ile ba˘glantılı olsun.
+ Kodlarınız ayrı bir Namespace olarak olu¸sturun.
+ Olu¸sturdu˘gunuz modelin UML Class Diagramını g¨osteriniz.
+ 18 Aralık 07.59’a kadar g¨onderilenler 10+2, finale kadar g¨onderenler 10 puan
+(kayubmprogramlama1@gmail.com).
+32/32
+
+
+================================================================================
+FILE: 10- Dosyalar ve Akışlar.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Variables and arrays offer only temporary storage of data—the data is 
+lost when a local variable “goes out of scope” or when the program 
+terminates. 
+By contrast, files (and databases) are used for long-term retention of 
+large amounts of data, even after the program that created the data 
+terminates. 
+Data maintained in files often is called persistent data. 
+Data maintained in files often is called persistent data. Computers 
+store files on secondary storage devices, such as hard drives, solid-
+state drives, flash drives, DVDs and tapes
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+C# views each file as a sequential stream of bytes. 
+Each file ends either with an end-of-file marker or at a specific byte 
+number that’s recorded in a system-maintained administrative data 
+structure. 
+When a file is opened, an object is created and a stream is associated 
+with the object. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+When a console app executes, the runtime environment creates three 
+stream objects that are accessible via properties Console.Out, 
+Console.In and Console.Error, respectively. 
+These objects use streams to facilitate communication between a 
+program and a particular file or device. 
+Console.In refers to the standard input stream object, which enables 
+a program to input data from the keyboard. 
+Console.Out refers to the standard output stream object, which 
+enables a program to output data to the screen. 
+Console.Error refers to the standard error stream object, which 
+enables a program to output error messages to the screen.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Abstract class Stream provides functionality for representing streams 
+as bytes. Classes FileStream, MemoryStream and BufferedStream
+(all from namespace System.IO) inherit from class Stream. 
+Class FileStream can be used to write data to and read data from 
+files. 
+Class MemoryStream enables the transfer of data directly to and from 
+memory—this is much faster than reading from and writing to external 
+devices. 
+Class BufferedStream uses buffering to transfer data to or from a 
+stream. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+The System.IO namespace includes stream classes such as 
+StreamReader (for text input from a file), StreamWriter (for text 
+output to a file) and FileStream (for both input from and output to a 
+file). 
+These stream classes inherit from abstract classes TextReader, 
+TextWriter and Stream, respectively. 
+Properties Console.In and Console.Out are of type TextReader
+and TextWriter, respectively. 
+The system creates objects of TextReader and TextWriter derived 
+classes to initialize Console properties Console.In and 
+Console.Out.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+C# imposes no structure on files. 
+Thus, the concept of a “record” does not exist in C# files. 
+This means that you must structure files to meet the requirements of 
+your apps. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Class BankUIForm
+The following examples demonstrate file processing in a bank-account 
+maintenance app. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+Using visual inheritance, you can extend this class to create the GUIs for 
+several examples. 
+Recall that to reuse class BankUIForm, you must compile the GUI into a 
+class library, then add a reference to the new class library in each 
+project that will reuse it. 
+This library (BankLibrary) is provided with the code for this example. 
+You might need to re-add the references to this library in our examples 
+when you copy them to your system, since the library most likely will 
+reside in a different location on your system.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+Class Record
+Record class is used for maintaining the information in each record 
+that’s written to or read from a file. 
+This class also belongs to the BankLibrary DLL, so it’s located in the 
+same project as class BankUIForm.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Using a Character Stream to Create an Output File
+Class CreateFileForm uses instances of class Record to create a 
+sequential-access file that might be used in an accounts-receivable 
+system—i.e., a program that organizes data regarding money owed by a 
+company’s credit clients. 
+For each client, the program obtains an account number and the 
+client’s first name, last name and balance (i.e., the amount of money 
+that the client owes to the company for previously received goods and 
+services). 
+The data obtained for each client constitutes a record for that client. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+In this app, the account number is used as the record key—files are 
+created and maintained in account-number order. 
+This program assumes that the user enters records in account-number 
+order. However, a comprehensive accounts-receivable system would 
+provide a sorting capability, so the user could enter the records in any 
+order.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+Sample Data
+To test the program, we entered information for the accounts shown in 
+the Table. 
+The program does not depict how the data records are stored in the 
+file. 
+To verify that the file has been created successfully, we create a 
+program in the next section to read and display the file. 
+Since this is a text file, you can actually open it in any text editor to see 
+its contents.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Class ReadSequentialAccessFileForm reads records from the file 
+created by the program, then displays the contents of each record. 
+Much of the code in this example is similar to that program, so we 
+discuss only the unique aspects of the app.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+In the prior examples, Record was used to aggregate the information 
+for one record. 
+When the instance variables for a Record were output to a disk file, 
+certain information was lost, such as the type of each value. 
+For instance, if the value "3" is read from a file, there’s no way to tell if 
+the value came from an int, a string or a decimal. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+We have only data, not type information, on disk. 
+If the program that’s going to read this data “knows” what object type 
+the data corresponds to, then the data can be read directly into objects 
+of that type. 
+For example, we know that we are inputting an int (the account 
+number), the first and last name strings and a decimal (the balance). 
+We also know that these values are separated by commas, with only 
+one record on each line. 
+So, we are able to parse the strings and convert the account number 
+to an int and the balance to a decimal. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+Sometimes it would be easier to read or write entire objects. 
+C# provides such a mechanism, called object serialization. 
+A serialized object is an object represented as a sequence of bytes that 
+includes the object’s data, as well as information about the object’s 
+type and the types of data stored in the object. 
+After a serialized object has been written to a file, it can be read from 
+the file and deserialized—that is, the type information and bytes that 
+represent the object and its data can be used to recreate the object in 
+memory.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+Class BinaryFormatter (namespace 
+System.Runtime.Serialization.Formatters.Binary) enables 
+entire objects to be written to or read from a stream. 
+BinaryFormatter method Serialize writes an object’s 
+representation to a file. 
+BinaryFormatter method Deserialize reads this representation 
+from a file and reconstructs the original object. 
+Both methods throw a SerializationException if an error occurs 
+during serialization or deserialization. 
+Both methods require a Stream object (e.g., the FileStream) as a 
+parameter so that the BinaryFormatter can access the correct 
+stream.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+Next, we create and manipulate sequential-access files using object 
+serialization. 
+Object serialization is performed with byte-based streams, so the 
+sequential files created and manipulated will be binary files. 
+Binary files are not human readable. 
+For this reason, we write a separate app that reads and displays 
+serialized objects.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+We begin by creating and writing serialized objects to a sequential-
+access file. 
+In this section, we reuse much of the code from earlier sections, so we 
+focus only on the new features.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+Defining the RecordSerializable Class
+Class RecordSerializable (part of the BankLibrary project) is 
+marked with the [Serializable] attribute, which indicates to the 
+CLR that RecordSerializable objects can be serialized. 
+Classes that represent serializable types must include this attribute in 
+their declarations or must implement interface ISerializable.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+In a class that’s marked with the [Serializable] attribute or that 
+implements interface ISerializable, you must ensure that every 
+instance variable of the class is also serializable. 
+All simple-type variables and strings are serializable. 
+For variables of reference types, you must check the class declaration 
+(and possibly its base classes) to ensure that the type is serializable. 
+By default, array objects are serializable. 
+However, if the array contains references to other objects, those objects 
+may or may not be serializable.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+Using a Serialization Stream to Create an Output File
+Next, we’ll create a sequential-access file with serialization. 
+To test this program, we used the sample data from the table to create a 
+file named clients.ser. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+The program does not show how the data records actually appear in 
+the file. 
+Remember that we are now using binary files, which are not human 
+readable. 
+To verify that the file was created successfully, the next section 
+presents a program to read the file’s contents.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 58 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 59 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 60 ---
+The preceding section showed how to create a sequential-access file 
+using object serialization. 
+In this section, we discuss how to read serialized objects sequentially 
+from a file.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 61 ---
+The program reads objects from a file in event handler 
+nextButton_Click.
+We use method Deserialize to read the data. 
+Note that we cast the result of Deserialize to type 
+RecordSerializable—this cast is necessary, because Deserialize
+returns a reference of type object and we need to access properties that 
+belong to class RecordSerializable. 
+If an error occurs during deserialization or the end of the file is 
+reached, a SerializationException is thrown, and the FileStream
+object is closed. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 62 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 63 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 64 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 65 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 66 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+
+================================================================================
+FILE: 2- Kontrol İfadeleri 1.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Computers solve problems by executing a series of actions 
+in a specific order.
+An algorithm is a procedure for solving a problem, in terms 
+of:
+the actions to be executed and
+the order in which these actions are executed
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+Consider the “rise-and-shine algorithm” followed by one 
+junior executive for getting out of bed and going to work:
+(1) get out of bed, 
+(2) take off pajamas, 
+(3) take a shower, 
+(4) get dressed, 
+(5) eat breakfast and 
+(6) carpool to work. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+Suppose that the same steps are performed in a different order:
+(1) get out of bed, 
+(2) take off pajamas, 
+(3) get dressed, 
+(4) take a shower, 
+(5) eat breakfast, 
+(6) carpool to work.
+In this case, the junior executive shows up for work soaking wet. 
+The order in which statements execute is called program control.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Pseudocode is similar to English—it’s not a programming 
+language.
+It helps you “think out” an app before attempting to write it.
+A carefully prepared pseudocode app can easily be 
+converted to a corresponding C# app. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+The pseudocode of Fig. 5.1 corresponds to the algorithm 
+that inputs two integers from the user, adds these integers 
+and displays their sum. 
+The pseudocode statements are simply English statements 
+that convey what task is to be performed in C#. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Normally, statements execute one after the other in sequential 
+execution.
+Various C# statements enable you to specify the next statement to 
+execute. This is called transfer of control.
+Structured apps are clearer, easier to debug and modify, and more 
+likely to be bug free. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+C# has three types of selection structures, which from this 
+point forward we shall refer to as selection statements. 
+The if statement performs (selects) an action if a condition is 
+true or skips the action if the condition is false. 
+The if…else statement performs an action if a condition is true
+or performs a different action if the condition is false. 
+The switch statement performs one of many different actions, 
+depending on the value of an expression.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+C# provides four iteration statements (sometimes called 
+repetition statements or looping statements) that enable 
+programs to perform statements repeatedly as long as a condition 
+(called the loop-continuation condition) remains true. 
+while, do…while, for and foreach statements. 
+The while, for and foreach statements perform the action (or 
+group of actions) in their bodies zero or more times. 
+The do…while statement performs the action (or group of actions) 
+in its body one or more times. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+if grade is greater than or equal to 60
+display “Passed”
+The preceding pseudocode if statement may be written
+in C# as:
+if (grade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+The C# code corresponds closely to the pseudocode.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+bool Simple Type
+A decision can be based on any expression that evaluates to 
+true or false. 
+C# provides the simple type bool for Boolean variables that 
+can hold only the values true and false—each of these is a 
+C# keyword.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+if grade is greater than or equal to 60
+display “Passed”
+else
+display “Failed”
+The preceding if…else pseudocode statement can be written in C# as
+if (grade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+else
+{
+Console.WriteLine("Failed");
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Nested if…else Statements
+An app can test multiple cases with nested if…else statements:
+if grade is greater than or equal to 90
+display “A”
+else 
+if grade is greater than or equal to 80
+display “B”
+else 
+if grade is greater than or equal to 70 
+display “C”
+else 
+if grade is greater than or equal to 60 
+display “D”
+else
+display “F”
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+
+if (studentGrade >= 90) 
+{
+Console.WriteLine("A");
+}
+else if (studentGrade >= 80) 
+{
+Console.WriteLine("B");
+}
+else if (studentGrade >= 70)
+{
+Console.WriteLine("C");
+}
+else if (studentGrade >= 60)
+{
+Console.WriteLine("D");
+}
+else
+{
+Console.WriteLine("F");
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+Statements contained within a pair of braces ({ and }) form a block:
+if (studentGrade >= 60) 
+{
+Console.WriteLine("Passed");
+}
+else 
+{
+Console.WriteLine("Failed");
+Console.WriteLine("You must take this course again.");
+}
+Without the braces, the last statement in the else block would execute 
+regardless of whether the grade was less than 60.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+The conditional operator (?:) can be used in place of an 
+if…else statement.
+Console.WriteLine(
+studentGrade >= 60 ? "Passed" : "Failed");
+The first operand is a boolean expression that evaluates to true
+or false.
+The second operand is the value if the expression is true
+The third operand is the value if the expression is false. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+The following example demonstrates a nested if…else statement that 
+determines a student’s letter grade based on the student’s average in a 
+course. 
+Read-only property LetterGrade (lines 39–68) uses nested if…else
+statements to determine the Student’s letter grade based on the 
+Student’s average. 
+A read-only property provides only a get accessor. 
+Local variable letterGrade is initialized to string.Empty (line 43), 
+which represents the empty string (that is, a string containing no 
+characters). 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+A iteration statement allows you to specify that an app should repeat 
+an action:
+While there are more items on my shopping list
+put next item in cart and cross it off my list
+As an example of C#’s while iteration statement, consider a code 
+segment designed to find the first power of 3 larger than 100:
+int product = 3;
+while (product <= 100) 
+{
+product = 3 * product;
+}
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+Consider the following problem statement:
+A class of 10 students took a quiz. The grades (integers in
+the range 0 to 100) for this quiz are available to you.
+Determine the class average on the quiz.
+The algorithm must input each grade, keep track of the total of all 
+grades input, perform the averaging calculation and display the result. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+Pseudocode Algorithm with Counter-Controlled Iteration
+We use counter-controlled iteration to input the grades one at a time.
+A variable called a counter controls the number of times a set of 
+statements will execute.
+Counter-controlled iteration is often called definite iteration, because 
+the number of iterations is known before the loop begins executing.
+A total is a variable used to accumulate the sum of several values.
+A counter is a variable used to  count.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+Dividing two integers results in integer division.
+Any fractional part of the result is lost (i.e., truncated, not rounded).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+Consider the following problem:
+Develop a class-averaging app that processes grades for an arbitrary number of 
+students each time it’s run.
+In this example, no indication is given of how many grades the user will 
+enter during the app’s execution. 
+A sentinel value can be entered to indicate “end of data entry.” This is 
+called sentinel-controlled iteration.
+Sentinel-controlled iteration is often called indefinite iteration because 
+the number of iterations is not known before the loop begins.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+To perform a floating-point calculation with integer values, we 
+temporarily treat these values as floating-point numbers.
+A unary cast operator such as (double) performs explicit conversion.
+C# performs an operation called promotion (or implicit conversion) on 
+selected operands for use in the expression.
+The cast operator is formed by placing parentheses around the name of 
+a type. 
+This operator is a unary operator (i.e., an operator that takes only one 
+operand).
+Cast operators have the second highest precedence.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+We’ve seen that control statements can be stacked on top of one 
+another (in sequence). 
+In this case study, we examine the only other structured way control 
+statements can be connected, namely, by nesting one control 
+statement within another.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+A college offers a course that prepares students for the state licensing 
+exam for real estate brokers. Last year, 10 of the students who 
+completed this course took the exam. The college wants to know how 
+well its students did on the exam. You’ve been asked to write an app to 
+summarize the results. You’ve been given a list of these 10 students. 
+Next to each name is written a 1 if the student passed the exam or a 2 if 
+the student failed.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+• C# provides several compound assignment operators
+• For example, you can abbreviate the statement
+c = c + 3;
+• with the addition compound assignment operator, +=, as
+c += 3;
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+• C# requires all variables to have a type.
+• Instance variables of types char, byte, sbyte, short, ushort, int, 
+uint, long, ulong, float, double, and decimal are all given the 
+value 0 by default.
+• Instance variables of type bool are given the value false by default. 
+Reference-type instance variables are initialized by default to the value 
+null.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+
+================================================================================
+FILE: 3- Kontrol İfadeleri 2.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Counter-controlled iteration requires
+a control variable (or loop counter)
+the initial value of the control variable
+the increment (or decrement) by which the control variable
+is modified each iteration of the loop
+the loop-continuation condition
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+The for iteration statement specifies the elements of counter-
+controlled-iteration in a single line of code.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+The initialization, loop-continuation condition and increment 
+portions of a for statement can contain arithmetic expressions.
+For example, assume that x = 2 and y = 10; if x and y are not 
+modified in the body of the loop, then the statement
+for (int j = x; j <= 4 * x * y; j += y / x)
+is equivalent to the statement
+for (int j = 2; j <= 80; j += 5)
+If the loop-continuation condition is initially false, the app does not 
+execute the for statement’s body.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+The app in Fig. uses a for statement to sum the even integers from 2 
+to 20 and store the result in an int variable called total.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+A person invests $1,000 in a savings account yielding 5% interest, 
+compounded yearly. Calculate and display the amount of money in 
+the account at the end of each year for 10 years.
+a = p (1 + r )n
+p is the original amount invested (i.e., the principal)
+r is the annual interest rate (use 0.05 for 5%)
+n is the number of years
+a is the amount on deposit at the end of the nth year.
+Fig. uses a loop that performs the calculation for each of the 10 years the money 
+remains on deposit.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+Many classes provide static methods that cannot be called on objects—they 
+must be called using a class name.
+You can call a static method by specifying the class name followed by the 
+member access (.) operator and the method name: 
+ClassName.methodName(arguments)
+Math.Pow(x, y) calculates the value of x raised to the yth power.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+• Console.WriteLine($"{year,4}{amount,20:C}");
+• displays the year and the amount on deposit at the end of that year. 
+• The interpolation expression 
+• {year,4} 
+• formats the year. 
+• The integer 4 after the comma indicates that the value output should be 
+displayed with a field width of 4.
+• If the value to be output is fewer than four character positions wide (one or 
+two characters in this example), the value is right-aligned in the field by 
+default. 
+• If the value to be output were more than four character positions wide, the 
+field width would be extended to the right to accommodate the entire value.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+The do…while iteration statement is similar to the while
+statement. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+The switch multiple-selection statement performs 
+different actions based on the value of an expression.
+Each action is associated with the value of a constant 
+integral expression or a constant string expression
+that the expression may assume.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+• The break statement causes immediate exit from a 
+statement.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+• The continue statement skips the remaining statements 
+in the loop body and tests whether to proceed with the next 
+iteration of the loop.
+• In a for statement, the increment expression executes, 
+then the app evaluates the loop-continuation test.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Simple conditions are expressed in terms of the relational operators >, <, >= and 
+<=, and the equality operators == and !=.
+Each expression tests only one condition. 
+C# provides logical operators to enable you to form more complex conditions 
+by combining simple conditions. 
+The logical operators are && (conditional AND), || (conditional OR), & (boolean
+logical AND), | (boolean logical inclusive OR), ^ (boolean logical exclusive OR) 
+and ! (logical negation).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+• The && (conditional AND) operator works as follows:
+if (gender == 'F' && age >= 65)
+{
+++seniorFemales;
+}
+• The combined condition is true if and only if both
+simple conditions are true.
+•The combined condition may be more readable with 
+redundant parentheses:
+(gender == 'F') && (age >= 65)
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+• The table shows all four possible combinations of false and 
+true values for expression1 and expression2.
+• Such tables are called truth tables. 
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+The || (conditional OR) operator, as in the 
+following app segment:
+if ((semesterAverage >= 90) || (finalExam >= 90))
+{
+Console.WriteLine ("Student grade is A");
+}
+The complex condition evaluates to true if either or 
+both of the simple conditions are true.
+Figure is a truth table for operator conditional OR 
+(||).
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+The parts of an expression containing && or ||
+operators are evaluated only until it’s known 
+whether the condition is true or false. 
+(gender == 'F') & (age >= 65)
+If gender is not equal to 'F' (i.e., it is certain that the 
+entire expression is false) evaluation stops.
+This feature is called short-circuit evaluation.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+The boolean logical AND (&) and boolean logical 
+inclusive OR (|) operators do not perform short-
+circuit evaluation.
+This is useful if the right operand has a required side 
+effect. For example:
+(birthday == true) | (++age >= 65)
+This ensures that the condition ++age >= 65 will be 
+evaluated.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+A complex condition containing the boolean logical
+exclusive OR (^) operator (also called the logical XOR
+operator) is true if and only if one of its operands is true
+and the other is false.
+Figure is a truth table for the boolean logical exclusive OR 
+operator (^).
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+The ! (logical negation or not) operator enables you to “reverse” 
+the meaning of a condition.
+◦if (! (grade == sentinelValue))
+{
+Console.WriteLine($"The next grade is {grade}");
+}
+In most cases, you can avoid using logical negation by expressing the 
+condition differently:   
+◦if (grade != sentinelValue)
+{
+Console.WriteLine($"The next grade is {grade}");
+}
+Figure is a truth table for the logical negation operator.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+
+================================================================================
+FILE: 4- Diziler.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Data structures are collections of related data items.
+Arrays are data structures consisting of related data items 
+of the same type.
+Arrays are fixed-length entities—they remain the same 
+length once they’re created.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+An array is a group of variables—called elements—
+containing values that all have the same type.
+Arrays are reference types—what we typically think of as an 
+array is actually a reference to an array object.
+The elements of an array can be either value types or 
+reference types.
+To refer to a particular element in an array, we specify the 
+name of the reference to the array the element’s position in 
+the array, which is called the element’s index.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+Since arrays are objects, they’re typically created with 
+keyword new.
+To create an array object, specify the type and the number 
+of array elements as part of an array-creation expression
+that uses keyword new.
+The following declaration and array-creation expression 
+create an array object containing 12 int elements and store 
+the array’s reference in variable c:
+int[] c = new int[12];
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+Creating the array also can be performed as follows:
+int[] c; // declare the array variable
+c = new int[12]; // create the array; assign to array variable
+The square brackets following int indicate that c
+will refer to an array of ints.
+The array variable c receives the reference to a new 
+array object of 12 int elements.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+The number of elements can also be specified as an 
+expression that's calculated at execution time.
+When an array is created, each element of the array 
+receives a default value:
+0 for the numeric simple-type elements.
+false for bool elements.
+null for references.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Resizing an Array
+Though arrays are fixed-length entities, you can use the 
+static Array method Resize which takes two 
+arguments—the array to be resized and the new length—
+to create a new array with the specified length.
+Copies the contents of the old array into the new array
+Sets the array variable to reference the new array.
+Any content that cannot fit into the new array is truncated 
+without warning.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+8.4.2 Using an Array Initializer
+An app can create an array and initialize its elements with an array 
+initializer, a comma-separated list of expressions (called an 
+initializer list) enclosed in braces.
+The array length is determined by the number of elements in the 
+initializer list.
+The app in Fig. 8.3 initializes an integer array with 5 values (line 10) 
+and displays the array in tabular format. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+The foreach statement iterates through the elements of an entire
+array or collection.
+The syntax of a foreach statement is:
+foreach (type identifier in arrayName)
+{
+statement
+}
+type and identifier are the type and name (e.g., int number) of 
+the iteration variable.
+arrayName is the array through which to iterate.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+Using Bar Charts to Display Array Data Graphically
+The app stores grade distribution data in an array of 11 elements, each 
+corresponding to a category of grades. 
+array[0] indicates the number of grades in the range 0–9.
+array[7] indicates the number of grades in the range 70–79.
+array[10] indicates the number of 100 grades. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+The app uses arrays to summarize data collected in a 
+survey: 
+Twenty students were asked to rate on a scale of 1 to 5 the quality 
+of the food in the student cafeteria, with 1 being “awful” and 5 
+being “excellent.” Place the 20 responses in an integer array and 
+determine the frequency of each rating. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+Pass-By-Value vs. Pass-By-Reference
+When an argument to a method is an entire array or an 
+individual array element of a reference type, the called 
+method receives a copy of the reference.
+When an argument to a method is an individual array 
+element of a value type, the called method receives a copy of 
+the element’s value.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+Storing Student Grades in an Array in Class GradeBook  
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+Class GradeBookTest That Demonstrates Class 
+GradeBook  
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+Two-dimensional arrays are often used to represent 
+tables of values consisting of information arranged in rows
+and columns.
+To identify a particular table element, we must specify two 
+indices. By convention, the first identifies the element’s row 
+and the second its column.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+Rectangular Arrays
+In rectangular arrays, each row has the same number of 
+columns.
+Figure illustrates a three-by-four rectangular array
+named a.
+An array with m rows and n columns is called an m-
+by-n array.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+Array-Access Expression for a Two-Dimensional Rectangular Array
+Every element in array a is identified by an array-access expression 
+of the form a[row, column];
+Array Initializer for a Two-Dimensional Rectangular Array
+A two-by-two rectangular array b can be declared and initialized 
+with nested array initializers as follows:
+int[,] b = {{1, 2}, {3, 4}};
+The initializer values are grouped by row in braces.
+The compiler will generate an error if the number of initializers in 
+each row is not the same, because every row of a rectangular array 
+must have the same number of columns
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+Jagged Arrays
+• A jagged array is a one-dimensional array whose elements 
+are one-dimensional arrays.
+• The lengths of the rows in the array need not be the same.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+Array Initializer for a Two-Dimensional Jagged Array
+• Elements in a jagged array are accessed using an array-
+access expression of the form arrayName[row][column].
+• A jagged array with three rows of different lengths could be 
+declared and initialized as follows:
+int[][] jagged = {new int[] {1, 2},
+new int[] {3},
+new int[] {4, 5, 6}};
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 58 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 59 ---
+Creating Two-Dimensional Arrays with Array-Creation Expressions
+• A rectangular array can be created with an array-creation expression:
+int[,] b;
+b = new int[3, 4];
+• A jagged array cannot be completely created with a single array-
+creation expression. Each one-dimensional array must be initialized 
+separately.
+• A jagged array can be created as follows:
+int[][] c;
+c = new int[2][]; // create 2 rows
+c[0] = new int[5]; // create 5 columns for row 0
+c[1] = new int[3]; // create 3 columns for row 1
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 60 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 61 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 62 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 63 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 64 ---
+Storing Student Grades in a Rectangular Array in Class 
+GradeBook 
+• Figure shows the output of a program that manipulates a 
+GradeBook that uses a rectangular array grades to store the 
+grades of a number of students on multiple exams. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 65 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 66 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 67 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 68 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 69 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 70 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 71 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 72 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 73 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 74 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 75 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 76 ---
+Class GradeBookTest That Demonstrates Class GradeBook
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 77 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 78 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 79 ---
+Variable-length argument lists allow you to create methods 
+that receive an arbitrary number of arguments.
+The necessary params modifier can occur only in the 
+parameter list’s last parameter. 
+Figure demonstrates method Average, which receives a 
+variable-length sequence of doubles. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 80 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 81 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 82 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 83 ---
+• You can pass command-line arguments to an app by including a 
+parameter of type string[] in the parameter list of Main.
+• By convention, this parameter is named args.
+• The execution environment passes the command-line arguments as 
+an array to the app’s Main method.
+• The number of arguments passed from the command line is obtained 
+by accessing the array’s Length property.
+• Command-line arguments are separated by whitespace, not commas.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 84 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 85 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 86 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 87 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 88 ---
+Changes to the local copy of a value-type argument in a called 
+method do not affect the original variable in the caller.
+If the argument is of a reference type, the method makes a copy of 
+the reference, not a copy of the actual object that's referenced.
+You can use keyword ref to pass a reference-type variable by 
+reference, which allows the called method to modify the original 
+variable in the caller and make that variable refer to a different 
+object.
+This is a subtle capability, which, if misused, can lead to problems.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 89 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 90 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 91 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 92 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 93 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 94 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 95 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 96 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 97 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+
+================================================================================
+FILE: 5- S_n_flar ve Nesneler.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Exception Handling: Processing the Incorrect Response
+An exception indicates a problem that occurs while a 
+program executes. 
+Exception handling enables you to create fault-tolerant 
+programs that can resolve (or handle) exceptions. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+In many cases, this allows a program to continue executing 
+as if no problems were encountered. 
+More severe problems might prevent a program from 
+continuing normal execution, instead requiring the program 
+to notify the user of the problem, then terminate. 
+When the runtime or a method detects a problem, such as 
+an invalid array index or an invalid method argument, it 
+throws an exception—that is, an exception occurs.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+To handle an exception, place any code that might throw an 
+exception in a try statement. 
+The try block contains the code that might throw an 
+exception, and the catch block contains the code that 
+handles the exception if one occurs. 
+At this point the try block terminates and the catch block 
+begins executing—if you declared any variables in the try
+block, they no longer exist, so they’re not accessible in the 
+catch block. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+The catch block declares a type and an exception 
+parameter (ex). 
+The catch block can handle exceptions of the specified 
+type.
+Inside the catch block, you can use the parameter’s 
+identifier to interact with a caught exception object.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+Class Time1 represents the time of day.
+The class contains public properties for the Hour, Minute and 
+Second.
+A class’s public members are the public services or the public
+interface that this class provides to its clients.
+Time1 does not declare a constructor, so the compiler defines a default 
+constructor. 
+Each property receives the default value 0 for an int. 
+Instance variables and auto-implemented properties also can be 
+assigned values in their declarations
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+The access modifiers public and private control access to a class’s 
+variables, methods and properties.
+The primary purpose of public methods/properties is to present to 
+the class’s clients a view of the services the class provides.
+Clients of the class need not be concerned with how the class accomplishes its 
+tasks.
+A class’s private variables, properties and methods are not directly 
+accessible to the class’s clients. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+Every object can access a reference to itself with keyword this.
+When a non-static method/property is called, its body implicitly uses 
+keyword this to refer to the object’s instance variables and other non-
+static class members.
+You can also use keyword this explicitly in a non-static method’s 
+body. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+If the constructor’s parameter names are identical to the class’s 
+instance-variable names, so they hide (shadow) the corresponding 
+instance variables.
+You can use the this reference to refer to hidden instance variables 
+explicitly.
+If a member is not hidden, the this keyword is implied, but can be 
+included explicitly.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+Overloaded constructors enable objects of a class to be conveniently 
+initialized in different ways.
+To overload constructors, simply provide multiple constructor 
+declarations with different signatures.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+Class Time2Test (Fig. 10.6) creates six Time2 objects to invoke the 
+overloaded Time2 constructors. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+• Every class must have at least one constructor. 
+• If you do not provide any constructors in a class’s declaration, the 
+compiler creates a default constructor that takes no arguments when 
+it is invoked.
+• The compiler will not create a default constructor for a class that 
+explicitly declares at least one constructor.
+• If you have declared a constructor, but want to be able to invoke the 
+constructor with no arguments, you must declare a parameterless
+constructor. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+A class can have objects of values types or references to objects of 
+other classes as members. 
+This is called composition and is sometimes referred to as a has-a
+relationship. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+Class Date
+Class Date declares instance variables month and day, and auto-implemented property Year to 
+represent a date. 
+Class Employee
+Class Employee has public auto-implemented, getter-only properties 
+FirstName, LastName, BirthDate and HireDate
+Demonstrates that a class can have references to objects of other classes as 
+members
+Class EmployeeTest
+Class EmployeeTest creates two Date objects to represent an Employee’s 
+birthday and hire date, respectively. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+• Every object you create uses various system resources, such as 
+memory.
+• In many programming languages, these system resources are 
+reserved for the object’s use until they’re explicitly released by the 
+programmer.
+• If all the references to the object that manages the resource are lost 
+before the resource is explicitly released, it can no longer be 
+released. This is known as a resource leak.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+• The Common Language Runtime (CLR) uses a garbage collector to 
+reclaim the memory occupied by objects that are no longer in use.
+• When there are no more references to an object, the object becomes 
+eligible for destruction.
+• Every object has a destructor that’s invoked by the garbage 
+collector to perform termination housekeeping before its memory 
+is reclaimed.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+• A destructor’s name is the class name, preceded by a tilde, and it has 
+no access modifier in its header.
+• After an object’s destructor is called, the object becomes eligible for 
+garbage collection—the memory for the object can be reclaimed by 
+the garbage collector.
+• Memory leaks are less likely in C# than languages like C and C++ 
+(but some can still happen in subtle ways).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+• Other types of resource leaks can occur, for example if an app fails to 
+close a file that it has opened.
+• A problem with the garbage collector is that it is not guaranteed to 
+perform its tasks at a specified time. For this reason, destructors are 
+rarely used.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+• A static variable or property is used when only one copy of a 
+particular variable should be shared by all objects of a class.
+• A static variable or property represents classwide information—
+all objects of the class share the same piece of data.
+• The declaration of a static variable or property begins with the 
+keyword static.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+• The scope of a static variable is the body of its class.
+• A class’s public static members can be accessed by qualifying the 
+member name with the class name and the member access (.) 
+operator, as in Math.PI.
+• A class’s private static class members can be accessed only 
+through the class’s methods and properties. 
+• To access a private static member from outside its class, a 
+public static method or property can be provided.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+A static method (or property) cannot access non-static class 
+members directly, because a static method (or property) can be 
+called even when no objects of the class exist. 
+For the same reason, this cannot be used in a static method—the 
+this reference always refers to a specific object of the class. 
+When a static method is called, it does not know which object to 
+manipulate and there might not be any objects of its class in memory.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+Class Employee declares private static auto-implemented property 
+Count to maintain a count of the number of Employee objects that 
+have been created. 
+Count’s set accessor is private, because only class Employee should 
+be able to modify Count’s value. 
+Count is a static auto-implemented property, so the compiler creates 
+a corresponding private static variable that Count manages. 
+When you declare a static variable and do not initialize it, the 
+compiler initializes it to the type’s default value (in this case, 0).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 50 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 51 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 52 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 53 ---
+The principle of least privilege states that code should be granted the 
+amount of privilege and access needed to accomplish its designated 
+task, but no more.
+Constants declared with const must be initialized to a constant value 
+when they’re declared.
+C# provides keyword readonly to specify that an instance variable of 
+an object is not modifiable and that any attempt to modify it after the 
+object is constructed is an error.
+A readonly variable’s identifier uses Pascal Case by convention.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 54 ---
+Although readonly instance variables can be initialized when they’re 
+declared, this isn’t required. 
+A readonly variable should be initialized by each of the class’s 
+constructors or in the variable’s declaration. 
+Each constructor can assign values to a readonly instance variable 
+multiple times—the variable doesn’t become unmodifiable until after
+the constructor completes execution. 
+If a constructor does not initialize the readonly variable, the variable 
+uses the same default value as any other instance variable.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 55 ---
+const members must be assigned values at compile time. 
+const members can be initialized only with other constant values, such 
+as integers, string literals, characters and other const members. 
+Constant members with values that cannot be determined at compile 
+time—such as constants that are initialized with the result of a method 
+call—must be declared with keyword readonly, so they can be 
+initialized at execution time. 
+Variables that are readonly can be initialized with more complex 
+expressions, such as an array initializer or a method call that returns a 
+value or a reference to an object. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 56 ---
+C# Getter-Only Auto-Implemented Properties and readonly
+When an auto-implemented property has only a get accessor, the 
+property can be used only to read the value, so the compiler implicitly 
+declares the corresponding private instance variable as readonly. 
+Getter-only auto-implemented properties can be initialized in their 
+declarations or in constructors. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 57 ---
+• The Class View displays the fields, methods and 
+properties for all classes in a project. 
+• Select View > Class View to display the Class View
+as a tab in the same position within the IDE
+• The view follows a hierarchical structure, with the 
+project name as the root. 
+• When a class is selected, its members appear in the 
+lower half of the window.
+public methods are indicated by purple boxes
+public properties are indicated by wrench icons
+If a class has any private members, those 
+members’ icons contain small padlocks.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 58 ---
+• You can use the Object Browser to learn about 
+the functionality provided by a specific class.
+• To open the Object Browser, select View > 
+Object Browser.
+• The Object Browser lists all methods provided 
+by class Math in the upper-right frame.
+• If you click the name of a member in the upper-
+right frame, a description of that member 
+appears in the lower-right frame.
+• The Object Browser can be a quick mechanism 
+to learn about a class or one of its methods.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 59 ---
+You can create operators that work with objects of your own types—
+via a process called operator overloading. 
+You can overload most operators. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 60 ---
+• The .NET Framework Class Library provides several classes, called 
+collections, used to store groups of related objects.
+• These classes provide efficient methods that organize, store and 
+retrieve your data without requiring knowledge of how the data is 
+being stored.
+©1992-2014 by Pearson Education, Inc. All Rights Reserved.
+
+--- Page 61 ---
+The generic collection class List<T> (from namespace 
+System.Collections.Generic) does not need to
+be reallocated to change its size.
+List<T> is called a generic class because it can be used with any type 
+of object.
+T is a placeholder for the type of the objects stored in the list.
+The next slides shows some common methods and properties of class 
+List<T>.
+
+--- Page 62 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 63 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 64 ---
+Figure demonstrates dynamically resizing a List object.
+The Count property returns the number of elements 
+currently in the List.
+The Capacity property indicates how many items the 
+List can hold without having to grow. 
+When the List is created, both are initially 0—though the 
+Capacity is implementation dependent. 
+
+--- Page 65 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 66 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 67 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 68 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 69 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 70 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 71 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 72 ---
+Collection initializers provide a convenient syntax (similar to array 
+initializers) for initializing a collection. For example;
+var items = new List<string> {"aQua", "RusT", "yElLow", "rEd"};
+Explicitly creates the List<string> with new, so the compiler knows that the 
+initializer list contains elements for a List<string>
+The following declaration would generate a compilation error, 
+because the compiler cannot determine whether you wish to create 
+an array or a collection
+var items = {"aQua", "RusT", "yElLow", "rEd"};
+©1992-2014 by Pearson Education, Inc. All Rights Reserved.
+
+
+================================================================================
+FILE: 6- Kal_t_m.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Inheritance allows a new class to absorb an existing class’s 
+members.
+A derived class normally adds its own fields and methods to 
+represent a more specialized group of objects.
+Inheritance saves time by reusing proven and debugged high-quality 
+software.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+The direct base class is the base class which the derived class 
+explicitly inherits.
+An indirect base class is any class above the direct base class in the 
+class hierarchy.
+The class hierarchy begins with class object.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+The is-a relationship represents inheritance.
+For example, a car is a vehicle, and a truck is a vehicle.
+New classes can inherit from thousands of pre-built classes in class
+libraries.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Objects of all classes that extend a common base class can be treated 
+as objects of that base class.
+However, base-class objects cannot be treated as objects of their 
+derived classes.
+A derived class can customize methods it inherits from its base class. 
+In such cases, the derived class can override (redefine) the base-
+class method with an appropriate implementation.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+A base class’s private members are inherited by derived classes, 
+but are not directly accessible by derived-class methods and 
+properties.
+A base class’s protected members can be accessed by members of 
+that base class and by members of its derived classes, but not by 
+clients of the class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+CommissionEmployee represents an employee who is paid 
+a percentage of their sales.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+Declaring instance variables as private and providing public properties to 
+manipulate and validate them helps enforce good software engineering.
+Constructors are not inherited.
+Either explicitly or implicitly, a call to the base-class constructor is made.
+Class object’s default (empty) constructor does nothing.
+Even if a class does not have constructors, the default constructor will call the 
+base class’s default or parameterless constructor.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+CommissionEmployee Method ToString
+Method ToString is special—it’s one of the methods that every class inherits directly 
+or indirectly from class object.
+Method ToString returns a string representing an object.
+Class object’s ToString method is primarily a placeholder that typically should be 
+overridden by a derived class.
+To override a base-class method, a derived class must declare a method with keyword
+override.
+The method must have the same signature (method name, number of parameters and 
+parameter types) and return type as the base-class method.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+Now we declare class BasePlusCommissionEmployee , 
+which extends class CommissionEmployee
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+A BasePlusCommissionEmployee object is a
+CommissionEmployee.
+Each derived-class constructor must implicitly or explicitly call its 
+base-class constructor to ensure that the instance variables 
+inherited from the base class are initialized properly. 
+A constructor initializer with keyword base invokes the base-class 
+constructor.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+BasePlusCommissionEmployee Method Earnings
+The virtual and abstract keywords indicate that a base-
+class method can be overridden in derived classes.
+The override modifier declares that a derived-class method 
+overrides a virtual or abstract base-class method.
+This modifier also implicitly declares the derived-class 
+method virtual. 
+We need to declare CommissionEmployee’s Earnings
+method virtual.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+The compiler generates additional errors because base class CommissionEmployee’s
+instance variables are private.
+The errors can be prevented by using the public properties inherited from class 
+CommissionEmployee.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Class BasePlusCommissionEmployee inherits from 
+CommissionEmployee’s and can access the private base-
+class members via the inherited public properties. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+Class BasePlusCommissionEmployee’s Earnings overrides class 
+CommissionEmployee’s Earnings method. 
+The new version obtains the portion of the employee’s earnings 
+based on commission alone by calling CommissionEmployee’s
+Earnings method with the expression base.Earnings()
+This method invocation is a good software engineering practice—by 
+having BasePlusCommissionEmployee’s Earnings method invoke 
+CommissionEmployee’s Earnings method to calculate part of a 
+BasePlusCommissionEmployee object’s earnings, we avoid 
+duplicating the code and reduce code-maintenance problems
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+Class BasePlusCommissionEmployeeTest
+Class BasePlusCommissionEmployeeTest performs the 
+same manipulations on a BasePlusCommissionEmployee
+object and produces the same output, so we do not show it 
+here.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+• The derived-class constructor, before performing its own tasks, 
+invokes its direct base class’s constructor.
+• This is done either explicitly or implicitly.
+• If the base class is derived from another class, the base-class 
+constructor invokes the constructor of the next class up in the 
+hierarchy, and so on.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+• When a new class extends an existing class, the new class inherits the 
+members of the existing class.
+• We can customize the new class to meet our needs by including additional 
+members and by overriding base-class members.
+• Independent software vendors (ISVs) can develop and sell proprietary 
+classes.
+• Users then can derive new classes from these library classes without 
+accessing the source code.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+Effective software reuse improves the software-
+development process.
+Object-oriented programming facilitates software reuse, 
+potentially shortening development time.
+The availability of substantial and useful class libraries 
+helps deliver the maximum benefits of software reuse 
+through inheritance.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+All classes inherit directly or indirectly from the object class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+
+================================================================================
+FILE: 7- Cokbicimlilik.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Polymorphism enables you to write apps that process objects that 
+share the same base class in a class hierarchy as if they were all objects 
+of the base class.
+Polymorphism promotes extensibility.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 3 ---
+If class Rectangle is derived from class Quadrilateral, then a 
+Rectangle is a more specific version of a Quadrilateral.
+Any operation that can be performed on a Quadrilateral object can 
+also be performed on a Rectangle object.
+These operations also can be performed on other Quadrilaterals, 
+such as Squares, Parallelograms and Trapezoids.
+The polymorphism occurs when an app invokes a method through a 
+base-class variable.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+Quadrilateral
+Rectangle
+Parallelogram
+Square
+Trapezoid
+Object
+(namespace: System)
+implicit inheritance
+explicit inheritance
+
+--- Page 5 ---
+As another example, suppose we design a video game that manipulates 
+objects of many different types, including objects of classes Martian, 
+Venusian, Plutonian, SpaceShip and LaserBeam.
+Each class inherits from the common base class SpaceObject, which 
+contains method Draw.
+A screen-manager app maintains a collection (e.g., a SpaceObject
+array) of references to objects of the various classes. 
+To refresh the screen, the screen manager periodically sends each 
+object the same message—namely, Draw, while object responds in a 
+unique way.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+SpaceObject
+Martian
+Plutonian
+Venutian
+SpaceShip
+Object
+(namespace: System)
+implicit inheritance
+explicit inheritance
+
+--- Page 7 ---
+A screen-manager program may contain a SpaceObject array of references to 
+objects of various classes that derive from SpaceObject
+arrOfSpaceObjects[ 0 ] = martian1;
+arrOfSpaceObjects[ 1 ] = martian2;
+arrOfSpaceObjects[ 2 ] = venutian1;
+arrOfSpaceObjects[ 3 ] = plutonian1;
+arrOfSpaceObjects[ 4 ] = spaceShip1;
+…
+To refresh the screen, the screen-manager calls DrawYourself on each object in 
+the array
+foreach(SpaceObject spaceObject in arrOfSpaceObjects)
+{
+spaceObject.DrawYourself
+}
+The program polymorphically calls the appropriate version of DrawYourself
+on each object, based on the type of that object
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+Abstract classes
+Cannot be instantiated
+Used as base classes
+Class definitions are not complete
+Derived classes must define the missing pieces
+Can contain abstract methods and/or abstract properties
+Have no implementation
+Derived classes must override inherited abstract methods and abstract 
+properties to enable instantiation
+Abstract methods and abstract properties are implicitly virtual 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 9 ---
+• An abstract class is used to provide an appropriate base class from which 
+other classes may inherit (concrete classes)
+• Abstract base classes are too generic to define (by instantiation) real 
+objects
+• To define an abstract class, use keyword abstract in the declaration
+• To declare a method or property abstract, use keyword abstract in the 
+declaration
+• Abstract methods and properties have no implementation
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 10 ---
+Concrete classes use the keyword override to provide 
+implementations for all the abstract methods and properties of the 
+base-class
+Any class with an abstract method or property must be declared 
+abstract
+Even though abstract classes cannot be instantiated,
+we can use abstract class references to refer to instances of any 
+concrete class derived from the abstract class
+Constructors and static methods cannot be declared abstract or 
+virtual
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 11 ---
+Abstract property declarations have the form:
+public abstract PropertyType MyProperty { get; set; } 
+An abstract property omits implementations for the get accessor 
+and/or the set accessor.
+Concrete derived classes must provide implementations for every 
+accessor declared in the abstract property.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 12 ---
+A company pays its employees on a weekly basis. The employees are of four 
+types: 
+Salaried employees are paid a fixed weekly salary regardless of the number of hours worked, 
+hourly employees are paid by the hour and receive "time-and-a-half" overtime pay for all 
+hours worked in excess of 40 hours, 
+commission employees are paid a percentage of their sales, and 
+salaried-commission employees receive a base salary plus a percentage of their sales.
+For the current pay period, the company has decided to reward salaried-
+commission employees by adding 10% to their base salaries. The company 
+wants to implement an app that performs its payroll calculations 
+polymorphically.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 13 ---
+We use abstract class Employee to represent the general concept of 
+an employee.
+SalariedEmployee, CommissionEmployee and HourlyEmployee
+extend Employee.
+Class BasePlusCommissionEmployee—which extends 
+CommissionEmployee—represents the last employee type.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 14 ---
+The UML class diagram  shows the inheritance hierarchy for our 
+polymorphic employee payroll app.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+The diagram shows each of the 
+five classes in the hierarchy 
+down the left side and methods 
+Earnings and ToString
+across the top.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+Class Employee provides methods Earnings and ToString, in 
+addition to the properties that manipulate Employee’s instance 
+variables.
+Each earnings calculation depends on the employee’s class, so we 
+declare Earnings as abstract.
+The app iterates through the array and calls method Earnings for each 
+Employee object. These method calls are processed polymorphically.
+Each derived class overrides method ToString to create a string
+representation of an object of that class.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+The app tests our Employee hierarchy. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+You can avoid a potential InvalidCastException by using the as 
+operator to perform a downcast rather than a cast operator.
+If the downcast is invalid, the expression will be null instead of throwing an 
+exception.
+Method GetType returns an object of class Type
+(of namespace System), which contains information about the object’s 
+type, including its class name, the names of its methods, and the name 
+of its base class.
+The Type class’s ToString method returns the class name.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 42 ---
+• Assigning a base-class reference to a base-class variable is straightforward.
+• Assigning a derived-class reference to a derived-class variable is straightfor-
+ward.
+• Assigning a derived-class reference to a base-class variable is safe, because the 
+derived-class object is an object of its base class. However, this reference can be 
+used to refer only to base-class members.
+• Attempting to assign a base-class reference to a derived-class variable is a 
+compilation error. To avoid this error, the base-class reference must be cast to a 
+derived-class type explicitly.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 43 ---
+A method declared sealed in a base class cannot be overridden in a 
+derived class.
+Methods that are declared private are implicitly sealed.
+Methods that are declared static also are implicitly sealed, because 
+static methods cannot be overridden either.
+A derived-class method declared both override and sealed can 
+override a base-class method, but cannot be overridden in classes 
+further down the inheritance hierarchy. 
+Calls to sealed methods (and non-virtual methods) are resolved at 
+compile time—this is known as static binding. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 44 ---
+A class that is declared sealed cannot be a base class (i.e., a class 
+cannot extend a sealed class).
+All methods in a sealed class are implicitly sealed.
+Class string is a sealed class. This class cannot be extended, so apps 
+that use strings can rely on the functionality of string objects as 
+specified in the Framework Class Library.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 45 ---
+
+--- Page 46 ---
+•
+TwoDimensionalShape sınıfı ve ThreeDimensionalShape sınıfı tarafında 
+kalıtılacak Shape soyut sınıfının  oluşturulmalıdır. 
+• Shape soyut sınıfında 
+• ilgili nesnenin ismini (Circle, Square vb..) döndürecek şekilde uygulanmış bir toString() 
+metottu olmalıdır.
+• Her bir alt sınıf için ilgili getArea() metotlar özelleştirilmelidir. 
+• TwoDimensionalShape sınıfında
+• getArea() metodu 
+• ThreeDimensionalShape sınıfında
+• getArea() ve getVolume()  metotları olmalıdır.
+• Bu özellikleri sağlayacak şekilde sınıf hiyerarşisi ve sınıf içleri doldurulmalı, 
+Main() metodu bun göre dizayn edilmelidir.
+
+
+================================================================================
+FILE: 8- Arayüzler.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Interfaces specify the public services (methods and properties) that classes 
+must implement
+Interfaces vs. abstract classes w.r.t default implementations
+Interfaces provide no default implementations
+Abstract classes may provide some default implementations
+If no default implementations  can/are defined – do not use an abstract class, use an 
+interface instead
+Interfaces are used to “bring together” or relate to each other disparate objects
+that relate to one another only through the interface
+I.e., provide uniform set of methods and properties for disparate objects
+E.g.: A person and a tree are disparate objects
+Interface can define age and name for these disparate objects
+Enables polymorphic processing of age and name for person & tree objects
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 3 ---
+Interfaces are defined using keyword interface
+Use inheritance notation to specify that a class implements an interface
+ClassName : InterfaceName
+Classes may implement more then one interface:
+e.g.: ClassName : InterfaceName1, InterfaceName2
+Can also have:
+ClassName : ClassName1, InterfaceName1, InterfaceName2    (object list must precedes interface list)
+A class that implement an interface, must provide implementations for every 
+method and property in the interface definition
+Example: interface IAge that returns information about an object’s age
+Can be used by classes for people, cars, trees (all have an age)
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 4 ---
+• To build an app that can determine payments for employees and 
+invoices alike, we first create an interface named IPayable.
+• Interface IPayable contains method GetPaymentAmount that 
+returns a decimal amount to be paid for an object of any class that 
+implements the interface.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 5 ---
+UML Diagram Containing an Interface
+The UML class diagram shows the interface and class hierarchy used in 
+our accounts-payable app.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+GetPaymentAmount simply calls Employee’s abstract method 
+Earnings. 
+At execution time, when GetPaymentAmount is called on an object of 
+an Employee derived class, GetPaymentAmount calls that class’s 
+concrete Earnings method, which knows how to calculate earnings for 
+objects of that derived-class type. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+Figure overviews several commonly used Framework Class Library 
+interfaces.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+• Ad, soyad ve aylık maaş özelliklerine sahip bir Employee sınıfını ve yılı, miktarı ve ödendi 
+bilgisi özelliklerine sahip Tax sınıfı tarafından uygulanacak Payable arayüzü oluşturalım 
+ve bu arayüz için de Pay isimli bir metot tanımlayın. Bu metot sınıflar tarafında uygun 
+şekilde doldurulacaktır. (Örneğin çalışanda maaş ödemesi, vergide vergi ödemesi.)  
+• Ayrıca Employee sınıfından türetilmiş Salesman sınıfı örnekleri aylık maaşlarının yanında 
+satışlarının üzerinden komisyon almaktadırlar. 
+• Employee sınıfına adını ve yıllık kazancını yazdıran bir metot ekleyelim.
+• Salesman sınıfında ilave olarak aylık satış miktarı (para cinsinden) ve komisyon oranı özellikleri 
+olsun.
+•
+Ayrıca Employee sınıfının IComparable arayüzünün uygulayarak, kendi aralarından doğum 
+tarihlerine göre sıralanabilir olmasını sağlayın. Böylece bir dizi (Array) içine yerleştirdiğiniz 
+Employee örneklerini sıralayabileceksiniz. Not: ArrayList içindeki örnekleri sıralanması için 
+IComparer arayüzü kullanılır.
+• Tüm özellikleri test edebilecek şekilde Main() metodunu düzenleyiniz.
+
+--- Page 21 ---
+
+--- Page 22 ---
+
+--- Page 23 ---
+•
+TwoDimensionalShape sınıfı ve ThreeDimensionalShape sınıfı tarafında 
+kalıtılacak Shape soyut sınıfının  oluşturulmalıdır. 
+• Shape soyut sınıfında 
+• ilgili nesnenin ismini (Circle, Square vb..) döndürecek şekilde uygulanmış bir toString() 
+metottu olmalıdır.
+• Her bir alt sınıf için ilgili getArea() metotlar özelleştirilmelidir. 
+• TwoDimensionalShape sınıfında
+• getArea() metodu 
+• ThreeDimensionalShape sınıfında
+• getArea() ve getVolume()  metotları olmalıdır.
+•
+Ayrıca Shape sınıfı IComparable arayüzünü uygulayarak, dizi içindeki sınıf 
+örneklerinin alanlarına göre sıralanması sağlanmalıdır.  
+• Bu özellikleri sağlayacak şekilde sınıf hiyerarşisi ve sınıf içleri doldurulmalı, Main() 
+metodu bun göre dizayn edilmelidir.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+Bilindiği üzere C# ‘da çoklu kalıtıma
+izin verilmemektedir. Yanda ki UML 
+diyagramında ise çoklu kalıtım
+gerektiren bir durum söz
+konusudur. Bu durumda ki öneriniz
+nedir?
+
+
+================================================================================
+FILE: 9- Generic S_n_flar ve Koleksiyonlar.txt
+================================================================================
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Overloaded methods are often used to perform similar operations on different 
+types of data. 
+To understand the motivation for generic methods, let’s begin with an example 
+that contains three overloaded DisplayArray methods. 
+These methods display the elements of an int array, a double array and a char
+array, respectively. 
+Soon, we’ll reimplement this program more concisely and elegantly using a 
+single generic method
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+This example effectively demonstrates the expressive power of 
+generics. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+Value Types vs. Reference Types in Generics
+The compiler handles value and reference types differently in generic method 
+calls. 
+When a value-type argument is used for a given type parameter, the compiler 
+generates a version of the method that’s specific to the value type—if one has 
+been generated previously, the compiler reuses that one. 
+If DisplayArray were called with a reference type, the compiler would also 
+generate a single version of the method that’s used by all reference types. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+Explicit Type Arguments
+You also can use explicit type arguments to indicate the exact type that should 
+be used to call a generic function. For example, line 15 could be written as
+DisplayArray<int>(intArray); // pass an int array argument
+The preceding method call explicitly provides the type argument (int) that 
+should be used to replace type parameter T in line 23. 
+Though not required here, an explicit type argument would be required if the 
+compiler cannot infer the type from the method’s argument(s).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+IComparable<T> Interface 
+It’s possible to compare two objects of the same type if that type implements the 
+generic interface IComparable<T> (of namespace System). 
+A benefit of implementing interface IComparable<T> is that IComparable<T>
+objects can be used with the sorting and searching methods of classes in the 
+System.Collections.Generic namespace—we will discuss those methods. 
+The structures in the Framework Class Library that correspond to the simple 
+types all implement this interface. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+Specifying Type Constraints
+Even though IComparable objects can be compared, they cannot be used with 
+generic code by default, because not all types implement interface 
+IComparable<T>. 
+However, we can restrict the types that can be used with a generic method or 
+class to ensure that they meet certain requirements. 
+This feature—known as a type constraint—restricts the type of the argument 
+supplied to a particular type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+Figure declares method Maximum (lines 18–35) with a type 
+constraint that requires each of the method’s arguments to be of 
+type IComparable<T>. 
+This restriction is important, because not all objects can be 
+compared. 
+However, all IComparable<T> objects are guaranteed to have a 
+CompareTo method that can be used in method Maximum to 
+determine the largest of its three arguments.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+C# provides several kinds of type constraints. 
+A class constraint indicates that the type argument must be an object of 
+a specific base class or one of its subclasses. 
+An interface constraint indicates that the type argument’s class must 
+implement a specific interface. 
+The type constraint in line 18 is an interface constraint, because 
+IComparable<T> is an interface. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+You can specify that the type argument must be a reference type or a 
+value type by using the reference-type constraint (class) or the value-
+type constraint (struct), respectively. 
+Finally, you can specify a constructor constraint—new()—to 
+indicate that the generic code can use operator new to create new 
+objects of the type represented by the type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+If a type parameter is specified with a constructor constraint, the type 
+argument’s class must provide a public parameterless or default 
+constructor to ensure that objects of the class can be created without 
+passing constructor arguments; otherwise, a compilation error occurs.
+It’s possible to apply multiple constraints to a type parameter. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+To do so, simply provide a comma-separated list of constraints in the 
+where clause. 
+If you have a class constraint, reference-type constraint or value-type 
+constraint, it must be listed first—only one of these types of 
+constraints can be used for each type parameter. 
+Interface constraints (if any) are listed next. 
+The constructor constraint is listed last (if there is one).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+A generic method may be overloaded. 
+Each overloaded method must have a unique signature
+A class can provide two or more generic methods with the same name 
+but different method parameters. 
+A generic method can be overloaded by nongeneric methods with the 
+same method name. 
+When the compiler encounters a method call, it searches for the 
+method declaration that best matches the method name and the 
+argument types specified in the call. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+With a generic class, you can use a simple, concise notation to indicate 
+the actual type(s) that should be used in place of the class’s type 
+parameter(s). 
+At compilation time, the compiler ensures your code’s type safety, and 
+the runtime system replaces type parameters with type arguments to 
+enable your client code to interact with the generic class.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+One generic Stack class, for example, could be the basis for creating 
+many Stack classes (e.g., “Stack of double,” “Stack of int,” “Stack of 
+char,” “Stack of Employee”). 
+Figure presents a generic Stack class declaration. 
+This class should not be confused with the class Stack from 
+namespace System.Collections.Generics. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+Classes FullStackException and EmptyStackException each 
+provide a parameterless constructor, a one-argument constructor of 
+exception classes and a two-argument constructor for creating a new 
+exception using an existing one. 
+The parameterless constructor sets the default error message while the 
+other two constructors set custom error messages.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+Now, let’s consider an app that uses the Stack generic class. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+Figure 20.9 declares generic method TestPush (lines 33–53) to 
+perform the same tasks as TestPushDouble and TestPushInt in Fig. 
+20.8—that is, Push values onto a Stack<T>. 
+Similarly, generic method TestPop (lines 56–77) performs the same 
+tasks as TestPopDouble and TestPopInt in Fig. 20.8—that is, Pop
+values off a Stack<T>.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 45 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 46 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 47 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 48 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 49 ---
+
+--- Page 50 ---
+
+--- Page 51 ---
+
+--- Page 52 ---
+
+--- Page 53 ---
+
+--- Page 54 ---
+
+--- Page 55 ---
+
+--- Page 56 ---
+
+--- Page 57 ---
+
+--- Page 58 ---
+
+--- Page 59 ---
+
+--- Page 60 ---
+
+--- Page 61 ---
+
+--- Page 62 ---
+
+--- Page 63 ---
+
+--- Page 64 ---
+
+--- Page 65 ---
+
+--- Page 66 ---
+
+--- Page 67 ---
+
+--- Page 68 ---
+
+--- Page 69 ---
+
+--- Page 70 ---
+
+--- Page 71 ---
+
+--- Page 72 ---
+

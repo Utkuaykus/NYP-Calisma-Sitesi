@@ -1,0 +1,254 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Counter-controlled iteration requires
+a control variable (or loop counter)
+the initial value of the control variable
+the increment (or decrement) by which the control variable
+is modified each iteration of the loop
+the loop-continuation condition
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 3 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 4 ---
+The for iteration statement specifies the elements of counter-
+controlled-iteration in a single line of code.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 5 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+The initialization, loop-continuation condition and increment 
+portions of a for statement can contain arithmetic expressions.
+For example, assume that x = 2 and y = 10; if x and y are not 
+modified in the body of the loop, then the statement
+for (int j = x; j <= 4 * x * y; j += y / x)
+is equivalent to the statement
+for (int j = 2; j <= 80; j += 5)
+If the loop-continuation condition is initially false, the app does not 
+execute the for statement’s body.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+The app in Fig. uses a for statement to sum the even integers from 2 
+to 20 and store the result in an int variable called total.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+A person invests $1,000 in a savings account yielding 5% interest, 
+compounded yearly. Calculate and display the amount of money in 
+the account at the end of each year for 10 years.
+a = p (1 + r )n
+p is the original amount invested (i.e., the principal)
+r is the annual interest rate (use 0.05 for 5%)
+n is the number of years
+a is the amount on deposit at the end of the nth year.
+Fig. uses a loop that performs the calculation for each of the 10 years the money 
+remains on deposit.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+Many classes provide static methods that cannot be called on objects—they 
+must be called using a class name.
+You can call a static method by specifying the class name followed by the 
+member access (.) operator and the method name: 
+ClassName.methodName(arguments)
+Math.Pow(x, y) calculates the value of x raised to the yth power.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 16 ---
+• Console.WriteLine($"{year,4}{amount,20:C}");
+• displays the year and the amount on deposit at the end of that year. 
+• The interpolation expression 
+• {year,4} 
+• formats the year. 
+• The integer 4 after the comma indicates that the value output should be 
+displayed with a field width of 4.
+• If the value to be output is fewer than four character positions wide (one or 
+two characters in this example), the value is right-aligned in the field by 
+default. 
+• If the value to be output were more than four character positions wide, the 
+field width would be extended to the right to accommodate the entire value.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+The do…while iteration statement is similar to the while
+statement. 
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+The switch multiple-selection statement performs 
+different actions based on the value of an expression.
+Each action is associated with the value of a constant 
+integral expression or a constant string expression
+that the expression may assume.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 21 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 22 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 23 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 25 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 26 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 27 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 28 ---
+• The break statement causes immediate exit from a 
+statement.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 29 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 30 ---
+• The continue statement skips the remaining statements 
+in the loop body and tests whether to proceed with the next 
+iteration of the loop.
+• In a for statement, the increment expression executes, 
+then the app evaluates the loop-continuation test.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 31 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 32 ---
+Simple conditions are expressed in terms of the relational operators >, <, >= and 
+<=, and the equality operators == and !=.
+Each expression tests only one condition. 
+C# provides logical operators to enable you to form more complex conditions 
+by combining simple conditions. 
+The logical operators are && (conditional AND), || (conditional OR), & (boolean
+logical AND), | (boolean logical inclusive OR), ^ (boolean logical exclusive OR) 
+and ! (logical negation).
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 33 ---
+• The && (conditional AND) operator works as follows:
+if (gender == 'F' && age >= 65)
+{
+++seniorFemales;
+}
+• The combined condition is true if and only if both
+simple conditions are true.
+•The combined condition may be more readable with 
+redundant parentheses:
+(gender == 'F') && (age >= 65)
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 34 ---
+• The table shows all four possible combinations of false and 
+true values for expression1 and expression2.
+• Such tables are called truth tables. 
+
+--- Page 35 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 36 ---
+The || (conditional OR) operator, as in the 
+following app segment:
+if ((semesterAverage >= 90) || (finalExam >= 90))
+{
+Console.WriteLine ("Student grade is A");
+}
+The complex condition evaluates to true if either or 
+both of the simple conditions are true.
+Figure is a truth table for operator conditional OR 
+(||).
+
+--- Page 37 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 38 ---
+The parts of an expression containing && or ||
+operators are evaluated only until it’s known 
+whether the condition is true or false. 
+(gender == 'F') & (age >= 65)
+If gender is not equal to 'F' (i.e., it is certain that the 
+entire expression is false) evaluation stops.
+This feature is called short-circuit evaluation.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 39 ---
+The boolean logical AND (&) and boolean logical 
+inclusive OR (|) operators do not perform short-
+circuit evaluation.
+This is useful if the right operand has a required side 
+effect. For example:
+(birthday == true) | (++age >= 65)
+This ensures that the condition ++age >= 65 will be 
+evaluated.
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 40 ---
+A complex condition containing the boolean logical
+exclusive OR (^) operator (also called the logical XOR
+operator) is true if and only if one of its operands is true
+and the other is false.
+Figure is a truth table for the boolean logical exclusive OR 
+operator (^).
+
+--- Page 41 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 42 ---
+The ! (logical negation or not) operator enables you to “reverse” 
+the meaning of a condition.
+◦if (! (grade == sentinelValue))
+{
+Console.WriteLine($"The next grade is {grade}");
+}
+In most cases, you can avoid using logical negation by expressing the 
+condition differently:   
+◦if (grade != sentinelValue)
+{
+Console.WriteLine($"The next grade is {grade}");
+}
+Figure is a truth table for the logical negation operator.
+
+--- Page 43 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 44 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.

@@ -1,0 +1,217 @@
+--- Page 1 ---
+Nesne Tabanlı Programlama
+B¨ol¨um 10
+UML Class Diyagramları
+1/32
+
+--- Page 2 ---
+Ders ˙I¸ceri˘gi
+ UML
+ Namespace, Enum kullanımı
+ Visual Studio eklenti y¨ukleme
+ ¨Ornekler
+2/32
+
+--- Page 3 ---
+UML
+ Unified Modeling Language (UML) bir sistemin tasarımını g¨orselle¸stirmek i¸cin
+yazılım m¨uhendisli˘gi alanında genel ama¸clı modelleme dilidir.
+ Yazılı bir dil de˘gildir.
+ UML, sistem ve yazılım geli¸stiricilerin yazılım sistemlerinin eserlerini belirleme,
+g¨orselle¸stirme, olu¸sturma ve belgelemenin yanı sıra i¸s modellemesi i¸cin geli¸stirilen
+bir y¨ontemdir.
+ 1995 yılında, yazılımlarda bir standart yakla¸sım olu¸sturmak i¸cin geli¸stirilmi¸stir.
+ UML, b¨uy¨uk ve karma¸sık sistemlerin modellenmesinde ba¸sarısı kanıtlanmı¸s en iyi
+m¨uhendislik uygulamalarının bir koleksiyonunu temsil eder.
+3/32
+
+--- Page 4 ---
+UML
+ UML, nesne y¨onelimli yazılım geli¸stirmenin ve yazılım geli¸stirme s¨urecinin ¸cok
+¨onemli bir par¸casıdır.
+ UML, yazılım projelerinin tasarımını ifade etmek i¸cin ¸co˘gunlukla grafik g¨osterimler
+kullanır.
+ UML’yi kullanmak, proje ekiplerinin ileti¸sim kurmasına, potansiyel tasarımları
+ke¸sfetmesine ve yazılımın mimari tasarımını do˘grulamasına yardımcı olur.
+ UML diyagramları ile ¨onceden modelledi˘giniz bir nesne tabanlı modelinizi di˘ger
+insanlarında anlayabilece˘gi (ba¸ska programla dili kullanan kullanıcılar veya
+programlama bilmeyen ki¸siler) formata ¸ceviriyorsunuz
+ Bu sayede yazılım geli¸stiren ki¸siler arasında ortak bir dil olu¸sturuyor.
+4/32
+
+--- Page 5 ---
+UML C¸e¸sitleri
+ Yaygın olarak bilinen 14 ¸ce¸sit UML t¨ur¨u bulunmaktadır.
+ Yapısal ve davranı¸ssal olmak ¨uzere iki gruba ayrılmaktadır.
+ Structure Diagrams(Yapısal Diyagramlar), modellenmekte olan sistemde
+bulunması gerekenler i¸cin kullanılır.
+ Bu ders kapsanında inceleyece˘gimiz Class Diagram, Structure Diagram altında
+bulunmaktadır.
+ Tasarlanan OOP modelin herkes tarafından anla¸sılabilecek yapısını g¨ostermek i¸cin
+kullanılır.
+5/32
+
+--- Page 6 ---
+UML Types
+6/32
+
+--- Page 7 ---
+¨Ornek
+ Animal t¨ur¨unde bir sınıfımızın oldu˘gunu d¨u¸s¨unelim.
+ Bu sınıfımızın private olarak metin t¨ur¨unde name, integer t¨ur¨unde id ve age
+¨ozellikleri olsun.
+ Name ¨ozelli˘gini set etmek i¸cin setName adına public olarak eri¸silebilen bir metodu
+olsun.
+ Eat ismininde dı¸sardan eri¸sebilen bir metodu olsun.
+ ˙Ilgili sınıfın c# kodunu ve UML Class diagram’ını inceleyelim.
+7/32
+
+--- Page 8 ---
+Source code
+8/32
+
+--- Page 9 ---
+UML Class Diagram
+9/32
+
+--- Page 10 ---
+UML Class Diagram
+ Class diyagramlarında sınıflar yukarıda g¨or¨uld¨u˘g¨u gibi ifade edilir.
+ En ¨ust kısımda Class (sınıf) adı yazar.
+ ˙Ikinci kısım Attributes (¨ozellik) kısmıdır.
+ Alt kısım ise Methods kısmını g¨ostermektedir.
+ - ifadesi private , + ifadesi public olarak eri¸sildi˘gini ifade edilmektedir.
+ Internal (sadece olu¸sturulan proje i¸cerisinden eri¸silebilen modifier t¨ur¨u) ∼ile ifade
+edilir. Protected # ile ifade edilir.
+ readOnly {readOnly} olarak, statik ise altı ¸cizi (under line) olarak ifade edilir.
+10/32
+
+--- Page 11 ---
+¨Ornek
+11/32
+
+--- Page 12 ---
+Ger¸cek hayatta kar¸sınıza ¸cıkacak UML Class Diagram
+12/32
+
+--- Page 13 ---
+C# Inheritance in UML
+ Sınıfların kalıtımı (inheritance) do˘grudan UML kullanılarak modellenebilir.
+ UML genellemesini kullanarak bir alt sınıfı bir ¨ust sınıfa ba˘glayabilirsiniz.
+Genellemenin ¨u¸cgen ba¸s oku, bir alt sınıftan bir ¨ust sınıfa i¸saret eder.
+13/32
+
+--- Page 14 ---
+C# Nested Classes in UML
+ Ba˘glı sınıflar (nested classes), UML i¸cerme ili¸skisi kullanılarak tanımlanabilir.
+ Ba˘glayıcı, i¸cinde artı i¸sareti olan bir daire olarak g¨osterilir. Dairenin ucu kapsayıcı
+sınıfına, di˘ger ucu i¸c sınıfa ba˘glıdır.
+14/32
+
+--- Page 15 ---
+C# Class Composition in UML
+ UML kompozisyon (Composition) ili¸skilendirmesini kullanarak bir sınıfı ba¸ska bir
+sınıfın alan t¨ur¨u olarak kullanılabilir.
+ Bu ¸sekilde, sınıflar karma¸sık olarak olu¸sturabilir.
+15/32
+
+--- Page 16 ---
+C# Interfaces in UML
+ Aray¨uzler (Interfaces), bir sınıflandırıcıdan hangi ¨uyelerin beklendi˘gini tanımlar.
+ C# Interfaces, UML aray¨uzleri kullanılarak modellenebilir. UML arabirimleri,
+notkalı ¸cizgi ili¸skisi kullanılarak sınıflarla ili¸skilendirilir.
+16/32
+
+--- Page 17 ---
+C# Enum in UML
+ Numaralandırılan de˘gerler (enumeration), bir adlandırılmı¸s de˘gerler k¨umesini
+tanımlar. Belirli numaralandırma ¨o˘geleri i¸cin sayısal de˘gerler tanımlanabilir. C#
+numaralandırmaları, UML numaralandırmaları kullanılarak modellenmi¸stir.
+Enumaration i¸cin flag kullanılır.
+17/32
+
+--- Page 18 ---
+C# Namespace in UML
+ Namespace ortak sınıfları bir arada tutmak i¸cin kullanılan yapıdır. K¨ut¨uphane adı
+olarak ge¸cer.
+ Using ibaresi ile kullanılır ve UML i¸cerisinde a¸sa˘gıda g¨osterildi˘gi gibi ifade edilir.
+18/32
+
+--- Page 19 ---
+Visual Studio eklenti y¨ukleme
+ UML olu¸sturmak i¸cin bir¸cok hazır program bulunmaktadır.
+ Visual studio i¸cin geli¸stirilen eklenti ile otomatik olarak UML diyagramınızı
+olu¸sturabilirsiniz.
+ Windows ba¸slangı¸c men¨us¨unden Visual Studio Installer a¸cın.
+ Visual studo s¨ur¨um¨un¨unden de˘gi¸stir (change) i¸saretleyin.
+ Individual components (ba˘gımsız bile¸senler) tabında bulunan Code tools
+(Kod ara¸cları) kategorisi alındaki Class Designer (Sınıf Tasarımcısı) i¸saretleyin.
+19/32
+
+--- Page 20 ---
+Visual Studio Eklenti
+20/32
+
+--- Page 21 ---
+Visual Studio Eklenti
+21/32
+
+--- Page 22 ---
+Visual Studio Eklenti (ingilizce)
+22/32
+
+--- Page 23 ---
+Kurulum i¸sleminden sonra
+23/32
+
+--- Page 24 ---
+¨Ornek
+ Sınıfları yeni bir namespace i¸cerisinde oluturan,
+ Cinsiyet i¸cin Enum kullanan
+ Person sınıfı i¸cin abstract class kullanan
+ Employee, student ve Customer sınıflarınının birer person oldu˘gunu ve doWork
+yeteneklerini oldu˘gunu
+ Sistemin kodlayalım ve UML diyagramını olu¸sturulalım.
+24/32
+
+--- Page 25 ---
+Harici Namespace ve do˘gal olarka sınıflar ekleme
+25/32
+
+--- Page 26 ---
+Namespace
+26/32
+
+--- Page 27 ---
+Enum
+27/32
+
+--- Page 28 ---
+Person Class
+28/32
+
+--- Page 29 ---
+Student ve Empoloyee Clesses
+29/32
+
+--- Page 30 ---
+Customer Class
+30/32
+
+--- Page 31 ---
+UML Class Diagram
+31/32
+
+--- Page 32 ---
+¨Odev
+ Asp.Net Web Application veya Windows Form ile football oyunu kodlayınız.
+ Yetenekleri g¨ostermek (¸sut atma vs top tutma) i¸cin Interface yapısı kullanılmalıdır.
+ Futbolcuları olu¸stururken (kaleci, ¨on libero, forvet vb.) inheritance class kullanılmalıdır.
+
+¨Odevleriniz ¨ozg¨un olsun.
+ Kullandı˘gınız objeler (btn vb.) classlardan olu¸sturdu˘gunuz nesneler ile ba˘glantılı olsun.
+ Kodlarınız ayrı bir Namespace olarak olu¸sturun.
+ Olu¸sturdu˘gunuz modelin UML Class Diagramını g¨osteriniz.
+ 18 Aralık 07.59’a kadar g¨onderilenler 10+2, finale kadar g¨onderenler 10 puan
+(kayubmprogramlama1@gmail.com).
+32/32

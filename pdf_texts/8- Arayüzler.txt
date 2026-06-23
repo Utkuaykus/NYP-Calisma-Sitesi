@@ -1,0 +1,151 @@
+--- Page 1 ---
+Visual C# How to Program, 6/e
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 2 ---
+Interfaces specify the public services (methods and properties) that classes 
+must implement
+Interfaces vs. abstract classes w.r.t default implementations
+Interfaces provide no default implementations
+Abstract classes may provide some default implementations
+If no default implementations  can/are defined – do not use an abstract class, use an 
+interface instead
+Interfaces are used to “bring together” or relate to each other disparate objects
+that relate to one another only through the interface
+I.e., provide uniform set of methods and properties for disparate objects
+E.g.: A person and a tree are disparate objects
+Interface can define age and name for these disparate objects
+Enables polymorphic processing of age and name for person & tree objects
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 3 ---
+Interfaces are defined using keyword interface
+Use inheritance notation to specify that a class implements an interface
+ClassName : InterfaceName
+Classes may implement more then one interface:
+e.g.: ClassName : InterfaceName1, InterfaceName2
+Can also have:
+ClassName : ClassName1, InterfaceName1, InterfaceName2    (object list must precedes interface list)
+A class that implement an interface, must provide implementations for every 
+method and property in the interface definition
+Example: interface IAge that returns information about an object’s age
+Can be used by classes for people, cars, trees (all have an age)
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 4 ---
+• To build an app that can determine payments for employees and 
+invoices alike, we first create an interface named IPayable.
+• Interface IPayable contains method GetPaymentAmount that 
+returns a decimal amount to be paid for an object of any class that 
+implements the interface.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 5 ---
+UML Diagram Containing an Interface
+The UML class diagram shows the interface and class hierarchy used in 
+our accounts-payable app.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 6 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 7 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 8 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 9 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 10 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 11 ---
+GetPaymentAmount simply calls Employee’s abstract method 
+Earnings. 
+At execution time, when GetPaymentAmount is called on an object of 
+an Employee derived class, GetPaymentAmount calls that class’s 
+concrete Earnings method, which knows how to calculate earnings for 
+objects of that derived-class type. 
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 12 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 13 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 14 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 15 ---
+Figure overviews several commonly used Framework Class Library 
+interfaces.
+© 2018 Pearson Education, Ltd. All 
+Rights Reserved.
+
+--- Page 16 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 17 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 18 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 19 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+
+--- Page 20 ---
+• Ad, soyad ve aylık maaş özelliklerine sahip bir Employee sınıfını ve yılı, miktarı ve ödendi 
+bilgisi özelliklerine sahip Tax sınıfı tarafından uygulanacak Payable arayüzü oluşturalım 
+ve bu arayüz için de Pay isimli bir metot tanımlayın. Bu metot sınıflar tarafında uygun 
+şekilde doldurulacaktır. (Örneğin çalışanda maaş ödemesi, vergide vergi ödemesi.)  
+• Ayrıca Employee sınıfından türetilmiş Salesman sınıfı örnekleri aylık maaşlarının yanında 
+satışlarının üzerinden komisyon almaktadırlar. 
+• Employee sınıfına adını ve yıllık kazancını yazdıran bir metot ekleyelim.
+• Salesman sınıfında ilave olarak aylık satış miktarı (para cinsinden) ve komisyon oranı özellikleri 
+olsun.
+•
+Ayrıca Employee sınıfının IComparable arayüzünün uygulayarak, kendi aralarından doğum 
+tarihlerine göre sıralanabilir olmasını sağlayın. Böylece bir dizi (Array) içine yerleştirdiğiniz 
+Employee örneklerini sıralayabileceksiniz. Not: ArrayList içindeki örnekleri sıralanması için 
+IComparer arayüzü kullanılır.
+• Tüm özellikleri test edebilecek şekilde Main() metodunu düzenleyiniz.
+
+--- Page 21 ---
+
+--- Page 22 ---
+
+--- Page 23 ---
+•
+TwoDimensionalShape sınıfı ve ThreeDimensionalShape sınıfı tarafında 
+kalıtılacak Shape soyut sınıfının  oluşturulmalıdır. 
+• Shape soyut sınıfında 
+• ilgili nesnenin ismini (Circle, Square vb..) döndürecek şekilde uygulanmış bir toString() 
+metottu olmalıdır.
+• Her bir alt sınıf için ilgili getArea() metotlar özelleştirilmelidir. 
+• TwoDimensionalShape sınıfında
+• getArea() metodu 
+• ThreeDimensionalShape sınıfında
+• getArea() ve getVolume()  metotları olmalıdır.
+•
+Ayrıca Shape sınıfı IComparable arayüzünü uygulayarak, dizi içindeki sınıf 
+örneklerinin alanlarına göre sıralanması sağlanmalıdır.  
+• Bu özellikleri sağlayacak şekilde sınıf hiyerarşisi ve sınıf içleri doldurulmalı, Main() 
+metodu bun göre dizayn edilmelidir.
+
+--- Page 24 ---
+© 2018 Pearson Education, Ltd. All Rights Reserved.
+Bilindiği üzere C# ‘da çoklu kalıtıma
+izin verilmemektedir. Yanda ki UML 
+diyagramında ise çoklu kalıtım
+gerektiren bir durum söz
+konusudur. Bu durumda ki öneriniz
+nedir?
